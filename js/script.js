@@ -20,3 +20,24 @@ $(document).on('ready', function() {
 		}	
 	})
 });
+
+var $labels = $(".actions label");
+var $inputs = $("section input");
+$(document).on('ready', function() {
+	$labels.mouseover(function() {
+		var keyers = Object.keys($inputs);
+		for (var i = 0; i < keyers.length - 1; i++) {
+			console.log(keyers.length);
+			if ($($inputs[keyers[i]]).is(':checked') && $(this).attr("for") === $($inputs[keyers[i]]).attr('id')) {
+				console.log($($inputs[keyers[i]]).is(':checked'))
+				var tooltip = $(this).attr("for");
+				tooltip = "[for=" + tooltip + "]" + " div";
+				$(tooltip).fadeIn(300);
+			}
+		} 
+	})
+	$labels.mouseleave(function() {
+		$(this).find("div").fadeOut(300);
+	});
+});
+

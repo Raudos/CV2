@@ -212,6 +212,10 @@ a:link {
 .contact img {
 	height: 100%;
 }
+.contact img:hover {
+	border-radius: 50%;
+	border: 2px solid rgba(254, 254, 254, 0.9);
+}
 /* All of them bars */
 .mainContainer {
 	width: 100%;
@@ -347,10 +351,10 @@ input[id='htmlcourse']:checked ~ .html .progress {
 input[id='htmlexp']:checked ~ .html .exp {
   display: inherit;
 }
-input[id='htmlbook']:checked ~ .html .course {
+input[id='htmlbook']:checked ~ .html .book {
   display: inherit;
 }
-input[id='htmlcourse']:checked ~ .html .book {
+input[id='htmlcourse']:checked ~ .html .course {
   display: inherit;
 }
 input[id='cssexp']:checked ~ .css .progress {
@@ -365,10 +369,10 @@ input[id='csscourse']:checked ~ .css .progress {
 input[id='cssexp']:checked ~ .css .exp {
   display: inherit;
 }
-input[id='cssbook']:checked ~ .css .course {
+input[id='cssbook']:checked ~ .css .book {
   display: inherit;
 }
-input[id='csscourse']:checked ~ .css .book {
+input[id='csscourse']:checked ~ .css .course {
   display: inherit;
 }
 input[id='jsexp']:checked ~ .js .progress {
@@ -383,10 +387,10 @@ input[id='jscourse']:checked ~ .js .progress {
 input[id='jsexp']:checked ~ .js .exp {
   display: inherit;
 }
-input[id='jsbook']:checked ~ .js .course {
+input[id='jsbook']:checked ~ .js .book {
   display: inherit;
 }
-input[id='jscourse']:checked ~ .js .book {
+input[id='jscourse']:checked ~ .js .course {
   display: inherit;
 }
 input[id='rwdexp']:checked ~ .rwd .progress {
@@ -401,10 +405,10 @@ input[id='rwdcourse']:checked ~ .rwd .progress {
 input[id='rwdexp']:checked ~ .rwd .exp {
   display: inherit;
 }
-input[id='rwdbook']:checked ~ .rwd .course {
+input[id='rwdbook']:checked ~ .rwd .book {
   display: inherit;
 }
-input[id='rwdcourse']:checked ~ .rwd .book {
+input[id='rwdcourse']:checked ~ .rwd .course {
   display: inherit;
 }
 input[id='jqueryexp']:checked ~ .jquery .progress {
@@ -419,10 +423,10 @@ input[id='jquerycourse']:checked ~ .jquery .progress {
 input[id='jqueryexp']:checked ~ .jquery .exp {
   display: inherit;
 }
-input[id='jquerybook']:checked ~ .jquery .course {
+input[id='jquerybook']:checked ~ .jquery .book {
   display: inherit;
 }
-input[id='jquerycourse']:checked ~ .jquery .book {
+input[id='jquerycourse']:checked ~ .jquery .course {
   display: inherit;
 }
 input[id='nodejsexp']:checked ~ .nodejs .progress {
@@ -437,10 +441,10 @@ input[id='nodejscouse']:checked ~ .nodejs .progress {
 input[id='nodejsexp']:checked ~ .nodejs .exp {
   display: inherit;
 }
-input[id='nodejscourse']:checked ~ .nodejs .book {
+input[id='nodejscourse']:checked ~ .nodejs .course {
   display: inherit;
 }
-input[id='nodejsbook']:checked ~ .nodejs .course {
+input[id='nodejsbook']:checked ~ .nodejs .book {
   display: inherit;
 }
 input {
@@ -452,4 +456,35 @@ input {
 }
 .label {
 	height: 50px;
+}
+label {
+	position: relative;
+	height: auto;
+}
+.labelTooltip {
+	position: absolute;
+	width: 400px;
+	height: 200px;
+	background-color: rgb(108,163,211);
+	border-radius: 20px;
+	border: 2px solid rgba(254, 254, 254, 0.9);
+	z-index: 1200;
+	display: none;
+	width: 400px;
+	height: 200px;
+	top: 100%;
+}
+.labelTooltip li {
+	color: white;
+	font-size: 25px;
+	font-family: tahoma;
+}
+.expTooltip {
+	left: -100px;
+}
+.bookTooltip {
+	left: -154px;
+}
+.courseTooltip {
+	left: -208px;
 }
