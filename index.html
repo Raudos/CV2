@@ -1,143 +1,703 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>CV2</title>
-    <meta charset="utf-8"/>
-    <link type="text/css" rel="stylesheet" href="css/style.css"/>
-</head>
-<body>
-<div class="container">
-        <header>
-            <h1>Pure <strong>CSS</strong> Progress</h1>
-            <p>... a pretty liquid progress-bar.</p>
-        </header>
-        <section>
-            <article>
-                <input type="radio" name="switch-color" id="red" checked>
-                <input type="radio" name="switch-color" id="cyan">
-                <input type="radio" name="switch-color" id="lime">
-                <div class="chart">
-                    <div class="bar bar-75 white">
-                        <div class="face top">
-                            <div class="growing-bar"></div>
-                        </div>
-                        <div class="face side-0">
-                            <div class="growing-bar"></div>
-                        </div>
-                        <div class="face floor">
-                            <div class="growing-bar"></div>
-                        </div>
-                        <div class="face side-a"></div>
-                        <div class="face side-b"></div>
-                        <div class="face side-1">
-                            <div class="growing-bar"></div>
-                        </div>
-                    </div>
-                </div>
-                <p>Try another color :)</p>
-                <nav class="actions">
-                    <label for="red">Red</label>
-                    <label for="cyan">Cyan</label>
-                    <label for="lime">Lime</label>
-                </nav>
-            </article>
-            <article>
-                <input type="radio" name="switch-pos" id="pos-0">
-                <input type="radio" name="switch-pos" id="pos-1">
-                <input type="radio" name="switch-pos" id="pos-2" checked>
-                <input type="radio" name="switch-pos" id="pos-3">
-                <div class="chart">
-                    <div class="bar bar-30 white">
-                        <div class="face top">
-                            <div class="growing-bar"></div>
-                        </div>
-                        <div class="face side-0">
-                            <div class="growing-bar"></div>
-                        </div>
-                        <div class="face floor">
-                            <div class="growing-bar"></div>
-                        </div>
-                        <div class="face side-a"></div>
-                        <div class="face side-b"></div>
-                        <div class="face side-1">
-                            <div class="growing-bar"></div>
-                        </div>
-                    </div>
-                </div>
-                <p>Try another position :)</p>
-                <nav class="actions">
-                    <label for="pos-0">1/4</label>
-                    <label for="pos-1">2/4</label>
-                    <label for="pos-2">3/4</label>
-                    <label for="pos-3">Full</label>
-                </nav>
-            </article>
-            <article>
-                <input type="radio" name="exercises" id="exercise-1" checked>
-                <input type="radio" name="exercises" id="exercise-2">
-                <input type="radio" name="exercises" id="exercise-3">
-                <input type="radio" name="exercises" id="exercise-4">
-                <div class="chart grid">
-                    <div class="exercise second">
-                        <div class="bar bar-45 navy lightGray-face">
-                            <div class="face top">
-                                <div class="growing-bar"></div>
-                            </div>
-                            <div class="face side-0">
-                                <div class="growing-bar"></div>
-                            </div>
-                            <div class="face floor">
-                                <div class="growing-bar"></div>
-                            </div>
-                            <div class="face side-a"></div>
-                            <div class="face side-b"></div>
-                            <div class="face side-1">
-                                <div class="growing-bar"></div>
-                            </div>
-                        </div>
-                        <div class="bar bar-80 yellow lightGray-face">
-                            <div class="face top">
-                                <div class="growing-bar"></div>
-                            </div>
-                            <div class="face side-0">
-                                <div class="growing-bar"></div>
-                            </div>
-                            <div class="face floor">
-                                <div class="growing-bar"></div>
-                            </div>
-                            <div class="face side-a"></div>
-                            <div class="face side-b"></div>
-                            <div class="face side-1">
-                                <div class="growing-bar"></div>
-                            </div>
-                        </div>
-                        <div class="bar bar-60 red lightGray-face">
-                            <div class="face top">
-                                <div class="growing-bar"></div>
-                            </div>
-                            <div class="face side-0">
-                                <div class="growing-bar"></div>
-                            </div>
-                            <div class="face floor">
-                                <div class="growing-bar"></div>
-                            </div>
-                            <div class="face side-a"></div>
-                            <div class="face side-b"></div>
-                            <div class="face side-1">
-                                <div class="growing-bar"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <p><em>It's liquid</em>, so adding a bit of code you can make charts like this :P</p>
-                <nav class="actions">
-                    <label for="exercise-1">E-1</label>
-                    <label for="exercise-2">E-2</label>
-                    <label for="exercise-3">E-3</label>
-                    <label for="exercise-4">E-4</label>
-                </nav>
-            </article>
-        </section>
-    </div> 
-</body>
+	<head>
+	    <title>Junior Front-end Developer for hire!</title>
+	    <meta charset="utf-8"/>
+			<meta name="viewport" content="width=device-width, initial-scale=1">
+	    <link type="text/css" rel="stylesheet" href="css/cssreset.css"/>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	    <link type="text/css" rel="stylesheet" href="css/style.css"/>
+	</head>
+	<body>
+    <nav id="fixedMenu">
+			<div id="circleContainer">
+				<div class="circleMenu first">
+					<div class="innerCircle first">
+					</div>
+				</div>
+				<div class="circleMenu second">
+					<div class="innerCircle second">
+					</div>
+				</div>
+				<div class="circleMenu third">
+					<div class="innerCircle third">
+					</div>
+				</div>
+				<div class="circleMenu fourth">
+					<div class="innerCircle fourth">
+					</div>
+				</div>
+				<div class="circleMenu fifth">
+					<div class="innerCircle fifth">
+					</div>
+				</div>
+			</div>
+		</nav>
+    <div class="container">
+      <div class="row" id="header">
+				<div class="col-xs-12 col-sm-12">
+					<img src="css/images/header2.png"/>
+				</div>
+      </div>
+      <div class="row tableAbout" id="intro">
+				<div class="info">
+					Introduction
+				</div>
+        <div class="col-xs-12 col-sm-6 col-md-4 cell" id="caricatureDiv">
+          <img id="caricature" class="img-responsive" src="css/images/cartoon.jpg"/>
+        </div>
+        <div id="introText" class="col-xs-12 col-sm-6 col-md-4 cell">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur.
+          </p>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-4 hidden-sm cell" id="hireDiv">
+          <img id="hire" class="img-responsive" src="css/images/hire2.jpg"/>
+        </div>
+      </div>
+      <div class="row" id="skills">
+					<div class="info">
+						Skills
+					</div>
+					<div class="mainContainer row">
+						<div class="containerBar col-sm-12 col-md-6">
+							<img src="css/images/html.png"/>
+							<div class="centerMe">
+								<section>
+									<input type="radio" name="html" id="htmlexp">
+							        <input type="radio" name="html" id="htmlbook">
+							        <input type="radio" name="html" id="htmlcourse">
+									<div class="squareContainer html">
+										<div class="bar">
+											<div class="side top">
+												<div class="progressBar">
+													<div class="tooltipBar">
+													</div>
+												</div>
+											</div>
+											<div class="side back">
+												<div class="progressBar">
+												</div>
+											</div>
+											<div class="side floor">
+												<div class="progressBar">
+												</div>
+											</div>
+											<div class="side smallLeft">
+											</div>
+											<div class="side smallRight">
+											</div>
+											<div class="side front">
+												<div class="progressBar">
+													<div class="tooltipBar">
+													</div>
+													<div class="tooltipText exp">
+														<p>
+															Experience
+														</p>
+													</div>
+													<div class="tooltipText course">
+														<p>
+															Courses
+														</p>
+													</div>
+													<div class="tooltipText book">
+														<p>
+															Books
+														</p>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<nav class="actions">
+										<div class="min">
+											0
+										</div>
+						                <label for="htmlexp">
+						                	<img class="labelBar" src="css/images/xp2.png"/>
+						                	<div class="expTooltip labelTooltip">
+						                		<ul>
+						                			<li>Experience in HTML</li>
+						                			<li>Lorem</li>
+						                			<li>Lorem</li>
+						                			<li>Lorem</li>
+						                			<li>Lorem</li>
+						                			<li>Lorem</li>
+						                			<li>Lorem</li>
+						                		</ul>
+						                	</div>
+						                </label>
+						                <label for="htmlbook">
+						                	<img class="labelBar" src="css/images/book2.png"/>
+						                	<div class="bookTooltip labelTooltip">
+						                		<ul>
+						                			<li>Books read on HTML:</li>
+						                			<li><a href="http://www.amazon.com/Beginning-HTML5-CSS3-For-Dummies/dp/1118657209">Beginning HTML5 and CSS3 for Dummies" - Ed Tittel,</a></li>
+						                			<li><a href="http://helion.pl/ksiazki/html-i-css-zaprojektuj-i-zbuduj-witryne-www-jon-duckett,htcsww.htm">"HTML i CSS : zaprojektuj i zbuduj witrynę WWW" - Jon Duckett,</a></li>
+						                			<li><a href="http://helion.pl/ksiazki/html5-canvas-receptury-eric-rowell,ht5cre.htm">"HTML5 canvas : receptury" - Eric Rowell.</a></li>
+						                		</ul>
+						                	</div>
+						                </label>
+						                <label for="htmlcourse">
+						                	<img class="labelBar" src="css/images/lecture.png"/>
+						                	<div class="courseTooltip labelTooltip">
+						                		<ul>
+						                			<li>Courses taken on HTML:</li>
+						                			<li><a href="http://coderslab.pl/kurs-front-end">"Zostań Programistą Front-End" - Coderslab,</a></li>
+						                			<li><a href="https://www.codecademy.com/learn/web">"HTML & CSS" - Codecademy,</a></li>
+						                			<li><a href="http://www.w3schools.com/html/default.asp">"HTML(5) Tutorial" - w3schools.</a></li>
+						                		</ul>
+						                	</div>
+						                </label>
+						                <div class="max">
+										 100
+										</div>
+					                </nav>
+					            </section>
+									</div>
+						</div>
+						<div class="containerBar col-sm-12 col-md-6">
+							<img src="css/images/css.png"/>
+							<div class="centerMe">
+								<section>
+									<input type="radio" name="css" id="cssexp" >
+							        <input type="radio" name="css" id="cssbook">
+							        <input type="radio" name="css" id="csscourse">
+									<div class="squareContainer css">
+										<div class="bar">
+											<div class="side top">
+												<div class="progressBar">
+													<div class="tooltipBar">
+													</div>
+												</div>
+											</div>
+											<div class="side back">
+												<div class="progressBar">
+												</div>
+											</div>
+											<div class="side floor">
+												<div class="progressBar">
+												</div>
+											</div>
+											<div class="side smallLeft">
+											</div>
+											<div class="side smallRight">
+											</div>
+											<div class="side front">
+												<div class="progressBar">
+													<div class="tooltipBar">
+													</div>
+													<div class="tooltipText exp">
+														<p>
+															Experience
+														</p>
+													</div>
+													<div class="tooltipText course">
+														<p>
+															Courses
+														</p>
+													</div>
+													<div class="tooltipText book">
+														<p>
+															Books
+														</p>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<nav class="actions">
+										<div class="min">
+											0
+										</div>
+						                <label for="cssexp">
+						                	<img class="labelBar" src="css/images/xp2.png"/>
+						                	<div class="expTooltip labelTooltip">
+						                		<ul>
+						                			<li>Lorem</li>
+						                			<li>Lorem</li>
+						                			<li>Lorem</li>
+						                			<li>Lorem</li>
+						                			<li>Lorem</li>
+						                			<li>Lorem</li>
+						                			<li>Lorem</li>
+						                			<li>Lorem</li>
+						                		</ul>
+						                	</div>
+						                </label>
+						                <label for="cssbook">
+						                	<img class="labelBar" src="css/images/book2.png"/>
+						                	<div class="bookTooltip labelTooltip">
+						                		<ul>
+																	<li>Books read on CSS:</li>
+						                			<li><a href="http://helion.pl/ksiazki/css3-tworzenie-nowoczesnych-stron-www-lukasz-pasternak,css3tw.htm">"CSS3:tworzenie nowoczesnych stron WWW" - Łukasz Pasternak,</a></li>
+						                			<li><a href="http://helion.pl/ksiazki/responsive-web-design-projektowanie-elastycznych-witryn-w-html5-i-css3-ben-frain,resweb.htm">"Responsive web design: projektowanie elastycznych witryn w HTML5 i CSS3" - Ben Frain,</a></li>
+						                			<li><a href="http://helion.pl/ksiazki/html-i-css-zaprojektuj-i-zbuduj-witryne-www-jon-duckett,htcsww.htm">"HTML i CSS : zaprojektuj i zbuduj witrynę WWW" - Jon Duckett.</a></li>
+						                		</ul>
+						                	</div>
+						                </label>
+						                <label for="csscourse">
+						                	<img class="labelBar" src="css/images/lecture.png"/>
+						                	<div class="courseTooltip labelTooltip">
+						                		<ul>
+																	<li>Courses taken on CSS:</li>
+						                			<li><a href="http://coderslab.pl/kurs-front-end">"Zostań Programistą Front-End" - Coderslab,</a></li>
+						                			<li><a href="https://www.codecademy.com/learn/web">"HTML & CSS" - Codecademy,</a></li>
+						                			<li><a href="http://www.w3schools.com/css/default.asp">"CSS Tutorial" - w3schools.</a></li>
+						                		</ul>
+						                	</div>
+						                </label>
+						                <div class="max">
+										 100
+										</div>
+					                </nav>
+					            </section>
+									</div>
+						</div>
+					</div>
+					<div class="mainContainer row">
+						<div class="containerBar col-sm-12 col-md-6">
+							<img src="css/images/js.png"/>
+							<div class="centerMe">
+								<section>
+									<input type="radio" name="js" id="jsexp" >
+							        <input type="radio" name="js" id="jsbook">
+							        <input type="radio" name="js" id="jscourse">
+									<div class="squareContainer js">
+										<div class="bar">
+											<div class="side top">
+												<div class="progressBar">
+													<div class="tooltipBar">
+													</div>
+												</div>
+											</div>
+											<div class="side back">
+												<div class="progressBar">
+												</div>
+											</div>
+											<div class="side floor">
+												<div class="progressBar">
+												</div>
+											</div>
+											<div class="side smallLeft">
+											</div>
+											<div class="side smallRight">
+											</div>
+											<div class="side front">
+												<div class="progressBar">
+													<div class="tooltipBar">
+													</div>
+													<div class="tooltipText exp">
+														<p>
+															Experience
+														</p>
+													</div>
+													<div class="tooltipText course">
+														<p>
+															Courses
+														</p>
+													</div>
+													<div class="tooltipText book">
+														<p>
+															Books
+														</p>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<nav class="actions">
+										<div class="min">
+											0
+										</div>
+						                <label for="jsexp">
+						                	<img class="labelBar" src="css/images/xp2.png"/>
+						                	<div class="expTooltip labelTooltip">
+						                		<ul>
+																	<li>Lorem</li>
+																	<li>Lorem</li>
+																	<li>Lorem</li>
+																	<li>Lorem</li>
+																	<li>Lorem</li>
+																	<li>Lorem</li>
+																	<li>Lorem</li>
+																	<li>Lorem</li>
+																</ul>
+						                	</div>
+						                </label>
+						                <label for="jsbook">
+						                	<img class="labelBar" src="css/images/book2.png"/>
+						                	<div class="bookTooltip labelTooltip">
+						                		<ul>
+																	<li>Books read on JavaScript:</li>
+						                			<li><a href="http://helion.pl/ksiazki/javascript-mocne-strony-douglas-crockford,jscmoc.htm">"JavaScript - mocne strony" - Douglas Crockford,.</a></li>
+						                			<li><a href="http://www.amazon.com/JavaScript-Programmers-Paul-Deitel/dp/0137001312">"JavaSript for programmers" - Paul J. Deitel, Harvey M. Deitel,</a></li>
+																	<li><a href="http://helion.pl/ksiazki/javascript-praktyczny-kurs-marcin-lis,jscpk.htm">"JavaScript: praktyczny kurs" - Marcin Lis,</a></li>
+																	<li><a href="http://helion.pl/ksiazki/javascript-i-jquery-interaktywne-strony-www-dla-kazdego-jon-duckett,jsqwdk.htm">"JavaScript i JQuery : interaktywne strony WWW dla każdego" - Jon Duckett,</a></li>
+																	<li><a href="http://primo-48tuw.hosted.exlibrisgroup.com/primo_library/libweb/action/display.do?tabs=detailsTab&ct=display&fn=search&doc=48TUW_WTU01000164521&indx=1&recIds=48TUW_WTU01000164521&recIdxs=0&elementId=0&renderMode=poppedOut&displayMode=full&frbrVersion=&frbg=&&dscnt=0&scp.scps=scope%3A%2848TUW_ibuk%29%2Cscope%3A%2848TUW_SYM01%29%2Cscope%3A%2848TUW_FOT01%29%2Cscope%3A%2848TUW_dlibra%29%2Cscope%3A%2848TUW_WTU01%29%2Cscope%3A%2848TUW_WTU03%29%2Cscope%3A%2848TUW_ejournals%29%2Cprimo_central_multiple_fe&tb=t&vid=48TUW_VIEW&mode=Basic&srt=rank&tab=default_tab&dum=true&vl%28freeText0%29=kuloodporny%20ajax&dstmp=1455452731357">"Kuloodporny Ajax : jak nowocześnie projektować strony internetowe" - Jeremy Keith,</a></li>
+																	<li><a href="http://eloquentjavascript.net/">"Eloquent JavaScript" - Marijn Haverbeke.</a></li>
+						                		</ul>
+						                	</div>
+						                </label>
+						                <label for="jscourse">
+						                	<img class="labelBar" src="css/images/lecture.png"/>
+						                	<div class="courseTooltip labelTooltip">
+						                		<ul>
+						                			<li>Courses taken on JavaScript:</li>
+																	<li><a href="http://coderslab.pl/kurs-front-end">"Zostań Programistą Front-End" - Coderslab,</a></li>
+																	<li><a href="https://www.codecademy.com/learn/javascript">"Javascript" - Codecademy,</a></li>
+																	<li><a href="http://www.w3schools.com/js/default.asp">"JavaScript Tutorial" - w3schools.</a></li>
+						                		</ul>
+						                	</div>
+						                </label>
+						                <div class="max">
+										 100
+										</div>
+					                </nav>
+					            </section>
+										</div>
+						</div>
+						<div class="containerBar col-sm-12 col-md-6">
+							<img src="css/images/rwd.png"/>
+							<div class="centerMe">
+								<section>
+									<input type="radio" name="rwd" id="rwdexp" >
+							        <input type="radio" name="rwd" id="rwdbook">
+							        <input type="radio" name="rwd" id="rwdcourse">
+									<div class="squareContainer rwd">
+										<div class="bar">
+											<div class="side top">
+												<div class="progressBar">
+													<div class="tooltipBar">
+													</div>
+												</div>
+											</div>
+											<div class="side back">
+												<div class="progressBar">
+												</div>
+											</div>
+											<div class="side floor">
+												<div class="progressBar">
+												</div>
+											</div>
+											<div class="side smallLeft">
+											</div>
+											<div class="side smallRight">
+											</div>
+											<div class="side front">
+												<div class="progressBar">
+													<div class="tooltipBar">
+													</div>
+													<div class="tooltipText exp">
+														<p>
+															Experience
+														</p>
+													</div>
+													<div class="tooltipText course">
+														<p>
+															Courses
+														</p>
+													</div>
+													<div class="tooltipText book">
+														<p>
+															Books
+														</p>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<nav class="actions">
+										<div class="min">
+											0
+										</div>
+						                <label for="rwdexp">
+						                	<img class="labelBar" src="css/images/xp2.png"/>
+						                	<div class="expTooltip labelTooltip">
+						                		<ul>
+						                			<li>Lorem</li>
+						                			<li>Lorem</li>
+						                			<li>Lorem</li>
+						                			<li>Lorem</li>
+						                			<li>Lorem</li>
+						                			<li>Lorem</li>
+						                			<li>Lorem</li>
+						                			<li>Lorem</li>
+						                		</ul>
+						                	</div>
+						                </label>
+						                <label for="rwdbook">
+						                	<img class="labelBar" src="css/images/book2.png"/>
+						                	<div class="bookTooltip labelTooltip">
+						                		<ul>
+						                			<li>Books read on Responsive Web Design:</li>
+						                			<li><a href="http://helion.pl/ksiazki/responsive-web-design-projektowanie-elastycznych-witryn-w-html5-i-css3-ben-frain,resweb.htm">"Responsive web design: projektowanie elastycznych witryn w HTML5 i CSS3" - Ben Frain,</a></li>
+						                			<li><a href="http://helion.pl/ksiazki/responsywne-strony-www-dla-kazdego-clarissa-peterson,reswdk.htm">"Responsywne strony WWW dla każdego" - Clarissa Peterson.</a></li>
+						                		</ul>
+						                	</div>
+						                </label>
+						                <label for="rwdcourse">
+						                	<img class="labelBar" src="css/images/lecture.png"/>
+						                	<div class="courseTooltip labelTooltip">
+						                		<ul>
+																	<li>Courses taken on Responsive Web Design:</li>
+																	<li><a href="http://coderslab.pl/kurs-front-end">"Zostań Programistą Front-End" - Coderslab,</a></li>
+																	<li><a href="http://www.w3schools.com/css/css_rwd_intro.asp">"Responsive Web Design" - w3schools.</a></li>
+						                		</ul>
+						                	</div>
+						                </label>
+						                <div class="max">
+										 100
+										</div>
+					                </nav>
+					            </section>
+									</div>
+						</div>
+					</div>
+					<div class="mainContainer row">
+						<div class="containerBar col-sm-12 col-md-6">
+							<img src="css/images/jquery.png"/>
+							<div class="centerMe">
+								<section>
+									<input type="radio" name="jquery" id="jqueryexp" >
+							        <input type="radio" name="jquery" id="jquerybook">
+							        <input type="radio" name="jquery" id="jquerycourse">
+									<div class="squareContainer jquery">
+										<div class="bar">
+											<div class="side top">
+												<div class="progressBar">
+													<div class="tooltipBar">
+													</div>
+												</div>
+											</div>
+											<div class="side back">
+												<div class="progressBar">
+												</div>
+											</div>
+											<div class="side floor">
+												<div class="progressBar">
+												</div>
+											</div>
+											<div class="side smallLeft">
+											</div>
+											<div class="side smallRight">
+											</div>
+											<div class="side front">
+												<div class="progressBar">
+													<div class="tooltipBar">
+													</div>
+													<div class="tooltipText exp">
+														<p>
+															Experience
+														</p>
+													</div>
+													<div class="tooltipText course">
+														<p>
+															Courses
+														</p>
+													</div>
+													<div class="tooltipText book">
+														<p>
+															Books
+														</p>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<nav class="actions">
+										<div class="min">
+											0
+										</div>
+						                <label for="jqueryexp">
+						                	<img class="labelBar" src="css/images/xp2.png"/>
+						                	<div class="expTooltip labelTooltip">
+						                		<ul>
+						                			<li>Lorem</li>
+						                			<li>Lorem</li>
+						                			<li>Lorem</li>
+						                			<li>Lorem</li>
+						                			<li>Lorem</li>
+						                			<li>Lorem</li>
+						                			<li>Lorem</li>
+						                			<li>Lorem</li>
+						                		</ul>
+						                	</div>
+						                </label>
+						                <label for="jquerybook">
+						                	<img class="labelBar" src="css/images/book2.png"/>
+						                	<div class="bookTooltip labelTooltip">
+						                		<ul>
+																	<li>Books read on</li>
+						                			<li><a href="http://helion.pl/ksiazki/podrecznik-jquery-interaktywne-interfejsy-internetowe-smashing-magazine-jake-rutter,pjqiii.htm">"Podręcznik jQuery : interaktywne interfejsy internetowe" - Jake Rutter,</a></li>
+																	<li><a href="http://helion.pl/ksiazki/javascript-i-jquery-interaktywne-strony-www-dla-kazdego-jon-duckett,jsqwdk.htm">"JavaScript i JQuery : interaktywne strony WWW dla każdego" - Jon Duckett.</a></li>
+						                		</ul>
+						                	</div>
+						                </label>
+						                <label for="jquerycourse">
+						                	<img class="labelBar" src="css/images/lecture.png"/>
+						                	<div class="courseTooltip labelTooltip">
+						                		<ul>
+																	<li>Courses taken on jQuery:</li>
+																	<li><a href="http://coderslab.pl/kurs-front-end">"Zostań Programistą Front-End" - Coderslab,</a></li>
+																	<li><a href="https://www.codecademy.com/learn/jquery">"jQuery" - Codecademy.</a></li>
+						                		</ul>
+						                	</div>
+						                </label>
+						                <div class="max">
+										 100
+										</div>
+					                </nav>
+					            </section>
+									</div>
+						</div>
+						<div class="containerBar col-sm-12 col-md-6">
+							<img src="css/images/nodejs.png"/>
+							<div class="centerMe">
+								<section>
+									<input type="radio" name="nodejs" id="nodejsexp" >
+							        <input type="radio" name="nodejs" id="nodejsbook">
+							        <input type="radio" name="nodejs" id="nodejscourse">
+									<div class="squareContainer nodejs">
+										<div class="bar">
+											<div class="side top">
+												<div class="progressBar">
+													<div class="tooltipBar">
+													</div>
+												</div>
+											</div>
+											<div class="side back">
+												<div class="progressBar">
+												</div>
+											</div>
+											<div class="side floor">
+												<div class="progressBar">
+												</div>
+											</div>
+											<div class="side smallLeft">
+											</div>
+											<div class="side smallRight">
+											</div>
+											<div class="side front">
+												<div class="progressBar">
+													<div class="tooltipBar">
+													</div>
+													<div class="tooltipText exp">
+														<p>
+															Experience
+														</p>
+													</div>
+													<div class="tooltipText course">
+														<p>
+															Courses
+														</p>
+													</div>
+													<div class="tooltipText book">
+														<p>
+															Books
+														</p>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<nav class="actions">
+										<div class="min">
+											0
+										</div>
+						                <label for="nodejsexp">
+						                	<img class="labelBar" src="css/images/xp2.png"/>
+						                	<div class="expTooltip labelTooltip">
+						                		<ul>
+						                			<li>Lorem</li>
+						                			<li>Lorem</li>
+						                			<li>Lorem</li>
+						                			<li>Lorem</li>
+						                			<li>Lorem</li>
+						                			<li>Lorem</li>
+						                			<li>Lorem</li>
+						                			<li>Lorem</li>
+						                		</ul>
+						                	</div>
+						                </label>
+						                <label for="nodejsbook">
+						                	<img class="labelBar" src="css/images/book2.png"/>
+						                	<div class="bookTooltip labelTooltip">
+						                		<ul>
+						                			<li>Books read on NodeJS:</li>
+						                			<li><a href="http://helion.pl/ksiazki/node-js-w-akcji-mike-cantelon-marc-harter-tj-holowaychuk-nathan,nodejs.htm">"Node.js w akcji" - MIke Cantelon,</a></li>
+						                			<li><a href="http://helion.pl/ksiazki/node-js-mongodb-angularjs-kompendium-wiedzy-brad-dayley,nodekw.htm">"Node.js, MongoDB, AngularJS: kompendium wiedzy" - Brad Dayley.</a></li>
+						                		</ul>
+						                	</div>
+						                </label>
+						                <label for="nodejscourse">
+						                	<img class="labelBar" src="css/images/lecture.png"/>
+						                	<div class="courseTooltip labelTooltip">
+						                		<ul>
+						                			<li>Lorem</li>
+						                			<li>Lorem</li>
+						                			<li>Lorem</li>
+						                			<li>Lorem</li>
+						                			<li>Lorem</li>
+						                			<li>Lorem</li>
+						                			<li>Lorem</li>
+						                			<li>Lorem</li>
+						                		</ul>
+						                	</div>
+						                </label>
+						                <div class="max">
+										 100
+										</div>
+					                </nav>
+					            </section>
+									</div>
+						</div>
+					</div>
+      </div>
+      <div class="row tableAbout" id="about">
+				<div class="info">
+					About me
+				</div>
+        <div class="col-xs-12 col-sm-12 col-md-6 cell">
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+					</p>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-6 cell">
+					<div id="imgContainer">
+						<img src="css/images/swim.png"/>
+						<img src="css/images/archery.png"/>
+						<img src="css/images/fantasy.png"/>
+						<img src="css/images/pw.png"/>
+					</div>
+        </div>
+      </div>
+      <div class="row" id="contact">
+				<div class="info">
+					Contact me
+				</div>
+        <div class="col-xs-3 col-sm-3">
+					<img src="css/images/phone.png"/>
+        </div>
+        <div class="col-xs-3 col-sm-3">
+					<img src="css/images/mail.png"/>
+        </div>
+        <div class="col-xs-3 col-sm-3">
+					<img src="css/images/github2.png"/>
+        </div>
+        <div class="col-xs-3 col-sm-3">
+					<img src="css/images/linkedin.png"/>
+        </div>
+      </div>
+    </div>
+		<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+		<script src="http://cdn.jsdelivr.net/jquery.scrollto/2.1.2/jquery.scrollTo.min.js"></script>
+		<script type="text/javascript" src="js/script.js"></script>
+  </body>
 </html>

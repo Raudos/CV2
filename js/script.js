@@ -17,27 +17,29 @@ $(document).on('ready', function() {
 			$(window).scrollTo(".row:nth-child(4) .info", 500);
 		} else if (e.target.classList[1] == "fifth") {
 			$(window).scrollTo(".row:nth-child(5) .info", 500);
-		}	
+		}
 	})
 });
 
 var $labels = $(".actions label");
 var $inputs = $("section input");
+var keyers = Object.keys($inputs);
 $(document).on('ready', function() {
+	$labels.on("click", function() {
+		var tooltip = $(this).attr("for");
+		tooltip = "[for=" + tooltip + "]" + " div";
+		$(tooltip).toggle();
+	})
 	$labels.mouseover(function() {
-		var keyers = Object.keys($inputs);
 		for (var i = 0; i < keyers.length - 1; i++) {
-			console.log(keyers.length);
 			if ($($inputs[keyers[i]]).is(':checked') && $(this).attr("for") === $($inputs[keyers[i]]).attr('id')) {
-				console.log($($inputs[keyers[i]]).is(':checked'))
 				var tooltip = $(this).attr("for");
 				tooltip = "[for=" + tooltip + "]" + " div";
 				$(tooltip).fadeIn(300);
 			}
-		} 
+		}
 	})
 	$labels.mouseleave(function() {
 		$(this).find("div").fadeOut(300);
 	});
 });
-
