@@ -96,6 +96,9 @@ a {
       padding: 0.5em;
       margin: 0px;
       text-align: center; }
+      @media (max-width: 500px) {
+        #intro div:nth-child(3) p {
+          font-size: 0.8em; } }
 
 @media (min-width: 768px) {
   #intro div.cell {
@@ -189,13 +192,15 @@ a {
   height: 100%; }
 
 .cell {
-  vertical-align: top;
+  vertical-align: middle;
   display: table-cell;
   height: 100%;
   float: none; }
 
 #about {
   background-color: #B1D0ED; }
+  #about .cell:first-child {
+    vertical-align: middle; }
   #about p {
     color: #FFF;
     /*position: relative;
@@ -210,10 +215,7 @@ a {
     text-align: center; }
 
 #imgContainer {
-  height: 90%;
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
+  vertical-align: middle;
   border-radius: 30px;
   border: 3px solid #5F9CD2;
   overflow: hidden; }

@@ -115,6 +115,9 @@ a {
         padding: 0.5em;
         margin: 0px;
         text-align: center;
+        @media (max-width: 500px) {
+          font-size: 0.8em;
+        }
       }
     }
   }
@@ -225,7 +228,7 @@ a {
 }
 
 .cell {
-  vertical-align: top;
+  vertical-align: middle;
   display: table-cell;
   height: 100%;
   float: none;
@@ -233,7 +236,9 @@ a {
 
 #about {
   background-color: #B1D0ED;
-
+  .cell:first-child {
+    vertical-align: middle;
+  }
   p {
     color: #FFF;
 
@@ -251,10 +256,7 @@ a {
 }
 
 #imgContainer {
-  height: 90%;
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
+  vertical-align: middle;
   border-radius: 30px;
   border: 3px solid #5F9CD2;
   overflow: hidden;
