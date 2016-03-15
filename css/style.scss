@@ -1,4 +1,5 @@
 /* Left side fixed menu */
+
 #fixedMenu {
   width: 30px;
   height: 140px;
@@ -6,26 +7,29 @@
   left: -2px;
   top: 50%;
   transform: translateY(-50%);
-  border: 2px solid #5f9cd2;
+  border: 2px solid rgb(95, 156, 210);
   border-top-right-radius: 30px;
   border-bottom-right-radius: 30px;
   z-index: 1000;
   background-color: white;
-  box-shadow: 0 0.1em 0.6em rgba(0, 0, 0, 0.3), 0.6em -0.5em 3em rgba(0, 0, 0, 0.3), 1em -1em 8em #fefefe; }
+  box-shadow: 0 0.1em 0.6em rgba(0, 0, 0, 0.3), 0.6em -0.5em 3em rgba(0, 0, 0, 0.3), 1em -1em 8em #fefefe;
+}
 
 #circleContainer {
   position: relative;
   top: 50%;
   left: 1px;
-  transform: translateY(-50%); }
+  transform: translateY(-50%);
+}
 
 .circleMenu {
   width: 20px;
   height: 20px;
-  border: 2px solid #5f9cd2;
+  border: 2px solid rgb(95, 156, 210);
   border-radius: 50%;
   margin: 2px;
-  position: relative; }
+  position: relative;
+}
 
 .innerCircle {
   position: absolute;
@@ -34,22 +38,28 @@
   transform: translate(-50%, -50%);
   width: 10px;
   height: 10px;
-  background-color: #5f9cd2;
-  border-radius: 50%; }
+  background-color: rgb(95, 156, 210);
+  border-radius: 50%;
+}
 
 .circleMenu:hover .innerCircle {
   width: 13px;
-  height: 13px; }
+  height: 13px;
+}
 
 /* Main body -------------- */
+
 body {
-  background-image: url("images/blocks.jpg"); }
+  background-image: url("images/blocks.jpg");
+}
 
 .row {
-  margin: 0px; }
+  margin: 0px;
+}
 
 a {
-  color: white; }
+  color: white;
+}
 
 .info {
   position: absolute;
@@ -64,49 +74,72 @@ a {
   box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
   color: #FFF;
   border-radius: 30px;
-  z-index: 1000; }
+  z-index: 1000;
+}
 
 .row:not(.mainContainer) {
   border: 1px solid white;
   margin-bottom: 0.5em;
-  position: relative; }
+  position: relative;
+}
 
-#header div {
-  padding: 0px; }
-#header img {
-  width: 100%; }
+#header {
+  div {
+    padding: 0px;
+  }
+
+  img {
+    width: 100%;
+  }
+}
 
 #intro {
-  background-color: #b1d0ed;
-  padding: 15px; }
-  #intro div img {
-    border: 3px solid #5F9CD2;
-    border-radius: 30px;
-    width: 100%; }
-  #intro div:nth-child(3) {
-    background-color: #5F9CD2;
-    border: 2px solid #5F9CD2;
-    border-radius: 30px; }
-    #intro div:nth-child(3) p {
-      height: 100%;
-      color: #FFF;
-      font-size: 1em;
-      font-weight: bold;
-      font-family: tahoma;
-      padding: 0.5em;
-      margin: 0px;
-      text-align: center; }
+  div {
+    img {
+      border: 3px solid #5F9CD2;
+      border-radius: 30px;
+      width: 100%;
+    }
+
+    &:nth-child(3) {
+      background-color: #5F9CD2;
+      border: 2px solid #5F9CD2;
+      border-radius: 30px;
+
+      p {
+        height: 100%;
+        color: #FFF;
+        font-size: 1em;
+        font-weight: bold;
+        font-family: tahoma;
+        padding: 0.5em;
+        margin: 0px;
+        text-align: center;
+      }
+    }
+  }
+
+  background-color: rgb(177, 208, 237);
+  padding: 15px;
+}
 
 @media (min-width: 768px) {
   #intro div.cell {
-    display: table-cell; } }
+    display: table-cell;
+  }
+}
+
 @media (max-width: 767px) {
   #intro div img {
     width: 70%;
-    margin: auto; }
+    margin: auto;
+  }
 
   #introText {
-    margin: 1em auto; } }
+    margin: 1em auto;
+  }
+}
+
 /* .row:nth-child(2):not(.mainContainer) {
 	background-color: rgb(177,208,237);
 	height: 30em;
@@ -180,24 +213,30 @@ a {
 		margin-bottom: 2%;
 	}
 } */
+
 .row:nth-child(3):not(.mainContainer) {
   background-color: #77B3D5;
-  height: 45em; }
+  height: 45em;
+}
 
 .tableAbout {
   display: table;
-  height: 100%; }
+  height: 100%;
+}
 
 .cell {
   vertical-align: top;
   display: table-cell;
   height: 100%;
-  float: none; }
+  float: none;
+}
 
 #about {
-  background-color: #B1D0ED; }
-  #about p {
+  background-color: #B1D0ED;
+
+  p {
     color: #FFF;
+
     /*position: relative;
     top: 50%;
     transform: translateY(-50%); */
@@ -207,7 +246,9 @@ a {
     font-weight: bold;
     font-family: tahoma;
     border-radius: 30px;
-    text-align: center; }
+    text-align: center;
+  }
+}
 
 #imgContainer {
   height: 90%;
@@ -216,55 +257,76 @@ a {
   transform: translateY(-50%);
   border-radius: 30px;
   border: 3px solid #5F9CD2;
-  overflow: hidden; }
-  #imgContainer img {
+  overflow: hidden;
+
+  img {
     width: 25%;
     height: 100%;
-    float: left; }
+    float: left;
+  }
+}
 
 @media (max-width: 992px) {
   .tableAbout, .cell {
-    display: block; }
+    display: block;
+  }
 
   #imgContainer {
     height: 70%;
-    transform: translateY(-10%); } }
+    transform: translateY(-10%);
+  }
+}
+
 #contact {
   background-color: #5F9CD2;
-  text-align: center; }
-  #contact img {
+  text-align: center;
+
+  img {
     width: 60%;
-    margin: 10%; }
-    #contact img:hover {
+    margin: 10%;
+
+    &:hover {
       border: 1px solid white;
-      border-radius: 50%; }
+      border-radius: 50%;
+    }
+  }
+}
 
 /* All of them bars --------------------------------------------------------------*/
+
 .mainContainer {
-  height: 33%; }
-  .mainContainer:first-child {
-    padding-top: 2em; }
+  height: 33%;
+
+  &:first-child {
+    padding-top: 2em;
+  }
+}
 
 .containerBar {
   height: 100%;
-  float: left; }
-  .containerBar img:not(.labelBar) {
+  float: left;
+
+  img:not(.labelBar) {
     width: 25%;
     margin-left: 7.5%;
     margin-right: 7.5%;
     position: relative;
     top: 50%;
     transform: translateY(-50%);
-    float: left; }
+    float: left;
+  }
+}
 
 section {
   width: 95%;
-  float: left; }
+  float: left;
+}
 
 .squareContainer {
   perspective: 1000px;
   perspective-origin: 50% 50%;
-  backface-visibility: visible; }
+  backface-visibility: visible;
+}
 
 .bar {
   font-size: 1em;
@@ -272,51 +334,62 @@ section {
   height: 10em;
   transition: all 0.3s ease-in-out 0s;
   transform: rotateX(60deg) rotateY(0deg);
-  transform-style: preserve-3d; }
+  transform-style: preserve-3d;
+}
 
 .side {
   font-size: 2em;
   position: relative;
   width: 100%;
   height: 2em;
-  background-color: rgba(254, 254, 254, 0.5); }
+  background-color: rgba(254, 254, 254, 0.5);
+}
 
 .smallLeft {
-  background-color: #5f9cd2;
-  width: 2em; }
+  background-color: rgb(95, 156, 210);
+  width: 2em;
+}
 
 .smallRight {
-  width: 2em; }
+  width: 2em;
+}
 
 .top {
   transform: rotateX(0deg) rotateY(0deg) translateX(0em) translateY(4em) translateZ(2em);
-  box-shadow: 0 0.1em 0.6em rgba(0, 0, 0, 0.3), 0.6em -0.5em 3em rgba(0, 0, 0, 0.3), 1em -1em 8em #fefefe; }
+  box-shadow: 0 0.1em 0.6em rgba(0, 0, 0, 0.3), 0.6em -0.5em 3em rgba(0, 0, 0, 0.3), 1em -1em 8em #fefefe;
+}
 
 .back {
-  transform: rotateX(90deg) rotateY(0deg) translateX(0px) translateY(1em) translateZ(-1em); }
+  transform: rotateX(90deg) rotateY(0deg) translateX(0px) translateY(1em) translateZ(-1em);
+}
 
 .floor {
-  box-shadow: 0 0.1em 0.6em rgba(0, 0, 0, 0.3), 0.6em -0.5em 3em rgba(0, 0, 0, 0.3), 1em -1em 8em #fefefe; }
+  box-shadow: 0 0.1em 0.6em rgba(0, 0, 0, 0.3), 0.6em -0.5em 3em rgba(0, 0, 0, 0.3), 1em -1em 8em #fefefe;
+}
 
 .smallLeft {
-  transform: rotateX(90deg) rotateY(-90deg) translateX(2em) translateY(1em) translateZ(1em); }
+  transform: rotateX(90deg) rotateY(-90deg) translateX(2em) translateY(1em) translateZ(1em);
+}
 
 .smallRight {
   transform: rotateX(90deg) rotateY(-90deg) translateX(4em) translateY(1em) translateZ(-1em);
   position: absolute;
   right: 0px;
-  background-color: rgba(254, 254, 254, 0.3); }
+  background-color: rgba(254, 254, 254, 0.3);
+}
 
 .front {
-  transform: rotateX(90deg) rotateY(0deg) translateX(0px) translateY(1em) translateZ(3em); }
+  transform: rotateX(90deg) rotateY(0deg) translateX(0px) translateY(1em) translateZ(3em);
+}
 
 .progressBar {
   width: 10%;
   height: 2em;
-  background-color: #5f9cd2;
+  background-color: rgb(95, 156, 210);
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
-  position: relative; }
+  position: relative;
+}
 
 .tooltipBar {
   height: 100%;
@@ -324,7 +397,8 @@ section {
   background-color: #4973C7;
   position: absolute;
   right: 0%;
-  transform: translateX(50%); }
+  transform: translateX(50%);
+}
 
 .tooltipText {
   position: absolute;
@@ -340,100 +414,159 @@ section {
   display: none;
   padding-left: 0.4em;
   padding-right: 0.4em;
-  padding-bottom: 1%; }
-  .tooltipText p {
+  padding-bottom: 1%;
+
+  p {
     transform: rotateZ(180deg);
     transform: rotateX(180deg);
     color: rgba(254, 254, 254, 0.9);
-    font-size: 0.8em; }
+    font-size: 0.8em;
+  }
+}
 
 .min {
   position: absolute;
   left: -10%;
-  top: 0%; }
+  top: 0%;
+}
 
 .max {
   position: absolute;
   right: -20%;
-  top: 0%; }
+  top: 0%;
+}
 
 .min, .max {
   font-size: 20px;
   font-family: impact;
-  color: rgba(254, 254, 254, 0.9); }
+  color: rgba(254, 254, 254, 0.9);
+}
 
 input {
-  display: none; }
-  input[id='htmlexp']:checked ~ .html .progressBar {
-    width: 50%; }
-  input[id='htmlbook']:checked ~ .html .progressBar {
-    width: 75%; }
-  input[id='htmlcourse']:checked ~ .html .progressBar {
-    width: 80%; }
-  input[id='htmlexp']:checked ~ .html .exp, input[id='htmlbook']:checked ~ .html .book, input[id='htmlcourse']:checked ~ .html .course {
-    display: inherit; }
-  input[id='cssexp']:checked ~ .css .progressBar {
-    width: 40%; }
-  input[id='cssbook']:checked ~ .css .progressBar {
-    width: 50%; }
-  input[id='csscourse']:checked ~ .css .progressBar {
-    width: 55%; }
-  input[id='cssexp']:checked ~ .css .exp, input[id='cssbook']:checked ~ .css .book, input[id='csscourse']:checked ~ .css .course {
-    display: inherit; }
-  input[id='jsexp']:checked ~ .js .progressBar {
-    width: 20%; }
-  input[id='jsbook']:checked ~ .js .progressBar {
-    width: 35%; }
-  input[id='jscourse']:checked ~ .js .progressBar {
-    width: 30%; }
-  input[id='jsexp']:checked ~ .js .exp, input[id='jsbook']:checked ~ .js .book, input[id='jscourse']:checked ~ .js .course {
-    display: inherit; }
-  input[id='rwdexp']:checked ~ .rwd .progressBar {
-    width: 30%; }
-  input[id='rwdbook']:checked ~ .rwd .progressBar {
-    width: 50%; }
-  input[id='rwdcourse']:checked ~ .rwd .progressBar {
-    width: 60%; }
-  input[id='rwdexp']:checked ~ .rwd .exp, input[id='rwdbook']:checked ~ .rwd .book, input[id='rwdcourse']:checked ~ .rwd .course {
-    display: inherit; }
-  input[id='jqueryexp']:checked ~ .jquery .progressBar {
-    width: 40%; }
-  input[id='jquerybook']:checked ~ .jquery .progressBar {
-    width: 65%; }
-  input[id='jquerycourse']:checked ~ .jquery .progressBar {
-    width: 50%; }
-  input[id='jqueryexp']:checked ~ .jquery .exp, input[id='jquerybook']:checked ~ .jquery .book, input[id='jquerycourse']:checked ~ .jquery .course {
-    display: inherit; }
-  input[id='nodejsexp']:checked ~ .nodejs .progressBar {
-    width: 40%; }
-  input[id='nodejsbook']:checked ~ .nodejs .progressBar {
-    width: 90%; }
-  input[id='nodejscourse']:checked ~ .nodejs .progressBar {
-    width: 85%; }
-  input[id='nodejsexp']:checked ~ .nodejs .exp, input[id='nodejscourse']:checked ~ .nodejs .course, input[id='nodejsbook']:checked ~ .nodejs .book {
-    display: inherit; }
+  &[id='htmlexp']:checked ~ .html .progressBar {
+    width: 50%;
+  }
+
+  &[id='htmlbook']:checked ~ .html .progressBar {
+    width: 75%;
+  }
+
+  &[id='htmlcourse']:checked ~ .html .progressBar {
+    width: 80%;
+  }
+
+  &[id='htmlexp']:checked ~ .html .exp, &[id='htmlbook']:checked ~ .html .book, &[id='htmlcourse']:checked ~ .html .course {
+    display: inherit;
+  }
+
+  &[id='cssexp']:checked ~ .css .progressBar {
+    width: 40%;
+  }
+
+  &[id='cssbook']:checked ~ .css .progressBar {
+    width: 50%;
+  }
+
+  &[id='csscourse']:checked ~ .css .progressBar {
+    width: 55%;
+  }
+
+  &[id='cssexp']:checked ~ .css .exp, &[id='cssbook']:checked ~ .css .book, &[id='csscourse']:checked ~ .css .course {
+    display: inherit;
+  }
+
+  &[id='jsexp']:checked ~ .js .progressBar {
+    width: 20%;
+  }
+
+  &[id='jsbook']:checked ~ .js .progressBar {
+    width: 35%;
+  }
+
+  &[id='jscourse']:checked ~ .js .progressBar {
+    width: 30%;
+  }
+
+  &[id='jsexp']:checked ~ .js .exp, &[id='jsbook']:checked ~ .js .book, &[id='jscourse']:checked ~ .js .course {
+    display: inherit;
+  }
+
+  &[id='rwdexp']:checked ~ .rwd .progressBar {
+    width: 30%;
+  }
+
+  &[id='rwdbook']:checked ~ .rwd .progressBar {
+    width: 50%;
+  }
+
+  &[id='rwdcourse']:checked ~ .rwd .progressBar {
+    width: 60%;
+  }
+
+  &[id='rwdexp']:checked ~ .rwd .exp, &[id='rwdbook']:checked ~ .rwd .book, &[id='rwdcourse']:checked ~ .rwd .course {
+    display: inherit;
+  }
+
+  &[id='jqueryexp']:checked ~ .jquery .progressBar {
+    width: 40%;
+  }
+
+  &[id='jquerybook']:checked ~ .jquery .progressBar {
+    width: 65%;
+  }
+
+  &[id='jquerycourse']:checked ~ .jquery .progressBar {
+    width: 50%;
+  }
+
+  &[id='jqueryexp']:checked ~ .jquery .exp, &[id='jquerybook']:checked ~ .jquery .book, &[id='jquerycourse']:checked ~ .jquery .course {
+    display: inherit;
+  }
+
+  &[id='nodejsexp']:checked ~ .nodejs .progressBar {
+    width: 40%;
+  }
+
+  &[id='nodejsbook']:checked ~ .nodejs .progressBar {
+    width: 90%;
+  }
+
+  &[id='nodejscourse']:checked ~ .nodejs .progressBar {
+    width: 85%;
+  }
+
+  &[id='nodejsexp']:checked ~ .nodejs .exp, &[id='nodejscourse']:checked ~ .nodejs .course, &[id='nodejsbook']:checked ~ .nodejs .book {
+    display: inherit;
+  }
+
+  display: none;
+}
 
 .actions {
   text-align: center;
-  position: relative; }
+  position: relative;
+}
 
 .labelBar {
-  height: 3em; }
+  height: 3em;
+}
 
 label {
   position: relative;
-  height: auto; }
+  height: auto;
+}
 
 .labelTooltip {
   position: absolute;
   width: 20em;
-  background-color: #6ca3d3;
+  background-color: rgb(108, 163, 211);
   border-radius: 20px;
   border: 2px solid rgba(254, 254, 254, 0.9);
   z-index: 1200;
   display: none;
-  top: 100%; }
-  .labelTooltip li {
+  top: 100%;
+
+  li {
     color: white;
     font-size: 0.8em;
     font-family: tahoma;
@@ -441,39 +574,54 @@ label {
     padding: 5px;
     padding-left: 0px;
     margin-left: 20px;
-    list-style-type: disc; }
-    .labelTooltip li:first-child {
+    list-style-type: disc;
+
+    &:first-child {
       font-size: 1.4em;
       text-align: center;
-      list-style-type: none; }
+      list-style-type: none;
+    }
+  }
+}
 
 .expTooltip {
-  left: -100px; }
+  left: -100px;
+}
 
 .bookTooltip {
-  left: -154px; }
+  left: -154px;
+}
 
 .courseTooltip {
-  left: -208px; }
+  left: -208px;
+}
 
 .centerMe {
   float: left;
   height: 100%;
   width: 52.5%;
-  margin-right: 7.5%; }
+  margin-right: 7.5%;
+}
 
 @media (max-width: 992px) {
   .containerBar {
     height: 50%;
-    width: 100%; }
+    width: 100%;
+  }
 
   #skills {
-    height: 100em; } }
+    height: 100em;
+  }
+}
+
 @media (max-width: 768px) {
   #skills {
-    height: 80em; } }
+    height: 80em;
+  }
+}
+
 @media (max-width: 400px) {
   .labelBar {
-    height: 2em; } }
-
-/*# sourceMappingURL=style.css.map */
+    height: 2em;
+  }
+}
