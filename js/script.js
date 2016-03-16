@@ -4,8 +4,23 @@ var $circleThree = $(".circleMenu:nth-child(3)");
 var $circleFour = $(".circleMenu:nth-child(4)");
 var $circleFive = $(".circleMenu:nth-child(5)");
 var $circle = $(".circleMenu");
+var $mail = $("#mail");
+
+function showMail() {
+	$mail.hover(function() {
+		console.log("vjsdhv");
+		$mail.next().toggle();
+	});
+	$mail.next().mouseover(function() {
+		$(this).show();
+	})
+	$mail.next().mouseleave(function() {
+		$(this).hide();
+	})
+}
 
 $(document).on('ready', function() {
+	showMail();
 	$circle.on('click', function(e) {
 		if (e.target.classList[1] == "first") {
 			$(window).scrollTo(".row:nth-child(1)", 500);

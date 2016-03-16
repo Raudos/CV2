@@ -95,7 +95,8 @@ a {
       font-family: tahoma;
       padding: 0.5em;
       margin: 0px;
-      text-align: center; }
+      text-align: center;
+      text-shadow: 2px 2px 2px #B1D0ED; }
       @media (max-width: 500px) {
         #intro div:nth-child(3) p {
           font-size: 0.8em; } }
@@ -110,79 +111,6 @@ a {
 
   #introText {
     margin: 1em auto; } }
-/* .row:nth-child(2):not(.mainContainer) {
-	background-color: rgb(177,208,237);
-	height: 30em;
-}
-.row:nth-child(2):not(.mainContainer) div:not(.info) {
-	height: 70%;
-	position: relative;
-	top: 50%;
-	transform: translateY(-50%);
-}
-.row:nth-child(2):not(.mainContainer) p {
-	height: 100%;
-	color: #FFF;
-	font-size: 1em;
-	font-weight: bold;
-	font-family: tahoma;
-	background-color: #5F9CD2;
-	border: 2px solid #5F9CD2;
-	border-radius: 30px;
-	padding: 0.5em;
-	margin: 0px;
-	overflow: hidden;
-	text-align: center;
-}
-.row:nth-child(2):not(.mainContainer) img {
-	width: 100%;
-	max-height: 100%;
-	border: 3px solid #5F9CD2;
-	border-radius: 30px;
-	float: right;
-}
-.row:nth-child(2):not(.mainContainer)	div * {
-	position: relative;
-	top: 50%;
-	transform: translateY(-50%);
-}
-.row:nth-child(2):not(.mainContainer) div:nth-child(3) img {
-	float: left;
-}
-@media (max-width: 992px) {
-	.row:nth-child(2):not(.mainContainer) div:nth-child(2) {
-		float:right;
-	}
-	.row:nth-child(2):not(.mainContainer) {
-		height: 40em;
-	}
-	.row:nth-child(2):not(.mainContainer) div:not(.info) {
-		height: 30%;
-		position: static;
-		transform: translateY(0%);
-	}
-	#intro div:nth-child(3) {
-		margin-top: 3%;
-		margin-bottom: 3%;
-	}
-	#hire, #caricature {
-		float: none;
-		margin: auto;
-	}
-	#hireDiv, #caricatureDiv {
-			height: 30%;
-			top: 0%;
-			transform: translateY(0%);
-	}
-	#caricatureDiv {
-		top: 7%;
-		margin-top: 2%;
-	}
-	#hireDiv {
-		top: 13%;
-		margin-bottom: 2%;
-	}
-} */
 .row:nth-child(3):not(.mainContainer) {
   background-color: #77B3D5;
   height: 45em; }
@@ -203,16 +131,14 @@ a {
     vertical-align: middle; }
   #about p {
     color: #FFF;
-    /*position: relative;
-    top: 50%;
-    transform: translateY(-50%); */
     padding-top: 5%;
     padding-bottom: 5%;
     font-size: 1em;
     font-weight: bold;
     font-family: tahoma;
     border-radius: 30px;
-    text-align: center; }
+    text-align: center;
+    text-shadow: 2px 2px 2px #4973C7; }
 
 #imgContainer {
   vertical-align: middle;
@@ -234,8 +160,24 @@ a {
 #contact {
   background-color: #5F9CD2;
   text-align: center; }
+  #contact div:nth-child(2) {
+    position: relative; }
+    #contact div:nth-child(2) div {
+      display: none;
+      position: absolute;
+      width: 60%;
+      left: 60%;
+      top: 60%;
+      font-family: tahoma;
+      color: white;
+      text-shadow: 2px 2px 2px #4973C7;
+      font-weight: bold;
+      background-color: #83bad9;
+      border: 1px solid white;
+      padding: 1em;
+      box-shadow: -1px -1px 5px 0px rgba(0, 0, 0, 0.75); }
   #contact img {
-    width: 60%;
+    width: 40%;
     margin: 10%; }
     #contact img:hover {
       border: 1px solid white;
