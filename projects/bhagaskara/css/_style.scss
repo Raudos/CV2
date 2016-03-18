@@ -1,0 +1,716 @@
+h1 {
+  font-size: 4em;
+  padding: 1em 0px;
+  color: white;
+}
+h2 {
+  font-size: 2em;
+  padding: 0.4em 0px;
+  color: white;
+}
+p {
+  color: white;
+  font-size: 1em;
+}
+span {
+  color: $purple;
+}
+body {
+  background-color: $mainBackground;
+}
+.container-fluid > .row {
+  padding-left: 15px;
+  padding-right : 15px;
+  box-sizing: border-box;
+  background-color: white;
+}
+.table {
+  width: 100%;
+}
+.title {
+  position: relative;
+  margin-bottom: 6em;
+  display: inline-block;
+  img {
+    position: absolute;
+    &:first-child {
+      left: -10%;
+      bottom: 0%;
+    }
+    &:nth-child(3) {
+      top: 0%;
+      right: -10%;
+    }
+  }
+  h1 {
+    color: $grey;
+    padding: 0.5em 0px;
+  }
+  @media (max-width: 500px) {
+    h1 {
+      font-size: 3em;
+    }
+  }
+}
+.invisible {
+  display: none;
+}
+.visible {
+  display: block !important;
+}
+.circle {
+  &:hover {
+    background-color: $purple;
+    p {
+      color: white !important;
+    }
+  }
+}
+/* --------------------------------------------------------------------
+                              First row
+---------------------------------------------------------------------*/
+header {
+  text-align: center;
+  background-image: url("images/Header/base/background.png");
+  background-position: center;
+  background-size: cover;
+  opacity: 0.9;
+  padding: 6em 0px;
+  @media (max-width: 800px) {
+    padding: 3em 0px;
+  }
+  #title {
+    margin-bottom: 5em;
+  }
+  h1, h2, p {
+    text-shadow: 1px 1px 2px rgba(150, 150, 150, 1);
+  }
+  .row {
+    .headerNav:first-child {
+      margin-right: 33.33333%;
+    }
+    .hexagon {
+      position: relative;
+      img {
+        &:first-child {
+          width: 85%;
+        }
+        &:nth-child(2) {
+          width: 25%;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+    }
+    #scroller {
+      width: 10%;
+      display: inline-block;
+      img {
+        &:first-child {
+          width: 100%;
+        }
+        &:nth-child(2) {
+          width: 60%;
+        }
+      }
+    }
+  }
+}
+
+/* --------------------------------------------------------------------
+                              Second row
+---------------------------------------------------------------------*/
+
+.container-fluid > .row:nth-child(2) {
+  position: relative;
+  h1 {
+    font-size: 2em;
+    color: $grey;
+  }
+  p {
+    color: $grey;
+    display: inline-block;
+    padding: 1em 15px;
+    &:hover {
+      color: $purple;
+    }
+  }
+  div:last-child {
+    text-align: right;
+    position: absolute;
+    top: 50%;
+    right: 0%;
+    transform: translateY(-50%);
+  }
+  #burger {
+    display: none;
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+  }
+  @media (max-width: 768px) {
+    #burger {
+      display: inline-block;
+      width: 8%;
+    }
+    #menu {
+      display: none;
+      top: 10%;
+      right: 15%;
+      transform: translateY(-0%);
+      border: 1px solid $purple;
+      background-color: white;
+      z-index: 1000;
+      border-radius: 10px;
+      width: 20%;
+      p {
+        display: block;
+        padding: 1em 5px;
+      }
+    }
+  }
+  @media (max-width: 600px) {
+    p {
+      font-size: 0.7em;
+    }
+    h1 {
+      font-size: 1.5em;
+      margin: 0.5em 0px;
+    }
+  }
+  @media (max-width: 300px) {
+    h1 {
+      margin: 1em 0px;
+    }
+  }
+}
+
+/* --------------------------------------------------------------------
+                              Third row
+---------------------------------------------------------------------*/
+
+.container-fluid > .row:nth-child(3) {
+  text-align: center;
+  background-color: $greyish;
+  padding: 9em 0px;
+  @media (max-width: 800px) {
+    padding: 4.5em 0px;
+  }
+  h2 {
+    color: $grey;
+  }
+  p {
+    color: $grey;
+    font-size: 1.5em;
+    line-height: 45px;
+    padding: 15px;
+  }
+  @media (max-width: 500px) {
+    h2 {
+      font-size: 1.8em;
+    }
+    p {
+      font-size: 0.9em;
+      line-height: 30px;
+    }
+  }
+  .hexagon {
+    position: relative;
+    img {
+      &:first-child {
+        width: 40%;
+      }
+      &:nth-child(2) {
+        width: 15%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+}
+
+/* --------------------------------------------------------------------
+                              Fourth row
+---------------------------------------------------------------------*/
+
+.container-fluid > .row:nth-child(4) {
+  #about {
+    position: relative;
+    margin-bottom: 6em;
+    img {
+      position: absolute;
+      &:first-child {
+        left: 0%;
+        bottom: 0%;
+      }
+      &:nth-child(3) {
+        top: 0%;
+        right: 0%;
+      }
+    }
+  }
+  text-align: center;
+  padding: 6em 0px;
+  @media (max-width: 800px) {
+    padding: 3em 0px;
+  }
+  .cell {
+    vertical-align: top;
+    text-align: left;
+    position: relative;
+    padding: 0px 15px;
+    button {
+      font-size: 1.5em;
+      color: white;
+      position: absolute;;
+      bottom: 0%;
+      background-color: $purple;
+      border: 0px;
+      border-radius: 5px;
+      padding: 15px 2em;
+    }
+  }
+  p {
+    color: grey;
+    font-size: 1.3em;
+    line-height: 45px;
+  }
+  h1 {
+    color: $grey;
+    font-size: 3em;
+    padding: 0.5em 0px;
+  }
+  .row {
+    div:not(.title) {
+      img {
+        width: 100%;
+      }
+    }
+  }
+  @media (max-width: 992px) {
+    .table {
+      display: inline-block !important;
+      .cell {
+        display: inline-block !important;
+        float: left !important;
+        padding: 15px 15px;
+        p {
+          font-size: 1.1em;
+          line-height: 30px;
+        }
+        button {
+          position: relative;
+          margin-top: 15px;
+        }
+        &:first-child {
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+
+/* --------------------------------------------------------------------
+                              Fifth and Eigth row
+---------------------------------------------------------------------*/
+.container-fluid > .row:nth-child(5), .container-fluid > .row:nth-child(8) {
+  text-align: center;
+  background-image: url("images/Quote/base/background.png");
+  background-position: center;
+  background-size: cover;
+  padding: 6em 0px;
+  @media (max-width: 800px) {
+    padding: 3em 0px;
+  }
+  .hexagon {
+    position: relative;
+    img {
+      &:nth-child(1) {
+        width: 20%;
+      }
+      &:nth-child(2) {
+        width: 6%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+}
+
+/* --------------------------------------------------------------------
+                              Sixth row
+---------------------------------------------------------------------*/
+
+.container-fluid > .row:nth-child(6) {
+  text-align: center;
+  padding: 6em 0px;
+  @media (max-width: 800px) {
+    padding: 3em 0px;
+  }
+  .person {
+    display: none;
+    .portrait {
+      width: 80%;
+    }
+  }
+  .teamActive {
+    display: block;
+  }
+  @media (max-width: 768px) {
+    .person {
+      display: block;
+    }
+    .hidden-xs {
+      display: none;
+    }
+  }
+  #nav {
+    margin-bottom: 6em;
+    div {
+      display: inline-block;
+      position: relative;
+      img {
+        &:nth-child(2) {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+    }
+  }
+  h2, p {
+    color: $grey;
+  }
+  .circle {
+    border: 1px solid $grey;
+    border-radius: 50%;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    margin: 1em;
+    position: relative;
+    p {
+      font-size: 1.5em;
+      display: inline-block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}
+
+/* --------------------------------------------------------------------
+                              Seventh row
+---------------------------------------------------------------------*/
+
+.container-fluid > .row:nth-child(7) {
+  text-align: center;
+  padding-bottom: 6em;
+  @media (max-width: 800px) {
+    padding-bottom: 3em;
+  }
+  .skillContainer {
+    width: 90%;
+    display: inline-block;
+    .textSkill {
+      width: 100%;
+      text-align: left;
+      position: relative;
+      h2 {
+        color: black;
+        font-size: 1.2em;
+        display: inline-block;
+      }
+      p {
+        color: $grey;
+        display: inline-block;
+        position: absolute;;
+        right: 0%;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+      @media (max-width: 400px) {
+        p {
+          font-size: 0.8em;
+        }
+        h2 {
+          font-size: 1em;
+        }
+      }
+    }
+    .bar {
+      width: 100%;
+      height: 25px;
+      background-color: $greytext;
+      opacity: 0.7;
+      margin-bottom: 2em;
+      div {
+        background-color: $purple;
+        width: 70%;
+        height: 100%;
+      }
+    }
+  }
+}
+
+/* --------------------------------------------------------------------
+                              Ninth row
+---------------------------------------------------------------------*/
+
+.container-fluid > .row:nth-child(9) {
+  text-align: center;
+  padding: 6em 0px;
+  background-color: $greyish;
+  @media (max-width: 800px) {
+    padding: 3em 0px;
+  }
+  h3 {
+    font-size: 4em;
+    margin-top: 0.5em;
+  }
+  @media (max-width: 400px) {
+    h3 {
+      font-size: 3em;
+    }
+  }
+  p {
+    color: $grey;
+  }
+  .quote {
+    display: none;
+    margin-top: 3em;
+    .iAmAPhoto {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background-color: $grey;
+      display: inline-block;
+      opacity: 0.7;
+    }
+    p {
+      &:nth-child(2) {
+        font-size: 1.5em;
+        padding: 15px;
+      }
+      &:nth-child(3) {
+        font-size: 1.1em;
+        font-weight: bold;
+        padding: 15px;
+      }
+    }
+  }
+  .quoteNav {
+    height: 15px;
+    width: 15px;
+    border: 1px solid $grey;
+    display: inline-block;
+    border-radius: 50%;
+    &:hover {
+      background-color: $grey;
+    }
+  }
+  .active {
+    background-color: $grey;
+  }
+}
+
+
+/* --------------------------------------------------------------------
+                              Tenth row
+---------------------------------------------------------------------*/
+
+.container-fluid > .row:nth-child(10) {
+  text-align: center;
+  padding: 6em 0px;
+  @media (max-width: 800px) {
+    padding: 3em 0px;
+  }
+  #portfolio {
+    position: relative;
+    margin-bottom: 6em;
+    img {
+      position: absolute;
+      &:first-child {
+        left: 0%;
+        bottom: 0%;
+      }
+      &:nth-child(3) {
+        top: 0%;
+        right: 0%;
+      }
+    }
+    h1 {
+      font-size: 2.5em;
+      padding: 0.5em 0px;
+      color: $grey;
+    }
+  }
+  button {
+    border: 1px solid $purple;
+    border-radius: 5px;
+    width: 80px;
+    margin: 0px 5px;
+    background-color: white;
+    &:hover {
+      background-color: $purple;
+      color: white;
+    }
+  }
+  #gallery {
+    margin: 2em 0px;
+    button {
+      border-radius: 5px;
+      width: 200px;
+      height: 50px;
+      margin-top: 3em;
+      background-color: $purple;
+      color: white;
+    }
+    div:not(.imageContainer) {
+      overflow: hidden;
+      height: 400px;
+      padding: 10px;
+      .imageContainer {
+        height: 80%;
+        img {
+          width: 100%;
+          height: 100%;
+        }
+        h2 {
+          color: black;
+        }
+        p {
+          color: $grey;
+        }
+      }
+    }
+  }
+}
+
+/* --------------------------------------------------------------------
+                              Eleventh row
+---------------------------------------------------------------------*/
+
+.container-fluid > .row:nth-child(11) {
+  text-align: center;
+  padding: 4em 0px;
+  @media (max-width: 800px) {
+    padding: 2em 0px;
+  }
+  input, textarea {
+    width: 90%;
+    resize: none;
+    margin: 0.8em 0px;
+    padding: 15px;
+    box-sizing: border-box;
+  }
+  input:first-child {
+    margin-top: 0px;
+  }
+  .cell {
+    vertical-align: top;
+    position: relative;
+    padding: 15px;
+    .circle {
+      border: 1px solid $grey;
+      border-radius: 50%;
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      margin: 1em;
+      position: absolute;
+      bottom: 2%;
+      &:nth-child(1) {
+        left: 0%;
+      }
+      &:nth-child(2) {
+        left: 15%;
+      }
+      &:nth-child(3) {
+        left: 30%;
+      }
+      p {
+        font-size: 1.5em;
+        display: inline-block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+  div:not(.row) {
+    text-align: left;
+    p {
+      color: black;
+    }
+    h2 {
+      color: black;
+      font-weight: bold;
+      font-size: 1.3em;
+    }
+  }
+  &> div:last-child {
+    text-align: left;
+    button {
+      border: 0px;
+      border-radius: 5px;
+      width: 200px;
+      height: 50px;
+      margin-top: 1em;
+      margin-left: 15px;
+      background-color: $purple;
+      color: white;
+    }
+  }
+  @media (max-width: 768px) {
+    .table {
+      display: inline-block !important;
+      .cell {
+        display: block !important;
+        input, textarea {
+          width: 100%;
+        }
+        h2 {
+          display: inline-block;
+        }
+        #circleHolder {
+          float: right;
+          display: inline-block;
+          .circle {
+            position: relative;
+            left: auto;
+            margin: 0em 1em;
+          }
+        }
+      }
+    }
+    &> div:last-child {
+      text-align: center;
+    }
+  }
+}
+
+/* --------------------------------------------------------------------
+                              Footer
+---------------------------------------------------------------------*/
+
+.container-fluid > .row:nth-child(12) {
+  text-align: center;
+  padding: 2em 0px;
+  @media (max-width: 800px) {
+    padding: 1em 0px;
+  }
+  h1 {
+    color: $grey;
+  }
+}

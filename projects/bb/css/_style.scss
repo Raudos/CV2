@@ -1,0 +1,509 @@
+body {
+  background-color: $grey;
+}
+.container-fluid > .row {
+  margin-left: 3em !important;
+  margin-right: 3em !important;
+}
+.table {
+  width: 100%;
+}
+* {
+  box-sizing: border-box;
+}
+
+// --------------------------------------------------------
+//              Slider reset for all browsers
+//---------------------------------------------------------
+input[type=range] {
+  -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
+  width: 100%; /* Specific width is required for Firefox. */
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+
+input[type=range]:focus {
+  outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+}
+
+input[type=range]::-ms-track {
+  width: 100%;
+  cursor: pointer;
+  background: transparent; /* Hides the slider so custom styles can be added */
+  border-color: transparent;
+  color: transparent;
+}
+//-----------------------------------------------------------------------
+//                       First row
+//--------------------------------------------------------------------------
+
+.container-fluid > .row:nth-child(1) {
+  padding: 2em 0px;
+  @for $i from 0 through 5 {
+    @media (max-width: 1300px - 200px*$i) {
+      padding: 2em - 0.3em*$i 0px;
+    }
+  }
+  .logo, .search {
+    display: inline-block;
+    @media (max-width: 500px) {
+      img {
+        max-width: 50%;
+        float: left;
+        &:first-child {
+          transform: translateY(50%);
+        }
+      }
+    }
+  }
+  .search {
+    position: relative;
+    form {
+      width: 90%;
+      input {
+        width: 100%;
+        border: 0px;
+        text-indent: 5px;
+        color: grey;
+        padding: 0.9rem;
+        @media (max-width: 450px) {
+          padding: 0.7rem;
+        }
+      }
+    }
+  }
+  .log {
+    border-radius: 5px;
+    background-color: $blue;
+    color: white;
+    text-align: center;
+    padding: 1em;
+    @media (max-width: 450px) {
+      padding: 0.8em;
+    }
+  }
+}
+
+//-----------------------------------------------------------------------
+//                       Second row
+//--------------------------------------------------------------------------
+
+.container-fluid > .row:nth-child(2) {
+  background-color: white;
+  padding: 0.5em 0px;
+  position: relative;
+  &>div:nth-child(2) {
+    text-align: right;
+    padding-right: 15px;
+  }
+  p {
+    display: inline-block;
+    padding: 0px 5px;
+    &:not(:first-child) {
+      border-left: 1px solid rgba(147, 160, 162, 0.3);
+    }
+  }
+  #burger {
+    display: none;
+  }
+  @media (max-width: 800px) {
+    #menu {
+      margin-top: 15px;
+      display: none;
+      position: absolute;
+      top: 130%;
+      left: 2em;
+      z-index: 1000;
+      background-color: $blue;
+      background-repeat: repeat-x;
+      background-position: bottom;
+      background-image: url("images/triangles2.png");
+      border: 2px solid $blue;
+      border-bottom: 0px;
+      border-radius: 5px;
+      p {
+        display: block;
+        padding: 5px 0px;
+        color: white;
+        &:last-child {
+          margin-bottom: 5px;
+        }
+      }
+    }
+    #burger {
+      display: inline-block;
+      height: 25px;
+      padding-left: 2em;
+    }
+
+  }
+}
+
+//-----------------------------------------------------------------------
+//                       Third row
+//--------------------------------------------------------------------------
+
+.container-fluid > .row:nth-child(3) {
+  background-repeat: repeat-x;
+  background-position: top;
+  background-image: url("images/triangles.png");
+  background-color: $blue;
+  position: relative;
+  img {
+    width: 100%;
+    margin-top: 1em;
+  }
+  .popup {
+    height: 50%;
+    width: 40%;
+    float: right;
+    background-color: $blue;
+    border-radius: 10px;
+    position: absolute;
+    top: 20%;
+    right: 0%;
+    div {
+      position: relative;
+      padding: 10%;
+      height: 100%;
+      box-sizing: border-box;
+      p, h2 {
+        color: white;
+      }
+      button {
+        background-color: black;
+        color: white;
+        border: 0px;
+        border-radius: 5px;
+        position: absolute;
+        bottom: 10%;
+        width: 50%;
+        height: 15%;
+      }
+    }
+  }
+}
+
+//-----------------------------------------------------------------------
+//                       Fourth row
+//--------------------------------------------------------------------------
+
+.container-fluid > .row:nth-child(4) {
+  background-color: white;
+  .cell {
+    padding: 5em 0px 3em 1em;
+    vertical-align: top;
+    &:first-child {
+      color: grey;
+      padding-right: 1em;
+      div {
+        float: left;
+        padding: 0.5em;
+        padding-top: 0px;
+        box-sizing: border-box;
+        img {
+          width: 100%;
+        }
+        a {
+          float: right;
+          color: $blue;
+          padding: 1em 0px;
+        }
+        h2 {
+          margin-bottom: 1em;
+          color: black;
+        }
+        &:first-child {
+          width: 30%;
+        }
+        &:last-child {
+          width: 70%;
+          @media (max-width: 768px) {
+            width: 100%;
+          }
+        }
+      }
+    }
+    &:last-child {
+      vertical-align: top;
+      padding-left: 1em;
+      h3 {
+        display: inline-block;
+        float: left;
+        padding: 1em;
+        padding-left: 0px;
+        span {
+          color: $blue;
+        }
+      }
+      a {
+        float: right;
+        color: $blue;
+        padding: 1em 0px;
+        padding-right: 20%;
+      }
+      #money, #time {
+        width: 100%;
+        p {
+          padding-top: 1em;
+          display: inline-block;
+          color: grey;
+          &:first-child {
+            float: left;
+            text-indent: 0.15em;
+          }
+          &:last-child {
+            float: right;
+          }
+        }
+      }
+      form {
+        width: 80%;
+        border-bottom: 1px solid $blue;
+        padding-bottom: 1em;
+      }
+      input[type=range] {
+        -webkit-appearance: none;
+        width: 100%;
+        margin: 12.85px 0;
+      }
+      input[type=range]:focus {
+        outline: none;
+      }
+      input[type=range]::-webkit-slider-runnable-track {
+        width: 100%;
+        height: 19.3px;
+        cursor: pointer;
+        box-shadow: 1px 1px 1px rgba(0, 0, 0, 0), 0px 0px 1px rgba(13, 13, 13, 0);
+        background: $grey;
+        border-radius: 0px;
+        border: 0px solid rgba(0, 0, 0, 0);
+      }
+      input[type=range]::-webkit-slider-thumb {
+        box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.19), 0px 0px 1px rgba(13, 13, 13, 0.19);
+        border: 0px solid #000000;
+        height: 45px;
+        width: 80px;
+        border-radius: 10px;
+        background-color: $blue;
+        background-image: url("images/thumb.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        cursor: pointer;
+        -webkit-appearance: none;
+        margin-top: -12.85px;
+      }
+      input[type=range]:focus::-webkit-slider-runnable-track {
+        background: $grey;
+      }
+      input[type=range]::-moz-range-track {
+        width: 100%;
+        height: 19.3px;
+        cursor: pointer;
+        box-shadow: 1px 1px 1px rgba(0, 0, 0, 0), 0px 0px 1px rgba(13, 13, 13, 0);
+        background: $grey;
+        border-radius: 0px;
+        border: 0px solid rgba(0, 0, 0, 0);
+      }
+      input[type=range]::-moz-range-thumb {
+        box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.19), 0px 0px 1px rgba(13, 13, 13, 0.19);
+        border: 0px solid #000000;
+        height: 45px;
+        width: 80px;
+        border-radius: 10px;
+        background-color: $blue;
+        background-image: url("images/thumb.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        cursor: pointer;
+      }
+      input[type=range]::-ms-track {
+        width: 100%;
+        height: 19.3px;
+        cursor: pointer;
+        background: transparent;
+        border-color: transparent;
+        color: transparent;
+      }
+      input[type=range]::-ms-fill-lower {
+        background: $grey;
+        border: 0px solid rgba(0, 0, 0, 0);
+        border-radius: 0px;
+        box-shadow: 1px 1px 1px rgba(0, 0, 0, 0), 0px 0px 1px rgba(13, 13, 13, 0);
+      }
+      input[type=range]::-ms-fill-upper {
+        background: $grey;
+        border: 0px solid rgba(0, 0, 0, 0);
+        border-radius: 0px;
+        box-shadow: 1px 1px 1px rgba(0, 0, 0, 0), 0px 0px 1px rgba(13, 13, 13, 0);
+      }
+      input[type=range]::-ms-thumb {
+        box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.19), 0px 0px 1px rgba(13, 13, 13, 0.19);
+        border: 0px solid #000000;
+        height: 45px;
+        width: 80px;
+        border-radius: 10px;
+        background-color: $blue;
+        background-image: url("images/thumb.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        cursor: pointer;
+        height: 19.3px;
+      }
+      input[type=range]:focus::-ms-fill-lower {
+        background: #3b71a9;
+      }
+      input[type=range]:focus::-ms-fill-upper {
+        background: #427ebc;
+      }
+      @media (max-width: 800px) {
+        input[type=range]::-moz-range-thumb {
+          width: 60px;
+          height: 35px;
+        }
+        input[type=range]::-webkit-slider-thumb {
+          width: 60px;
+          height: 35px;
+        }
+        input[type=range]::-ms-thumb {
+          width: 60px;
+          height: 35px;
+
+        }
+        @media (max-width: 500px) {
+          input[type=range]::-moz-range-thumb {
+            width: 40px;
+            height: 25px;
+            background-size: 40%;
+          }
+          input[type=range]::-webkit-slider-thumb {
+            width: 40px;
+            height: 25px;
+            background-size: 40%;
+          }
+          input[type=range]::-ms-thumb {
+            width: 40px;
+            height: 25px;
+            background-size: 40%;
+          }
+        }
+        @media (max-width: 400px) {
+          input[type=range]::-moz-range-thumb {
+            width: 30px;
+            height: 20px;
+            background-size: 40%;
+          }
+          input[type=range]::-webkit-slider-thumb {
+            width: 30px;
+            height: 20px;
+            background-size: 40%;
+          }
+          input[type=range]::-ms-thumb {
+            width: 30px;
+            height: 20px;
+            background-size: 40%;
+          }
+        }
+      }
+    }
+  }
+}
+
+//-----------------------------------------------------------------------
+//                       Fifth row
+//--------------------------------------------------------------------------
+
+.container-fluid > .row:nth-child(5) {
+  background-color: black;
+  text-align: center;
+  color: white;
+  div {
+    padding: 3em 0px;
+    img {
+      max-width: 35%;
+    }
+  }
+  h2 {
+    padding-top: 1em;
+    padding-bottom: 10px;
+  }
+  p {
+  }
+  button {
+    margin-top: 2em;
+    color: white;
+    background-color: black;
+    border: 0px;
+  }
+}
+
+//-----------------------------------------------------------------------
+//                       Sixth row
+//--------------------------------------------------------------------------
+
+.container-fluid > .row:nth-child(6) {
+  background-color: white;
+  div {
+    color: grey;
+    text-align: left;
+    padding-left: 15px;
+    &:nth-child(1) {
+      padding-left: 15px;
+    }
+    &:nth-child(2) {
+        @media (max-width: 768) {
+          padding-left: 15px;
+        }
+    }
+    &:nth-child(3) {
+      padding-left: 15px;
+    }
+    ul {
+      @media (min-width: 768px) {
+        text-align: left;
+      }
+      @media (max-width: 768px) {
+        text-align: center;
+      }
+    }
+    h2, li {
+      padding: 0.5em 0px;
+    }
+    li {
+      list-style-type: square;
+      margin-left: 1em;
+    }
+    @media (max-width: 768px) {
+      li {
+        display: none;
+      }
+    }
+  }
+}
+
+//-----------------------------------------------------------------------
+//                       Seventh row
+//--------------------------------------------------------------------------
+
+.container-fluid > .row:nth-child(7) {
+  background-color: $grey;
+  color: grey;
+  p {
+    padding: 15px 0 0 15px;
+  }
+  div {
+    &:nth-child(2) {
+      text-align: left;
+      p {
+        display: inline-block;
+        padding-left: 1em;
+        padding-right: 1em;
+        &:not(:first-child) {
+          border-left: 1px solid rgba(147, 160, 162, 0.3);
+        }
+      }
+    }
+  }
+}

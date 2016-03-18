@@ -1,0 +1,25 @@
+p {
+  @for $i from 0 through 5 {
+    @media (max-width: 1500px - 200px * $i) {
+      font-size: 1em - 0.14em * $i;
+    }
+  }
+}
+
+h1 {
+  @for $i from 0 through 5 {
+    @media (max-width: 1500px - 200px * $i) {
+      font-size: 2em - 0.25em * $i;
+    }
+  }
+}
+
+nav {
+  p {
+    @for $i from 0 through 7 {
+      @media (max-width: 1500px - 150px * $i) {
+        font-size: 1.2em - 0.118em * $i;
+      }
+    }
+  }
+}

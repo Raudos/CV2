@@ -1,0 +1,54 @@
+#container {
+	width: 1300px;
+	height: 600px;
+}
+#leftColumn {
+	float: left;
+	width: 25%;
+	height: 100%;
+	text-align: center;
+}
+#rightColumn {
+	float: left;
+	width: 75%;
+	height: 100%;
+}
+#myCanvas {
+	background: transparent;
+	border: 5px solid rgb(43, 96, 154);
+	width: 70%;
+	height: 95%;
+	position: absolute;
+	top: 2%;
+}
+#bgCanvas {
+	width: 70%;
+	height: 95%;
+	border: 5px solid rgb(43, 96, 154);
+	position: absolute;
+	top: 2%;
+}
+#playerCanvas {
+	margin-top: 20px;
+	width: 60%;
+	height: 45%;
+
+	background: black;
+	border: 5px solid rgb(43, 96, 154);
+	border-radius: 30%;
+}
+#instr {
+	width: 100%;
+}
+#pointsCanvas {
+	width: 80%;
+	height: 30%;
+
+	background-color: black;
+	background-image: url("images/comp.png");
+	background-repeat: no-repeat;
+	background-position: center;
+	border: 5px solid rgb(43, 96, 154);
+	border-radius: 30%;
+
+}

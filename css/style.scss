@@ -2,7 +2,7 @@
 
 #fixedMenu {
   width: 30px;
-  height: 140px;
+  height: 160px;
   position: fixed;
   left: -2px;
   top: 50%;
@@ -233,6 +233,73 @@ a {
   }
 }
 
+
+#portfolio {
+  background-color: #77B3D5;
+  .project {
+    &:not(:first-child) {
+      text-align: center;
+      padding: 15px;
+      img {
+        width: 90%;
+        border: 3px solid #5f9cd2;
+        border-radius: 10px;
+        box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
+        &:hover {
+          box-shadow: -5px -5px 5px 0px rgba(0, 0, 0, 0.75);
+        }
+      }
+    }
+    &:nth-child(2n):not(:nth-child(8)) {
+      position: relative;
+      &:before {
+        @media (min-width: 768px) {
+          content: "";
+          position: absolute;
+          right: -0.6%;
+          bottom: 7%;
+          height: 80%;
+          width: 2px;
+          border-right: 2px solid #4973C7;
+          opacity: 0.3;
+        }
+      }
+    }
+    &:last-child {
+      position: relative;
+      img {
+        width: 45%;
+        @media (max-width: 768px) {
+          width: 90%;
+        }
+      }
+      &:before {
+        @media (min-width: 768px) {
+          content: "";
+          position: absolute;
+          left: 5%;
+          bottom: 50%;
+          height: 3px;
+          width: 20%;
+          border-top: 2px solid #4973C7;
+          opacity: 0.6;
+        }
+      }
+      &:after {
+        @media (min-width: 768px) {
+          content: "";
+          position: absolute;
+          right: 5%;
+          bottom: 50%;
+          height: 3px;
+          width: 20%;
+          border-top: 2px solid #4973C7;
+          opacity: 0.6;
+        }
+      }
+    }
+  }
+}
 /* All of them bars --------------------------------------------------------------*/
 
 .mainContainer {
@@ -495,6 +562,10 @@ input {
 label {
   position: relative;
   height: auto;
+  border-radius: 10px;
+  &:hover {
+    box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.75);
+  }
 }
 
 .labelTooltip {

@@ -1,0 +1,38 @@
+@for $i from 0 through 4 {
+  @media (max-width: 1500px - 300px * $i) {
+    p, input {
+      font-size: 1.1em - 0.2em * $i !important;
+    }
+    .container-fluid > .row:nth-child(1) {
+      p, input {
+        font-size: 1.4em - 0.2em * $i !important;
+      }
+    }
+    .container-fluid > .row:nth-child(3) {
+      p {
+        font-size: 1.4em - 0.35em * $i !important;
+      }
+    }
+  }
+}
+@for $j from 0 through 5 {
+  @media (max-width: 1500px - 200px * $j) {
+    h1 {
+      font-size: 2.2em - 0.2em * $j;
+    }
+    h2, h3, a {
+      font-size: 2.4rem - 0.3rem * $j !important;
+    }
+    button {
+      font-size: 2.2rem - 0.3rem * $j !important;
+    }
+    .container-fluid > .row:nth-child(3) {
+      h2 {
+        font-size: 2.3em - 0.35em * $j !important;
+      }
+      button {
+        font-size: 2.2em - 0.37em * $j !important;
+      }
+    }
+  }
+}

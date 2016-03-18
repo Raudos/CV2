@@ -1,0 +1,779 @@
+@font-face {
+  font-family: raleway;
+  src: url("fonts/raleway/raleway-regular-webfont.woff");
+}
+
+p, h1, h2, h3, h4, h5{
+  font-family: raleway;
+}
+h2 {
+  float: left;
+  padding-right: 3em;
+  display: inline-block;
+  font-weight: bold;
+  border-bottom: 5px solid #24ba9f;
+  margin-bottom: 0.5em;
+}
+@media (max-width: 500px) {
+    h2 {
+      font-size: 1.5em;
+    }
+}
+#gibBorder h2 {
+  float: none;
+}
+.additionalRow:nth-child(3) h2 {
+  float: right;
+  padding-right: 0px;
+  padding-left: 3em;
+}
+.row {
+  padding: 1em 15px;
+}
+/* ---------------------- */
+/*        Top menu        */
+/* ---------------------- */
+
+#topMenu {
+  background-color: black;
+  font-size: 0.7em;
+  color: white;
+  span {
+    font-weight: bold;
+    color: $myGreen;
+  }
+  nav, div {
+    text-align: center;
+    padding: 0.3em;
+  }
+  .hoverList {
+    position: absolute;
+    top: 100%;
+    left: 0%;
+    width: 100%;
+    height: 300%;
+    visibility: hidden;
+    z-index: 1000;
+
+    img {
+      margin-left: -20px;
+      margin-top: 10px;
+    }
+
+    li {
+      color: white;
+      background-color: black;
+      border-top: 5px solid black;
+      border-bottom: 5px solid black;
+    }
+  }
+
+  nav:hover .hoverList {
+    visibility: visible;
+  }
+}
+/* ---------------------- */
+/*        Slider          */
+/* ---------------------- */
+
+#slider {
+  position: relative;
+  background: #ffffff;
+  background: -moz-linear-gradient(top, #ffffff 0%, #d3d2da 100%);
+  background: -webkit-linear-gradient(top, #ffffff 0%, #d3d2da 100%);
+  background: linear-gradient(to bottom, #ffffff 0%, #d3d2da 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#d3d2da',GradientType=0 );
+
+  nav {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 3%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+
+    &:nth-child(5) {
+      left: 97%;
+    }
+  }
+  button {
+    background-color: rgb(36, 186, 159);
+    border: 0px;
+    padding: 5px;
+    color: white;
+    border-radius: 5px;
+    max-width: 100%;
+    width: 300px;
+    margin: 0.5em;
+  }
+  div {
+    text-align: center;
+  }
+
+  nav p {
+    color: $myGreen;
+    font-size: 5.5em;
+  }
+  .centerMe {
+    padding: 1em;
+  }
+}
+
+.chairDiv {
+  display: none;
+  text-align: center;
+  width: 100%;
+
+  img {
+    display: inline;
+  }
+}
+
+.active {
+  display: inline;
+}
+
+@media (min-width: 768px) {
+  #slider {
+    div {
+      position: static;
+    }
+
+    .centerMe {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      margin-right: 3em;
+    }
+  }
+}
+
+/* ---------------------- */
+/*        Third row          */
+/* ---------------------- */
+.row:nth-child(3) {
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+.row:nth-child(3) h3 {
+  display: inline-block;
+  font-weight: bold;
+  padding-right: 1em;
+  border-bottom: 5px solid $myGreen;
+  margin-bottom: 0.5em;
+}
+
+.leftCol {
+  img {
+    padding: 1em;
+    padding-left: 0px;
+    width: 100%;
+  }
+  div {
+    height: 50%;
+  }
+  div:nth-child(2) img {
+    padding-bottom: 0px;
+  }
+}
+.rightCol {
+  padding-top: 1em;
+}
+
+#gibBorder {
+  height: 100%;
+  border: 2px solid $midGrey;
+  margin-right: 0px;
+  p {
+    padding: 5px;
+  }
+  h2 {
+    margin: 5px;
+  }
+}
+
+@media (max-width: 768px) {
+  .row:nth-child(3) {
+    display: table;
+    table-layout: fixed;
+    height: 100%;
+    width: 100%;
+  }
+
+  .cell {
+    vertical-align: top;
+    display: table-cell;
+    height: 100%;
+  }
+
+  .leftCol {
+    width: 50%;
+    float: none;
+  }
+
+  .rightCol {
+    width: 50%;
+    float: none;
+
+    div {
+      height: 100%;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .leftCol {
+    width: 66.666%;
+    float: left;
+  }
+
+  .rightCol {
+    width: 33.333%;
+    float: left;
+  }
+}
+
+/*----------------------- */
+//        Fourth row
+/*--------------------------*/
+.row:nth-child(4) {
+  background-color: $midGrey;
+  div:first-child {
+    margin-bottom: 3em;
+  }
+  .table {
+    display: table;
+    table-layout: fixed;
+    height: 100%;
+    width: 100%;
+  }
+  .cell {
+    vertical-align: top;
+    display: table-cell;
+    height: 100%;
+    float: none !important;
+  }
+  .table-split {
+    display: table-cell;
+    width: 1.5%;
+  }
+  h2 {
+    display: inline-block;
+    font-weight: bold;
+    border-bottom: 5px solid $myGreen;
+    margin-bottom: 0.5em;
+  }
+  .offert {
+    width: 32.333%;
+    float: left;
+    border: 2px solid $darkGrey;
+    position: relative;
+    text-align: center;
+    &:hover {
+      border: 2px solid $myGreen;
+    }
+    @media (min-width: 500px) {
+      &:hover .outerCircle {
+        background-color: $myGreen;
+        border: $myGreen;
+      }
+      &:hover .innerCircle {
+        background-color: white;
+      }
+    }
+    h3 {
+      margin-top: 2em;
+      color: $myGreen;
+    }
+    ul {
+      margin-bottom: 4em;
+    }
+    li {
+      color: grey;
+    }
+    li:nth-child(even) {
+      background-color: $midGrey;
+    }
+    li:nth-child(odd) {
+      background-color: $darkGrey;
+    }
+    .offertPrice {
+      height: 8em;
+      width: 8em;
+      background-color: white;
+      border: 2px solid $darkGrey;
+      border-radius: 50%;
+      margin: 1em auto;
+      div {
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        p {
+          color: grey;
+        }
+        p:first-child {
+          font-size: 2em;
+        }
+        p:nth-child(2) {
+          font-size: 1.3em;
+        }
+      }
+    }
+    button {
+      position: absolute;
+      bottom: 3%;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: $myGreen;
+      color: white;
+      border-radius: 5px;
+      border: 7px solid $myGreen;
+    }
+  }
+  .offert:nth-child(3) {
+    margin: 0px 1.5%;
+  }
+  .outerCircle {
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 3em;
+    height: 3em;
+    background-color: $lightGrey;
+    border: 1px solid $darkGrey;
+    border-radius: 50%;
+    text-align: center;
+    .innerCircle {
+      position: relative;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 1.5em;
+      height: 1.5em;
+      background-color: $darkGrey;
+      border-radius: 50%;
+    }
+  }
+
+  .row {
+    padding-top: 5em;
+    .additionalRow {
+      width: 33.333%;
+      float: left;
+      text-align: center;
+    }
+    .additionalRow img {
+      width: 100%;
+    }
+    #pickContainer {
+    	width: 100%;
+    	height: 55%;
+    	float: left;
+    	margin-left: 10px;
+    }
+    #pickContainer div:not(.pickList) {
+    	height: 26%;
+    	margin-bottom: 5%;
+    	position: relative;
+    }
+    #pickContainer ul {
+    	width: 100%;
+    	position: absolute;
+    	z-index: 1000;
+    	top: 101%;
+    	background-color: white;
+    	border: 1px solid black;
+    	padding: 1px;
+    	padding-top: 5px;
+    	padding-bottom: 5px;
+    	text-indent: 5px;
+    	text-align: left;
+    	display: none;
+    }
+    #pickContainer li:hover {
+    	font-weight: bold;
+    }
+    .pickList {
+    	height: 25px;
+    	width: 25px;
+    	position: absolute;
+    	top: 40%;
+    	right: 3%;
+    	transform: translateY(-50%);
+    	background-image: url("images/triangle2.png");
+    	background-size: contain;
+    	margin-top: 5px;
+    	opacity: 0.5;
+    }
+    .pickList span {
+    	display: none;
+    }
+    .toggleList {
+    	opacity: 1;
+    }
+    #pickContainer input{
+    	width: 100%;
+    	border: 1px solid #24BA9F;
+    	height: 100%;
+    	color: #C2C2C2;
+    	text-indent: 10px;
+    	font-size: 22px;
+    	margin: 0px;
+    }
+    #transportLabel {
+    	margin-left: 10px;
+    	margin-top: 25px;
+    	border: 1px solid #24BA9F;
+    	float: left;
+    	width: 50px;
+    	height: 50px;
+      overflow: hidden;
+    }
+    #transport {
+    	position: relative;
+    	top: 50%;
+    	transform: translateY(-50%);
+    }
+    #transportInput {
+    	display: none;
+    }
+    #transportP {
+    	color: #C2C2C2;
+    	font-size: 25px;
+    	float: left;
+    	margin-left: 10px;
+    	margin-top: 33px;
+    }
+    #order {
+    	width: 80%;
+        height: 50px;
+        border: 1px solid #24BA9F;
+        background-color: #24BA9F;
+        color: #FFF;
+        font-size: 22px;
+        border-radius: 10px;
+        margin-top: 25px;
+        clear: right;
+    }
+    #yourChair {
+    	height: 55%;
+    	width: 100%;
+    	clear: right;
+    	background-color: white;
+    }
+    #yourChair div:first-child {
+    	width: 70%;
+    	height: 80%;
+    	float: left;
+    	position: relative;
+    	text-align: left;
+    }
+    #names p:not(:first-child) {
+    	color: black;
+    	clear: left;
+    	margin-left: 10px;
+    	margin-top: 10px;
+    }
+    #yourChair div:first-child::after {
+    	content: "";
+    	position: absolute;
+    	left: 10%;
+    	bottom: 0;
+    	height: 2px;
+    	width: 85%;
+    	border-bottom: 1px solid grey;
+    	opacity: 0.3;
+    }
+    #yourChair div:first-child::before {
+    	content:"";
+    	background: grey;
+    	position: absolute;
+    	top: 10%;
+    	right: 0%;
+    	height: 90%;
+    	width: 1px;
+    	opacity: 0.3;
+    }
+    #names p:first-child, #prices p {
+    	color: #24BA9F;
+    	clear: left;
+    	margin-left: 10px;
+    	margin-top: 10px;
+    }
+    #yourChair div:nth-child(2) p {
+    	margin-right: 10px;
+    	text-align: right;
+    }
+    #yourChair div:nth-child(3) p {
+    	color: #C2C2C2;
+    	font-size: 26px;
+    	float: left;
+    	margin-left: 10px;
+    	margin-top: 10px;
+    }
+    #yourChair div:nth-child(3) p:nth-child(2) {
+    	font-size: 26px;
+    	float: right;
+    	margin-right: 10px;
+    	margin-top: 10px;
+    	color: #24BA9F;
+    }
+    #yourChair div:nth-child(2) {
+    	width: 30%;
+    	height: 80%;
+    	float: left;
+    	position: relative;
+    }
+    #yourChair div:nth-child(2)::after {
+    	content: "";
+    	position: absolute;
+    	left: 0%;
+    	bottom: 0;
+    	height: 2px;
+    	width: 90%;
+    	border-bottom: 1px solid grey;
+    	opacity: 0.3;
+    }
+    #yourChair div:nth-child(3) {
+    	width: 100%;
+    	height: 20%;
+    	clear: left;
+    }
+    #names p, #prices p {
+      font-size: 2em;
+    }
+  }
+}
+@media (max-width: 720px) {
+  .row:nth-child(4) {
+    .row {
+      .additionalRow:first-child {
+        width: 100%;
+      }
+      .additionalRow:nth-child(2) {
+        margin-top: 6em;
+        width: 35%;
+      }
+      .additionalRow:nth-child(3) {
+        width: 65%;
+      }
+      #pickContainer {
+        margin: 0px;
+        width: 70%;
+      }
+      #checkbox {
+        width: 29%;
+        float: left;
+      }
+      #transportLabel {
+        margin-top: 0px;
+        float: right;
+      }
+      #transportP {
+        float: right;
+        clear: right;
+        margin-top: 0px;
+        font-size: 1.2em;
+      }
+      #yourChair {
+        border: 2px solid $midGrey;
+      }
+    }
+  }
+}
+@media (max-width: 500px) {
+  .row:nth-child(4) {
+    .row {
+      #names p, #prices p {
+        font-size: 1.6em;
+      }
+    }
+    .table {
+      display: inline-block;
+    }
+    .cell {
+      display: inline-block;
+    }
+    .cell:not(.visible) {
+      display: none;
+    }
+    .offert {
+      width: 100%;
+      .outerCircle {
+        display: inline-block;
+        width: 5em;
+        height: 5em;
+        .innerCircle {
+          width: 2.5em;
+          height: 2.5em;
+        }
+        &:hover {
+          background-color: $myGreen;
+        }
+        &:hover .innerCircle {
+          background-color: white;
+        }
+      }
+      .circled {
+        background-color: $myGreen;
+        .innerCircle {
+          background-color: white;
+        }
+      }
+      .outerCircle:nth-child(1) {
+        left: 25%;
+      }
+      .outerCircle:nth-child(3) {
+        left: 75%;
+      }
+      h3 {
+        font-size: 2em;
+      }
+      li {
+        font-size: 1.5em;
+      }
+      ul {
+        margin-bottom: 4em;
+      }
+      button {
+        font-size: 1.5em;
+      }
+    }
+    .offert:nth-child(3) {
+      margin: 0px;
+    }
+  }
+}
+
+/* --------------------------------- */
+//           FIFTH ROW
+/* ------------------------------------ */
+.row:nth-child(5) {
+  h2 {
+    display: inline-block;
+    font-weight: bold;
+    border-bottom: 5px solid #24ba9f;
+    margin-bottom: 3.5em;
+  }
+}
+#seventhRowDivOne {
+  height: 100%;
+  width: 60%;
+  float: left;
+
+  input {
+    width: 90%;
+    margin-left: 10px;
+    border: 1px solid rgb(36, 186, 159);
+    height: 50px;
+    color: rgb(194, 194, 194);
+    text-indent: 10px;
+    font-size: 22px;
+  }
+}
+
+#seventhRowDivTwo {
+  width: 40%;
+  height: 100%;
+  float: left;
+
+  p {
+    color: #C2C2C2;
+    font-size: 22px;
+    margin-left: 10px;
+    margin-top: 4px;
+  }
+
+  img {
+    float: left;
+    width: 100%;
+  }
+
+  div {
+    width: 100%;
+    margin-top: 25px;
+    float: left;
+  }
+}
+
+#userInput {
+  display: none;
+}
+
+#userLabel {
+  height: 50px;
+  width: 50px;
+  border: 1px solid rgb(36, 186, 159);
+  float: left;
+  overflow: hidden;
+  margin: 5px;
+
+  img {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+textarea {
+  resize: none;
+  margin-left: 10px;
+  border: 1px solid rgb(36, 186, 159);
+  color: rgb(194, 194, 194);
+  width: 90%;
+  font-size: 22px;
+  text-indent: 10px;
+  padding-top: 10px;
+}
+
+#send {
+  width: 280px;
+  height: 70px;
+  border: 1px solid rgb(36, 186, 159);
+  background-color: rgb(36, 186, 159);
+  color: white;
+  font-size: 22px;
+  border-radius: 10px;
+  margin-top: 25px;
+}
+#order {
+  width: 80%;
+  height: 50px;
+  border: 1px solid #24BA9F;
+  background-color: #24BA9F;
+  color: #FFF;
+  font-size: 22px;
+  border-radius: 10px;
+  margin-top: 25px;
+  clear: right;
+}
+
+/* ------------------------------------ */
+//              Sixth row
+/* -------------------------------------*/
+
+.row:nth-child(6) {
+  margin-top: 5em;
+  margin-bottom: 1em;
+  p {
+    margin-top: 1em;
+    color: grey;
+  }
+  img {
+    padding: 5px;
+    float: left;
+    width: 25%;
+  }
+  div:nth-child(2) p {
+    display: inline-block;
+    float: right;
+    margin: 1em 1em;
+  }
+  div:nth-child(2) {
+    float: right;
+  }
+  span {
+    font-weight: bold;
+  }
+}

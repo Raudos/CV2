@@ -3,6 +3,7 @@ var $circleTwo = $(".circleMenu:nth-child(2)");
 var $circleThree = $(".circleMenu:nth-child(3)");
 var $circleFour = $(".circleMenu:nth-child(4)");
 var $circleFive = $(".circleMenu:nth-child(5)");
+var $circleSix = $(".circleMenu:nth-child(6)");
 var $circle = $(".circleMenu");
 var $mail = $("#mail");
 
@@ -32,6 +33,8 @@ $(document).on('ready', function() {
 			$(window).scrollTo(".row:nth-child(4) .info", 500);
 		} else if (e.target.classList[1] == "fifth") {
 			$(window).scrollTo(".row:nth-child(5) .info", 500);
+		} else if (e.target.classList[1] == "sixth") {
+			$(window).scrollTo(".row:nth-child(6) .info", 500);
 		}
 	})
 });

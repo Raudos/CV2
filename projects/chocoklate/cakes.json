@@ -1,0 +1,156 @@
+[
+  {
+    "cakeName": "Donut",
+    "id": 1,
+    "purchases": 215,
+    "price": "many gold",
+    "ingredients": "magical powder"
+  },
+  {
+    "cakeName": "Marzipan pie",
+    "id": 2,
+    "purchases": 100,
+    "price": "many gold",
+    "ingredients": "magical powder"
+  },
+  {
+    "cakeName": "Jelly",
+    "id": 3,
+    "purchases": 459,
+    "price": "many gold",
+    "ingredients": "magical powder"
+  },
+  {
+    "cakeName": "Dessert",
+    "id": 4,
+    "purchases": 904,
+    "price": "many gold",
+    "ingredients": "magical powder"
+  },
+  {
+    "cakeName": "Bonbon",
+    "id": 5,
+    "purchases": 48,
+    "price": "many gold",
+    "ingredients": "magical powder"
+  },
+  {
+    "cakeName": "Sesame",
+    "id": 6,
+    "purchases": 247,
+    "price": "many gold",
+    "ingredients": "magical powder"
+  },
+  {
+    "cakeName": "Muffin",
+    "id": 7,
+    "purchases": 98,
+    "price": "many gold",
+    "ingredients": "magical powder"
+  },
+  {
+    "cakeName": "Chocolate",
+    "id": 8,
+    "purchases": 298,
+    "price": "many gold",
+    "ingredients": "magical powder"
+  },
+  {
+    "cakeName": "Gummi bears",
+    "id": 9,
+    "purchases": 571,
+    "price": "many gold",
+    "ingredients": "magical powder"
+  },
+  {
+    "cakeName": "Ice cream",
+    "id": 10,
+    "purchases": 421,
+    "price": "many gold",
+    "ingredients": "magical powder"
+  },
+  {
+    "cakeName": "Pudding",
+    "id": 11,
+    "purchases": 365,
+    "price": "many gold",
+    "ingredients": "magical powder"
+  },
+  {
+    "cakeName": "Donut",
+    "id": 1,
+    "purchases": 215,
+    "price": "many gold",
+    "ingredients": "magical powder"
+  },
+  {
+    "cakeName": "Marzipan pie",
+    "id": 2,
+    "purchases": 100,
+    "price": "many gold",
+    "ingredients": "magical powder"
+  },
+  {
+    "cakeName": "Jelly",
+    "id": 3,
+    "purchases": 459,
+    "price": "many gold",
+    "ingredients": "magical powder"
+  },
+  {
+    "cakeName": "Dessert",
+    "id": 4,
+    "purchases": 904,
+    "price": "many gold",
+    "ingredients": "magical powder"
+  },
+  {
+    "cakeName": "Bonbon",
+    "id": 5,
+    "purchases": 48,
+    "price": "many gold",
+    "ingredients": "magical powder"
+  },
+  {
+    "cakeName": "Sesame",
+    "id": 6,
+    "purchases": 247,
+    "price": "many gold",
+    "ingredients": "magical powder"
+  },
+  {
+    "cakeName": "Muffin",
+    "id": 7,
+    "purchases": 98,
+    "price": "many gold",
+    "ingredients": "magical powder"
+  },
+  {
+    "cakeName": "Chocolate",
+    "id": 8,
+    "purchases": 298,
+    "price": "many gold",
+    "ingredients": "magical powder"
+  },
+  {
+    "cakeName": "Gummi bears",
+    "id": 9,
+    "purchases": 571,
+    "price": "many gold",
+    "ingredients": "magical powder"
+  },
+  {
+    "cakeName": "Ice cream",
+    "id": 10,
+    "purchases": 421,
+    "price": "many gold",
+    "ingredients": "magical powder"
+  },
+  {
+    "cakeName": "Pudding",
+    "id": 11,
+    "purchases": 365,
+    "price": "many gold",
+    "ingredients": "magical powder"
+  }
+]

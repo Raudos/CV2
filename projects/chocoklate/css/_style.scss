@@ -1,0 +1,330 @@
+.container-fluid > .row {
+  @for $i from 0 through 5 {
+    @media (max-width: 1500px - 200px * $i) {
+      padding-left: 5.5em - 0.6em * $i;
+      padding-right: 5.5em - 0.6em * $i;
+    }
+  }
+  box-sizing: border-box;
+}
+
+.light {
+  color: $lightBlue;
+  font-size: 1em;
+}
+.mid {
+  color: $midBlue;
+  font-size: 1em;
+}
+.dark {
+  color: $blue;
+  font-size: 1.3em;
+}
+.grey {
+  color: grey;
+  font-size: 0.8em;
+}
+
+
+/* ===============================================================
+                          First row
+===============================================================*/
+
+header {
+  background-color: black;
+  background-image: url("images/grp/bg.png");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: 33%;
+  position: relative;
+  img {
+    padding: 1.5em 0px;
+    width: 20%;
+    @media (max-width: 768px) {
+      padding: 0.8em;
+    }
+  }
+  nav {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    @for $i from 0 through 5 {
+      @media (max-width: 1500px - 200px * $i) {
+        right: 5em - 0.6em * $i;
+      }
+    }
+    transform: translateY(-50%);
+    p {
+      color: white;
+      display: inline-block;
+      &:hover {
+        color: $lightBlue;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+/* ===============================================================
+                          Second row
+===============================================================*/
+
+.container-fluid > .row:nth-child(2) {
+  background-color: $blue;
+  background-image: url("images/bg.png");
+  overflow: hidden;
+  position: relative;
+  img {
+    position: absolute;
+    width: 55%;
+    top: 50%;
+    right: 0%;
+    transform: translateY(-50%);
+  }
+  div {
+    padding-top: 2em;
+    padding-bottom: 2em;
+    @for $i from 0 through 5 {
+      @media (max-width: 1500px - 200px * $i) {
+        padding-top: 2em - 0.3em * $i;
+        padding-bottom: 2em - 0.3em * $i;
+      }
+    }
+    h1, p {
+      color: white;
+    }
+    h1 {
+      padding-bottom: 0.8em;
+    }
+    p {
+      @for $i from 0 through 5 {
+        @media (max-width: 1500px - 200px * $i) {
+          line-height: 35px - 4px * $i;
+        }
+      }
+    }
+  }
+}
+
+/* ===============================================================
+                          Third row
+===============================================================*/
+
+.container-fluid > .row:nth-child(3) {
+  padding-top: 1.5em;
+  padding-bottom: 1.5em;
+  text-align: justify;
+  #random {
+    padding: 15px;
+    box-sizing: border-box;
+    p {
+      display: inline-block;
+      margin: 5px;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+  .row {
+    &:nth-child(1) {
+      h1 {
+        color: black;
+      }
+      h2 {
+        color: $blue;
+        font-size: 1.3em;
+      }
+    }
+    &:nth-child(2) {
+      .table {
+        margin: 1em 0px;
+        .cell:first-child {
+          vertical-align: bottom;
+        }
+      }
+      img {
+        width: 95%;
+      }
+      p {
+        line-height: 27px;
+        color: grey;
+        @for $i from 0 through 5 {
+          @media (max-width: 1500px - 200px * $i) {
+            line-height: 27px - 3px * $i;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* ===============================================================
+                          Fourth row
+===============================================================*/
+
+.container-fluid > .row:nth-child(4) {
+  background-color: black;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  h1, p {
+    color: white;
+  }
+  h1 {
+    margin-bottom: 1em;
+  }
+  #gallery {
+    div {
+      overflow: hidden;
+      @for $i from 0 through 7 {
+        @media (max-width: 1500px - 150px * $i) {
+          height: 240px - 30px * $i;
+        }
+      }
+      background-repeat: no-repeat;
+      background-position: top;
+      background-size: cover;
+      margin-bottom: 1em;
+      &:nth-child(1) {
+        background-image: url("images/layer18.png");
+      }
+      &:nth-child(2) {
+        background-image: url("images/layer19.png");
+      }
+      &:nth-child(3) {
+        background-image: url("images/layer20.png");
+      }
+      &:nth-child(4) {
+        background-image: url("images/layer21.png");
+      }
+      &:nth-child(5) {
+        background-image: url("images/layer22.png");
+      }
+      &:nth-child(6) {
+        background-image: url("images/layer23.png");
+      }
+    }
+  }
+}
+
+/* ===============================================================
+                          Fifth row
+===============================================================*/
+
+.container-fluid > .row:nth-child(5) {
+  padding-top: 2em;
+  padding-bottom: 2em;
+  h1 {
+    margin-bottom: 1em;
+  }
+  p {
+    color: grey;
+  }
+}
+
+/* ===============================================================
+                          Sixth row
+===============================================================*/
+
+.container-fluid > .row:nth-child(6) {
+  @for $i from 0 through 7 {
+    @media (max-width: 1500px - 150px * $i) {
+      height: 350px - 30px * $i;
+    }
+  }
+  background-image: url("images/bg6.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* ===============================================================
+                          Seventh row
+===============================================================*/
+
+.container-fluid > .row:nth-child(7) {
+  padding-top: 2em;
+  padding-bottom: 2em;
+  div {
+    float: left;
+    &:nth-child(1) {
+      width: 87%;
+      p {
+        color: grey;
+      }
+    }
+    &:nth-child(2) {
+      width: 13%;
+      img {
+        width: 60%;
+        float: right;
+        margin-top: 2em;
+      }
+    }
+  }
+}
+
+/* ===============================================================
+                          Eigth row
+===============================================================*/
+
+.container-fluid > .row:nth-child(8) {
+  background-color: black;
+  .table {
+    .cell {
+      &:nth-child(1) {
+        width: 45%;
+        background-image: url("images/bg8.png");
+        background-size: cover;
+        background-position: center;
+      }
+      &:nth-child(2) {
+        width: 10%
+      }
+      &:nth-child(3) {
+        width: 45%;
+        text-align: justify;
+        padding-top: 2em;
+        padding-bottom: 2em;
+        h1, p, a {
+          color: white;
+        }
+        h1 {
+          margin-bottom: 1em;
+          text-align: right;
+        }
+        p {
+          margin-bottom: 1em;
+        }
+        .centerMe {
+          text-align: right;
+        }
+      }
+    }
+  }
+}
+
+/* ===============================================================
+                          Ninth row
+===============================================================*/
+
+.container-fluid > footer {
+  padding-top: 2em;
+  padding-bottom: 2em;
+  table{
+    width: 100%;
+    border-bottom: 1px solid grey;
+    h1 {
+      padding: 0.5em;
+      color: grey;
+      span {
+        opacity: 0.6;
+      }
+    }
+  }
+  .centerMe {
+    text-align: center;
+    color: grey;
+     p {
+       margin-top: 15px;
+     }
+  }
+}

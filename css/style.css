@@ -1,7 +1,7 @@
 /* Left side fixed menu */
 #fixedMenu {
   width: 30px;
-  height: 140px;
+  height: 160px;
   position: fixed;
   left: -2px;
   top: 50%;
@@ -182,6 +182,58 @@ a {
     #contact img:hover {
       border: 1px solid white;
       border-radius: 50%; }
+
+#portfolio {
+  background-color: #77B3D5; }
+  #portfolio .project:not(:first-child) {
+    text-align: center;
+    padding: 15px; }
+    #portfolio .project:not(:first-child) img {
+      width: 90%;
+      border: 3px solid #5f9cd2;
+      border-radius: 10px;
+      box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75); }
+      #portfolio .project:not(:first-child) img:hover {
+        box-shadow: -5px -5px 5px 0px rgba(0, 0, 0, 0.75); }
+  #portfolio .project:nth-child(2n):not(:nth-child(8)) {
+    position: relative; }
+    @media (min-width: 768px) {
+      #portfolio .project:nth-child(2n):not(:nth-child(8)):before {
+        content: "";
+        position: absolute;
+        right: -0.6%;
+        bottom: 7%;
+        height: 80%;
+        width: 2px;
+        border-right: 2px solid #4973C7;
+        opacity: 0.3; } }
+  #portfolio .project:last-child {
+    position: relative; }
+    #portfolio .project:last-child img {
+      width: 45%; }
+      @media (max-width: 768px) {
+        #portfolio .project:last-child img {
+          width: 90%; } }
+    @media (min-width: 768px) {
+      #portfolio .project:last-child:before {
+        content: "";
+        position: absolute;
+        left: 5%;
+        bottom: 50%;
+        height: 3px;
+        width: 20%;
+        border-top: 2px solid #4973C7;
+        opacity: 0.6; } }
+    @media (min-width: 768px) {
+      #portfolio .project:last-child:after {
+        content: "";
+        position: absolute;
+        right: 5%;
+        bottom: 50%;
+        height: 3px;
+        width: 20%;
+        border-top: 2px solid #4973C7;
+        opacity: 0.6; } }
 
 /* All of them bars --------------------------------------------------------------*/
 .mainContainer {
@@ -366,7 +418,10 @@ input {
 
 label {
   position: relative;
-  height: auto; }
+  height: auto;
+  border-radius: 10px; }
+  label:hover {
+    box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.75); }
 
 .labelTooltip {
   position: absolute;
