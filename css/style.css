@@ -88,7 +88,7 @@ a {
 
 #intro {
   background-color: #b1d0ed;
-  padding: 15px; }
+  padding: 15px 0px; }
   #intro #caricatureDiv {
     background-image: url("images/cartoon.jpg");
     background-size: cover;
@@ -101,17 +101,49 @@ a {
     background-position: center;
     border: 2px solid #5F9CD2;
     border-radius: 30px; }
-  #intro div {
-    padding: 0px; }
-    #intro div img {
-      border: 3px solid #5F9CD2;
-      border-radius: 30px;
-      width: 100%; }
-    #intro div:nth-child(4) {
+  #intro .tableAbout {
+    display: table;
+    height: 100%;
+    width: 100%; }
+  #intro .cell {
+    padding: 0px;
+    vertical-align: middle;
+    display: table-cell;
+    height: 100%;
+    float: none; }
+    @media (max-width: 767px) {
+      #intro .cell:nth-child(2), #intro .cell:nth-child(4), #intro .cell:nth-child(6), #intro .cell:nth-child(8) {
+        width: 0%; } }
+    @media (min-width: 768px) {
+      #intro .cell:nth-child(2), #intro .cell:nth-child(4), #intro .cell:nth-child(6), #intro .cell:nth-child(8) {
+        width: 3%; } }
+    @media (max-width: 767px) {
+      #intro .cell:nth-child(7), #intro .cell:nth-child(3) {
+        width: 97%;
+        margin-left: 1.5%; } }
+    @media (min-width: 768px) {
+      #intro .cell:nth-child(7), #intro .cell:nth-child(3) {
+        width: 40.5%; } }
+    @media (min-width: 992px) {
+      #intro .cell:nth-child(7), #intro .cell:nth-child(3) {
+        width: 29.333%; } }
+    #intro .cell:nth-child(5) {
       background-color: #5F9CD2;
       border: 2px solid #5F9CD2;
       border-radius: 30px; }
-      #intro div:nth-child(4) p {
+      @media (max-width: 767px) {
+        #intro .cell:nth-child(5) {
+          width: 97%;
+          margin-left: 1.5%;
+          margin-top: 15px;
+          margin-bottom: 15px; } }
+      @media (min-width: 768px) {
+        #intro .cell:nth-child(5) {
+          width: 40.5%; } }
+      @media (min-width: 992px) {
+        #intro .cell:nth-child(5) {
+          width: 29.333%; } }
+      #intro .cell:nth-child(5) p {
         height: 100%;
         color: #FFF;
         font-size: 1em;
@@ -122,32 +154,23 @@ a {
         text-align: center;
         text-shadow: 1px 1px 2px black; }
         @media (max-width: 500px) {
-          #intro div:nth-child(4) p {
+          #intro .cell:nth-child(5) p {
             font-size: 0.8em; } }
 
-@media (min-width: 768px) {
-  #intro .cell {
-    display: table-cell; } }
-@media (max-width: 768px) {
-  #intro div img {
-    width: 70%;
-    margin: auto; }
+@media (max-width: 767px) {
+  .tableAbout, .cell {
+    display: inline-block !important; }
 
-  #introText {
-    margin: 1em auto; } }
+  #hireDiv, #caricatureDiv {
+    height: 250px !important; }
+
+  #imgContainer {
+    height: 70%;
+    -webkit-transform: translateY(-10%);
+    transform: translateY(-10%); } }
 .row:nth-child(3):not(.mainContainer) {
   background-color: #77B3D5;
   height: 45em; }
-
-.tableAbout {
-  display: table;
-  height: 100%; }
-
-.cell {
-  vertical-align: middle;
-  display: table-cell;
-  height: 100%;
-  float: none; }
 
 #about {
   background-color: #B1D0ED; }
@@ -174,17 +197,6 @@ a {
     height: 100%;
     float: left; }
 
-@media (max-width: 768px) {
-  .tableAbout, .cell {
-    display: block; }
-
-  #hireDiv, #caricatureDiv {
-    height: 250px; }
-
-  #imgContainer {
-    height: 70%;
-    -webkit-transform: translateY(-10%);
-    transform: translateY(-10%); } }
 #contact {
   background-color: #5F9CD2;
   text-align: center; }
