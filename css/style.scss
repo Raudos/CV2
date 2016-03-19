@@ -365,17 +365,29 @@ a {
     div {
       display: none;
       position: absolute;
-      width: 60%;
       left: 60%;
-      top: 60%;
+      top: 0%;
       font-family: tahoma;
       color: white;
       text-shadow: 2px 2px 2px #4973C7;
       font-weight: bold;
-      background-color: rgb(131, 186, 217);
-      border: 1px solid white;
       padding: 1em;
-      box-shadow: -1px -1px 5px 0px rgba(0,0,0,0.75);
+      z-index: 1000;
+      img {
+        width: 250px;
+        margin: 0%;
+        &:hover {
+          border: 0px;
+        }
+      }
+      p {
+        position: absolute;
+        top: 45%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        color: black
+      }
     }
   }
   img {
