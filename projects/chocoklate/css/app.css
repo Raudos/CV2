@@ -61,6 +61,9 @@
   nav p {
     font-size: 0.374em; } }
 
+@font-face {
+  font-family: lato;
+  src: url("fonts/lato.ttf"); }
 .container-fluid > .row {
   box-sizing: border-box; }
   @media (max-width: 1500px) {
@@ -87,6 +90,9 @@
     .container-fluid > .row {
       padding-left: 2.5em;
       padding-right: 2.5em; } }
+
+* {
+  font-family: lato !important; }
 
 .light {
   color: #88cfdc;
@@ -145,7 +151,8 @@ header {
         right: 2em; } }
     header nav p {
       color: white;
-      display: inline-block; }
+      display: inline-block;
+      padding: 3px; }
       header nav p:hover {
         color: #88cfdc;
         cursor: pointer; }

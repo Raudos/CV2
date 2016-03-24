@@ -10,6 +10,11 @@ body {
 }
 * {
   box-sizing: border-box;
+  font-family: lato !important;
+}
+@font-face {
+    font-family: lato;
+    src: url("fonts/lato.ttf");
 }
 
 // --------------------------------------------------------
@@ -81,7 +86,7 @@ input[type=range]::-ms-track {
     text-align: center;
     padding: 1em;
     @media (max-width: 450px) {
-      padding: 0.8em;
+      padding: 0.8em !important;
     }
   }
 }
@@ -94,50 +99,51 @@ input[type=range]::-ms-track {
   background-color: white;
   padding: 0.5em 0px;
   position: relative;
-  &>div:nth-child(2) {
-    text-align: right;
-    padding-right: 15px;
-  }
-  p {
-    display: inline-block;
-    padding: 0px 5px;
-    &:not(:first-child) {
-      border-left: 1px solid rgba(147, 160, 162, 0.3);
+  .table {
+    &>div:nth-child(2) {
+      text-align: right;
+      padding-right: 15px;
     }
-  }
-  #burger {
-    display: none;
-  }
-  @media (max-width: 800px) {
-    #menu {
-      margin-top: 15px;
-      display: none;
-      position: absolute;
-      top: 130%;
-      left: 2em;
-      z-index: 1000;
-      background-color: $blue;
-      background-repeat: repeat-x;
-      background-position: bottom;
-      background-image: url("images/triangles2.png");
-      border: 2px solid $blue;
-      border-bottom: 0px;
-      border-radius: 5px;
-      p {
-        display: block;
-        padding: 5px 0px;
-        color: white;
-        &:last-child {
-          margin-bottom: 5px;
-        }
+    p {
+      display: inline-block;
+      padding: 0px 5px;
+      &:not(:first-child) {
+        border-left: 1px solid rgba(147, 160, 162, 0.3);
       }
     }
     #burger {
-      display: inline-block;
-      height: 25px;
-      padding-left: 2em;
+      display: none;
     }
-
+    @media (max-width: 800px) {
+      #menu {
+        margin-top: 15px;
+        display: none;
+        position: absolute;
+        top: 130%;
+        left: 2em;
+        z-index: 1000;
+        background-color: $blue;
+        background-repeat: repeat-x;
+        background-position: bottom;
+        background-image: url("images/triangles2.png");
+        border: 2px solid $blue;
+        border-bottom: 0px;
+        border-radius: 5px;
+        p {
+          display: block;
+          padding: 5px 0px;
+          color: white;
+          &:last-child {
+            margin-bottom: 5px;
+          }
+        }
+      }
+      #burger {
+        display: inline-block;
+        height: 25px;
+        padding-left: 2em;
+      }
+    }
   }
 }
 
@@ -491,7 +497,8 @@ input[type=range]::-ms-track {
   background-color: $grey;
   color: grey;
   p {
-    padding: 15px 0 0 15px;
+    margin-top: 15px;
+    padding-left: 15px;
   }
   div {
     &:nth-child(2) {

@@ -138,8 +138,12 @@ body {
   width: 100%; }
 
 * {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  font-family: lato !important; }
 
+@font-face {
+  font-family: lato;
+  src: url("fonts/lato.ttf"); }
 input[type=range] {
   -webkit-appearance: none;
   /* Hides the slider so that custom slider can be made */
@@ -210,24 +214,24 @@ input[type=range]::-ms-track {
     padding: 1em; }
     @media (max-width: 450px) {
       .container-fluid > .row:nth-child(1) .log {
-        padding: 0.8em; } }
+        padding: 0.8em !important; } }
 
 .container-fluid > .row:nth-child(2) {
   background-color: white;
   padding: 0.5em 0px;
   position: relative; }
-  .container-fluid > .row:nth-child(2) > div:nth-child(2) {
+  .container-fluid > .row:nth-child(2) .table > div:nth-child(2) {
     text-align: right;
     padding-right: 15px; }
-  .container-fluid > .row:nth-child(2) p {
+  .container-fluid > .row:nth-child(2) .table p {
     display: inline-block;
     padding: 0px 5px; }
-    .container-fluid > .row:nth-child(2) p:not(:first-child) {
+    .container-fluid > .row:nth-child(2) .table p:not(:first-child) {
       border-left: 1px solid rgba(147, 160, 162, 0.3); }
-  .container-fluid > .row:nth-child(2) #burger {
+  .container-fluid > .row:nth-child(2) .table #burger {
     display: none; }
   @media (max-width: 800px) {
-    .container-fluid > .row:nth-child(2) #menu {
+    .container-fluid > .row:nth-child(2) .table #menu {
       margin-top: 15px;
       display: none;
       position: absolute;
@@ -241,13 +245,13 @@ input[type=range]::-ms-track {
       border: 2px solid #50c5da;
       border-bottom: 0px;
       border-radius: 5px; }
-      .container-fluid > .row:nth-child(2) #menu p {
+      .container-fluid > .row:nth-child(2) .table #menu p {
         display: block;
         padding: 5px 0px;
         color: white; }
-        .container-fluid > .row:nth-child(2) #menu p:last-child {
+        .container-fluid > .row:nth-child(2) .table #menu p:last-child {
           margin-bottom: 5px; }
-    .container-fluid > .row:nth-child(2) #burger {
+    .container-fluid > .row:nth-child(2) .table #burger {
       display: inline-block;
       height: 25px;
       padding-left: 2em; } }
@@ -513,7 +517,8 @@ input[type=range]::-ms-track {
   background-color: #ebebeb;
   color: grey; }
   .container-fluid > .row:nth-child(7) p {
-    padding: 15px 0 0 15px; }
+    margin-top: 15px;
+    padding-left: 15px; }
   .container-fluid > .row:nth-child(7) div:nth-child(2) {
     text-align: left; }
     .container-fluid > .row:nth-child(7) div:nth-child(2) p {

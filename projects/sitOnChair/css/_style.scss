@@ -3,6 +3,7 @@
   src: url("fonts/raleway/raleway-regular-webfont.woff");
 }
 
+
 p, h1, h2, h3, h4, h5{
   font-family: raleway;
 }
@@ -45,6 +46,15 @@ h2 {
   nav, div {
     text-align: center;
     padding: 0.3em;
+    p {
+      font-size: 1.3em;
+      @media (max-width: 800px) {
+        font-size: 1.1em;
+      }
+      @media (max-width: 500px) {
+        font-size: 0.9em;
+      }
+    }
   }
   .hoverList {
     position: absolute;
@@ -418,8 +428,13 @@ h2 {
     	height: 100%;
     	color: #C2C2C2;
     	text-indent: 10px;
-    	font-size: 22px;
+    	font-size: 1.3em;
     	margin: 0px;
+      @media (max-width: 700px) {
+        font-size: 1.1em;
+        padding-top: 5px;
+        padding-bottom: 5px;
+      }
     }
     #transportLabel {
     	margin-left: 10px;
@@ -644,6 +659,9 @@ h2 {
       margin: 0px;
     }
   }
+  #transportP {
+    font-size: 1em !important;
+  }
 }
 
 /* --------------------------------- */
@@ -680,9 +698,16 @@ h2 {
 
   p {
     color: #C2C2C2;
-    font-size: 22px;
+    font-size: 1.3em;
     margin-left: 10px;
     margin-top: 4px;
+
+    @media (max-width: 680px) {
+      font-size: 1.1em;
+    }
+    @media (max-width: 550px) {
+      clear: left;
+    }
   }
 
   img {

@@ -39,6 +39,14 @@ h2 {
   #topMenu nav, #topMenu div {
     text-align: center;
     padding: 0.3em; }
+    #topMenu nav p, #topMenu div p {
+      font-size: 1.3em; }
+      @media (max-width: 800px) {
+        #topMenu nav p, #topMenu div p {
+          font-size: 1.1em; } }
+      @media (max-width: 500px) {
+        #topMenu nav p, #topMenu div p {
+          font-size: 0.9em; } }
   #topMenu .hoverList {
     position: absolute;
     top: 100%;
@@ -326,8 +334,13 @@ h2 {
       height: 100%;
       color: #C2C2C2;
       text-indent: 10px;
-      font-size: 22px;
+      font-size: 1.3em;
       margin: 0px; }
+      @media (max-width: 700px) {
+        .row:nth-child(4) .row #pickContainer input {
+          font-size: 1.1em;
+          padding-top: 5px;
+          padding-bottom: 5px; } }
     .row:nth-child(4) .row #transportLabel {
       margin-left: 10px;
       margin-top: 25px;
@@ -496,7 +509,10 @@ h2 {
     .row:nth-child(4) .offert button {
       font-size: 1.5em; }
   .row:nth-child(4) .offert:nth-child(3) {
-    margin: 0px; } }
+    margin: 0px; }
+
+  #transportP {
+    font-size: 1em !important; } }
 /* --------------------------------- */
 /* ------------------------------------ */
 .row:nth-child(5) h2 {
@@ -524,9 +540,15 @@ h2 {
   float: left; }
   #seventhRowDivTwo p {
     color: #C2C2C2;
-    font-size: 22px;
+    font-size: 1.3em;
     margin-left: 10px;
     margin-top: 4px; }
+    @media (max-width: 680px) {
+      #seventhRowDivTwo p {
+        font-size: 1.1em; } }
+    @media (max-width: 550px) {
+      #seventhRowDivTwo p {
+        clear: left; } }
   #seventhRowDivTwo img {
     float: left;
     width: 100%; }
