@@ -1,8 +1,10 @@
 .container-fluid > .row {
-  @for $i from 0 through 5 {
-    @media (max-width: 1500px - 200px * $i) {
-      padding-left: 5.5em - 0.6em * $i;
-      padding-right: 5.5em - 0.6em * $i;
+  padding-left: 2.5em;
+  padding-right: 2.5em;
+  @for $i from 1 through 5 {
+    @media (min-width: 500px + 200px * $i) {
+      padding-left: 2.5em + 0.6em * $i;
+      padding-right: 2.5em + 0.6em * $i;
     }
   }
   box-sizing: border-box;
@@ -13,18 +15,30 @@
 .light {
   color: $lightBlue;
   font-size: 1em;
+  @media (max-width: 750px) {
+    font-size: 0.8em;
+  }
 }
 .mid {
   color: $midBlue;
   font-size: 1em;
+  @media (max-width: 750px) {
+    font-size: 0.8em;
+  }
 }
 .dark {
   color: $blue;
   font-size: 1.3em;
+  @media (max-width: 750px) {
+    font-size: 1.1em;
+  }
 }
 .grey {
   color: grey;
   font-size: 0.8em;
+  @media (max-width: 750px) {
+    font-size: 0.6em;
+  }
 }
 
 
@@ -50,9 +64,10 @@ header {
     display: inline-block;
     position: absolute;
     top: 50%;
-    @for $i from 0 through 5 {
-      @media (max-width: 1500px - 200px * $i) {
-        right: 5em - 0.6em * $i;
+    right: 2.5em;
+    @for $i from 1 through 5 {
+      @media (min-width: 500px + 200px * $i) {
+        right: 2.5em + 0.6em * $i;
       }
     }
     transform: translateY(-50%);
@@ -85,12 +100,12 @@ header {
     transform: translateY(-50%);
   }
   div {
-    padding-top: 2em;
-    padding-bottom: 2em;
-    @for $i from 0 through 5 {
-      @media (max-width: 1500px - 200px * $i) {
-        padding-top: 2em - 0.3em * $i;
-        padding-bottom: 2em - 0.3em * $i;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    @for $i from 1 through 5 {
+      @media (min-width: 500px + 200px * $i) {
+        padding-top: 0.5em + 0.3em * $i;
+        padding-bottom: 0.5em + 0.3em * $i;
       }
     }
     h1, p {
@@ -100,9 +115,10 @@ header {
       padding-bottom: 0.8em;
     }
     p {
-      @for $i from 0 through 5 {
-        @media (max-width: 1500px - 200px * $i) {
-          line-height: 35px - 4px * $i;
+      line-height: 15px;
+      @for $i from 1 through 5 {
+        @media (min-width: 500px + 200px * $i) {
+          line-height: 15px + 4px * $i;
         }
       }
     }
@@ -126,6 +142,7 @@ header {
       &:hover {
         cursor: pointer;
       }
+
     }
   }
   .row {
@@ -151,9 +168,10 @@ header {
       p {
         line-height: 27px;
         color: grey;
-        @for $i from 0 through 5 {
-          @media (max-width: 1500px - 200px * $i) {
-            line-height: 27px - 3px * $i;
+        line-height: 12px;
+        @for $i from 1 through 5 {
+          @media (min-width: 500px + 200px * $i) {
+            line-height: 12px + 3px * $i;
           }
         }
       }
@@ -178,9 +196,10 @@ header {
   #gallery {
     div {
       overflow: hidden;
-      @for $i from 0 through 7 {
-        @media (max-width: 1500px - 150px * $i) {
-          height: 240px - 30px * $i;
+      height: 30px;
+      @for $i from 1 through 7 {
+        @media (min-width: 450px + 150px * $i) {
+          height: 30px + 30px * $i;
         }
       }
       background-repeat: no-repeat;
@@ -229,9 +248,10 @@ header {
 ===============================================================*/
 
 .container-fluid > .row:nth-child(6) {
-  @for $i from 0 through 7 {
-    @media (max-width: 1500px - 150px * $i) {
-      height: 350px - 30px * $i;
+  height: 140px;
+  @for $i from 1 through 7 {
+    @media (min-width: 450px + 150px * $i) {
+      height: 140px + 30px * $i;
     }
   }
   background-image: url("images/bg6.png");

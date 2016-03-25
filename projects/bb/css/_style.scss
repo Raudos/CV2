@@ -45,10 +45,10 @@ input[type=range]::-ms-track {
 //--------------------------------------------------------------------------
 
 .container-fluid > .row:nth-child(1) {
-  padding: 2em 0px;
-  @for $i from 0 through 5 {
-    @media (max-width: 1300px - 200px*$i) {
-      padding: 2em - 0.3em*$i 0px;
+  padding: 0.5em 0px;
+  @for $i from 1 through 5 {
+    @media (min-width: 300px + 200px*$i) {
+      padding: 0.5em + 0.3em*$i 0px;
     }
   }
   .logo, .search {

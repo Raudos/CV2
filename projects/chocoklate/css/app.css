@@ -1,95 +1,90 @@
-@media (max-width: 1500px) {
-  p {
-    font-size: 1em; } }
-@media (max-width: 1300px) {
-  p {
-    font-size: 0.86em; } }
-@media (max-width: 1100px) {
-  p {
-    font-size: 0.72em; } }
-@media (max-width: 900px) {
-  p {
-    font-size: 0.58em; } }
-@media (max-width: 700px) {
-  p {
-    font-size: 0.44em; } }
-@media (max-width: 500px) {
-  p {
-    font-size: 0.3em; } }
+p {
+  font-size: 0.54em; }
+  @media (min-width: 700px) {
+    p {
+      font-size: 0.68em; } }
+  @media (min-width: 900px) {
+    p {
+      font-size: 0.82em; } }
+  @media (min-width: 1100px) {
+    p {
+      font-size: 0.96em; } }
+  @media (min-width: 1300px) {
+    p {
+      font-size: 1.1em; } }
+  @media (min-width: 1500px) {
+    p {
+      font-size: 1.24em; } }
 
-@media (max-width: 1500px) {
-  h1 {
-    font-size: 2em; } }
-@media (max-width: 1300px) {
-  h1 {
-    font-size: 1.75em; } }
-@media (max-width: 1100px) {
-  h1 {
-    font-size: 1.5em; } }
-@media (max-width: 900px) {
-  h1 {
-    font-size: 1.25em; } }
-@media (max-width: 700px) {
-  h1 {
-    font-size: 1em; } }
-@media (max-width: 500px) {
-  h1 {
-    font-size: 0.75em; } }
+h1 {
+  font-size: 0.75em; }
+  @media (min-width: 700px) {
+    h1 {
+      font-size: 1em; } }
+  @media (min-width: 900px) {
+    h1 {
+      font-size: 1.25em; } }
+  @media (min-width: 1100px) {
+    h1 {
+      font-size: 1.5em; } }
+  @media (min-width: 1300px) {
+    h1 {
+      font-size: 1.75em; } }
+  @media (min-width: 1500px) {
+    h1 {
+      font-size: 2em; } }
 
-@media (max-width: 1500px) {
-  nav p {
-    font-size: 1.2em; } }
-@media (max-width: 1350px) {
-  nav p {
-    font-size: 1.082em; } }
-@media (max-width: 1200px) {
-  nav p {
-    font-size: 0.964em; } }
-@media (max-width: 1050px) {
-  nav p {
-    font-size: 0.846em; } }
-@media (max-width: 900px) {
-  nav p {
-    font-size: 0.728em; } }
-@media (max-width: 750px) {
-  nav p {
-    font-size: 0.61em; } }
-@media (max-width: 600px) {
-  nav p {
-    font-size: 0.492em; } }
-@media (max-width: 450px) {
-  nav p {
-    font-size: 0.374em; } }
+nav p {
+  font-size: 0.374em; }
+  @media (min-width: 600px) {
+    nav p {
+      font-size: 0.492em; } }
+  @media (min-width: 750px) {
+    nav p {
+      font-size: 0.61em; } }
+  @media (min-width: 900px) {
+    nav p {
+      font-size: 0.728em; } }
+  @media (min-width: 1050px) {
+    nav p {
+      font-size: 0.846em; } }
+  @media (min-width: 1200px) {
+    nav p {
+      font-size: 0.964em; } }
+  @media (min-width: 1350px) {
+    nav p {
+      font-size: 1.082em; } }
+  @media (min-width: 1500px) {
+    nav p {
+      font-size: 1.2em; } }
 
 @font-face {
   font-family: lato;
   src: url("fonts/lato.ttf"); }
 .container-fluid > .row {
+  padding-left: 2.5em;
+  padding-right: 2.5em;
   box-sizing: border-box; }
-  @media (max-width: 1500px) {
-    .container-fluid > .row {
-      padding-left: 5.5em;
-      padding-right: 5.5em; } }
-  @media (max-width: 1300px) {
-    .container-fluid > .row {
-      padding-left: 4.9em;
-      padding-right: 4.9em; } }
-  @media (max-width: 1100px) {
-    .container-fluid > .row {
-      padding-left: 4.3em;
-      padding-right: 4.3em; } }
-  @media (max-width: 900px) {
-    .container-fluid > .row {
-      padding-left: 3.7em;
-      padding-right: 3.7em; } }
-  @media (max-width: 700px) {
+  @media (min-width: 700px) {
     .container-fluid > .row {
       padding-left: 3.1em;
       padding-right: 3.1em; } }
-  @media (max-width: 500px) {
+  @media (min-width: 900px) {
     .container-fluid > .row {
-      padding-left: 2.5em;
-      padding-right: 2.5em; } }
+      padding-left: 3.7em;
+      padding-right: 3.7em; } }
+  @media (min-width: 1100px) {
+    .container-fluid > .row {
+      padding-left: 4.3em;
+      padding-right: 4.3em; } }
+  @media (min-width: 1300px) {
+    .container-fluid > .row {
+      padding-left: 4.9em;
+      padding-right: 4.9em; } }
+  @media (min-width: 1500px) {
+    .container-fluid > .row {
+      padding-left: 5.5em;
+      padding-right: 5.5em; } }
 
 * {
   font-family: lato !important; }
@@ -97,18 +92,30 @@
 .light {
   color: #88cfdc;
   font-size: 1em; }
+  @media (max-width: 750px) {
+    .light {
+      font-size: 0.8em; } }
 
 .mid {
   color: #44afc2;
   font-size: 1em; }
+  @media (max-width: 750px) {
+    .mid {
+      font-size: 0.8em; } }
 
 .dark {
   color: #37829c;
   font-size: 1.3em; }
+  @media (max-width: 750px) {
+    .dark {
+      font-size: 1.1em; } }
 
 .grey {
   color: grey;
   font-size: 0.8em; }
+  @media (max-width: 750px) {
+    .grey {
+      font-size: 0.6em; } }
 
 /* ===============================================================
                           First row
@@ -130,25 +137,23 @@ header {
     display: inline-block;
     position: absolute;
     top: 50%;
+    right: 2.5em;
     transform: translateY(-50%); }
-    @media (max-width: 1500px) {
+    @media (min-width: 700px) {
       header nav {
-        right: 5em; } }
-    @media (max-width: 1300px) {
+        right: 3.1em; } }
+    @media (min-width: 900px) {
       header nav {
-        right: 4.4em; } }
-    @media (max-width: 1100px) {
+        right: 3.7em; } }
+    @media (min-width: 1100px) {
       header nav {
-        right: 3.8em; } }
-    @media (max-width: 900px) {
+        right: 4.3em; } }
+    @media (min-width: 1300px) {
       header nav {
-        right: 3.2em; } }
-    @media (max-width: 700px) {
+        right: 4.9em; } }
+    @media (min-width: 1500px) {
       header nav {
-        right: 2.6em; } }
-    @media (max-width: 500px) {
-      header nav {
-        right: 2em; } }
+        right: 5.5em; } }
     header nav p {
       color: white;
       display: inline-block;
@@ -172,54 +177,49 @@ header {
     right: 0%;
     transform: translateY(-50%); }
   .container-fluid > .row:nth-child(2) div {
-    padding-top: 2em;
-    padding-bottom: 2em; }
-    @media (max-width: 1500px) {
-      .container-fluid > .row:nth-child(2) div {
-        padding-top: 2em;
-        padding-bottom: 2em; } }
-    @media (max-width: 1300px) {
-      .container-fluid > .row:nth-child(2) div {
-        padding-top: 1.7em;
-        padding-bottom: 1.7em; } }
-    @media (max-width: 1100px) {
-      .container-fluid > .row:nth-child(2) div {
-        padding-top: 1.4em;
-        padding-bottom: 1.4em; } }
-    @media (max-width: 900px) {
-      .container-fluid > .row:nth-child(2) div {
-        padding-top: 1.1em;
-        padding-bottom: 1.1em; } }
-    @media (max-width: 700px) {
+    padding-top: 0.5em;
+    padding-bottom: 0.5em; }
+    @media (min-width: 700px) {
       .container-fluid > .row:nth-child(2) div {
         padding-top: 0.8em;
         padding-bottom: 0.8em; } }
-    @media (max-width: 500px) {
+    @media (min-width: 900px) {
       .container-fluid > .row:nth-child(2) div {
-        padding-top: 0.5em;
-        padding-bottom: 0.5em; } }
+        padding-top: 1.1em;
+        padding-bottom: 1.1em; } }
+    @media (min-width: 1100px) {
+      .container-fluid > .row:nth-child(2) div {
+        padding-top: 1.4em;
+        padding-bottom: 1.4em; } }
+    @media (min-width: 1300px) {
+      .container-fluid > .row:nth-child(2) div {
+        padding-top: 1.7em;
+        padding-bottom: 1.7em; } }
+    @media (min-width: 1500px) {
+      .container-fluid > .row:nth-child(2) div {
+        padding-top: 2em;
+        padding-bottom: 2em; } }
     .container-fluid > .row:nth-child(2) div h1, .container-fluid > .row:nth-child(2) div p {
       color: white; }
     .container-fluid > .row:nth-child(2) div h1 {
       padding-bottom: 0.8em; }
-    @media (max-width: 1500px) {
-      .container-fluid > .row:nth-child(2) div p {
-        line-height: 35px; } }
-    @media (max-width: 1300px) {
-      .container-fluid > .row:nth-child(2) div p {
-        line-height: 31px; } }
-    @media (max-width: 1100px) {
-      .container-fluid > .row:nth-child(2) div p {
-        line-height: 27px; } }
-    @media (max-width: 900px) {
-      .container-fluid > .row:nth-child(2) div p {
-        line-height: 23px; } }
-    @media (max-width: 700px) {
-      .container-fluid > .row:nth-child(2) div p {
-        line-height: 19px; } }
-    @media (max-width: 500px) {
-      .container-fluid > .row:nth-child(2) div p {
-        line-height: 15px; } }
+    .container-fluid > .row:nth-child(2) div p {
+      line-height: 15px; }
+      @media (min-width: 700px) {
+        .container-fluid > .row:nth-child(2) div p {
+          line-height: 19px; } }
+      @media (min-width: 900px) {
+        .container-fluid > .row:nth-child(2) div p {
+          line-height: 23px; } }
+      @media (min-width: 1100px) {
+        .container-fluid > .row:nth-child(2) div p {
+          line-height: 27px; } }
+      @media (min-width: 1300px) {
+        .container-fluid > .row:nth-child(2) div p {
+          line-height: 31px; } }
+      @media (min-width: 1500px) {
+        .container-fluid > .row:nth-child(2) div p {
+          line-height: 35px; } }
 
 /* ===============================================================
                           Third row
@@ -249,25 +249,23 @@ header {
     width: 95%; }
   .container-fluid > .row:nth-child(3) .row:nth-child(2) p {
     line-height: 27px;
-    color: grey; }
-    @media (max-width: 1500px) {
-      .container-fluid > .row:nth-child(3) .row:nth-child(2) p {
-        line-height: 27px; } }
-    @media (max-width: 1300px) {
-      .container-fluid > .row:nth-child(3) .row:nth-child(2) p {
-        line-height: 24px; } }
-    @media (max-width: 1100px) {
-      .container-fluid > .row:nth-child(3) .row:nth-child(2) p {
-        line-height: 21px; } }
-    @media (max-width: 900px) {
-      .container-fluid > .row:nth-child(3) .row:nth-child(2) p {
-        line-height: 18px; } }
-    @media (max-width: 700px) {
+    color: grey;
+    line-height: 12px; }
+    @media (min-width: 700px) {
       .container-fluid > .row:nth-child(3) .row:nth-child(2) p {
         line-height: 15px; } }
-    @media (max-width: 500px) {
+    @media (min-width: 900px) {
       .container-fluid > .row:nth-child(3) .row:nth-child(2) p {
-        line-height: 12px; } }
+        line-height: 18px; } }
+    @media (min-width: 1100px) {
+      .container-fluid > .row:nth-child(3) .row:nth-child(2) p {
+        line-height: 21px; } }
+    @media (min-width: 1300px) {
+      .container-fluid > .row:nth-child(3) .row:nth-child(2) p {
+        line-height: 24px; } }
+    @media (min-width: 1500px) {
+      .container-fluid > .row:nth-child(3) .row:nth-child(2) p {
+        line-height: 27px; } }
 
 /* ===============================================================
                           Fourth row
@@ -282,34 +280,32 @@ header {
     margin-bottom: 1em; }
   .container-fluid > .row:nth-child(4) #gallery div {
     overflow: hidden;
+    height: 30px;
     background-repeat: no-repeat;
     background-position: top;
     background-size: cover;
     margin-bottom: 1em; }
-    @media (max-width: 1500px) {
-      .container-fluid > .row:nth-child(4) #gallery div {
-        height: 240px; } }
-    @media (max-width: 1350px) {
-      .container-fluid > .row:nth-child(4) #gallery div {
-        height: 210px; } }
-    @media (max-width: 1200px) {
-      .container-fluid > .row:nth-child(4) #gallery div {
-        height: 180px; } }
-    @media (max-width: 1050px) {
-      .container-fluid > .row:nth-child(4) #gallery div {
-        height: 150px; } }
-    @media (max-width: 900px) {
-      .container-fluid > .row:nth-child(4) #gallery div {
-        height: 120px; } }
-    @media (max-width: 750px) {
-      .container-fluid > .row:nth-child(4) #gallery div {
-        height: 90px; } }
-    @media (max-width: 600px) {
+    @media (min-width: 600px) {
       .container-fluid > .row:nth-child(4) #gallery div {
         height: 60px; } }
-    @media (max-width: 450px) {
+    @media (min-width: 750px) {
       .container-fluid > .row:nth-child(4) #gallery div {
-        height: 30px; } }
+        height: 90px; } }
+    @media (min-width: 900px) {
+      .container-fluid > .row:nth-child(4) #gallery div {
+        height: 120px; } }
+    @media (min-width: 1050px) {
+      .container-fluid > .row:nth-child(4) #gallery div {
+        height: 150px; } }
+    @media (min-width: 1200px) {
+      .container-fluid > .row:nth-child(4) #gallery div {
+        height: 180px; } }
+    @media (min-width: 1350px) {
+      .container-fluid > .row:nth-child(4) #gallery div {
+        height: 210px; } }
+    @media (min-width: 1500px) {
+      .container-fluid > .row:nth-child(4) #gallery div {
+        height: 240px; } }
     .container-fluid > .row:nth-child(4) #gallery div:nth-child(1) {
       background-image: url("images/layer18.png"); }
     .container-fluid > .row:nth-child(4) #gallery div:nth-child(2) {
@@ -338,33 +334,31 @@ header {
                           Sixth row
 ===============================================================*/
 .container-fluid > .row:nth-child(6) {
+  height: 140px;
   background-image: url("images/bg6.png");
   background-size: cover;
   background-repeat: no-repeat; }
-  @media (max-width: 1500px) {
-    .container-fluid > .row:nth-child(6) {
-      height: 350px; } }
-  @media (max-width: 1350px) {
-    .container-fluid > .row:nth-child(6) {
-      height: 320px; } }
-  @media (max-width: 1200px) {
-    .container-fluid > .row:nth-child(6) {
-      height: 290px; } }
-  @media (max-width: 1050px) {
-    .container-fluid > .row:nth-child(6) {
-      height: 260px; } }
-  @media (max-width: 900px) {
-    .container-fluid > .row:nth-child(6) {
-      height: 230px; } }
-  @media (max-width: 750px) {
-    .container-fluid > .row:nth-child(6) {
-      height: 200px; } }
-  @media (max-width: 600px) {
+  @media (min-width: 600px) {
     .container-fluid > .row:nth-child(6) {
       height: 170px; } }
-  @media (max-width: 450px) {
+  @media (min-width: 750px) {
     .container-fluid > .row:nth-child(6) {
-      height: 140px; } }
+      height: 200px; } }
+  @media (min-width: 900px) {
+    .container-fluid > .row:nth-child(6) {
+      height: 230px; } }
+  @media (min-width: 1050px) {
+    .container-fluid > .row:nth-child(6) {
+      height: 260px; } }
+  @media (min-width: 1200px) {
+    .container-fluid > .row:nth-child(6) {
+      height: 290px; } }
+  @media (min-width: 1350px) {
+    .container-fluid > .row:nth-child(6) {
+      height: 320px; } }
+  @media (min-width: 1500px) {
+    .container-fluid > .row:nth-child(6) {
+      height: 350px; } }
 
 /* ===============================================================
                           Seventh row

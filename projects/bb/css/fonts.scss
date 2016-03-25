@@ -1,4 +1,4 @@
-@for $i from 0 through 4 {
+/*@for $i from 0 through 4 {
   @media (max-width: 1500px - 300px * $i) {
     p, input {
       font-size: 1.1em - 0.2em * $i !important;
@@ -14,8 +14,78 @@
       }
     }
   }
+}*/
+p, input {
+  font-size: 0.3em;
+  @for $i from 1 through 4 {
+    @media (min-width: 300px + 300px * $i) {
+      font-size: 0.3em + 0.2em * $i;
+    }
+  }
 }
-@for $j from 0 through 5 {
+.container-fluid > .row:nth-child(1) {
+  p, input {
+    font-size: 0.6em;
+    @for $i from 1 through 4 {
+      @media (min-width: 300px + 300px * $i) {
+        font-size: 0.6em + 0.35em * $i !important;
+      }
+    }
+  }
+}
+.container-fluid > .row:nth-child(3) {
+  p {
+    font-size: 0.35em;
+    @for $i from 1 through 4 {
+      @media (min-width: 300px + 300px * $i) {
+        font-size: 0.35em + 0.35em * $i;
+      }
+    }
+  }
+}
+h1 {
+  font-size: 1.2em;
+  @for $j from 1 through 5 {
+    @media (min-width: 500px + 200px * $j) {
+      font-size: 1.2em + 0.2em * $j;
+    }
+  }
+}
+h2, h3, a {
+  font-size: 0.9rem;
+  @for $j from 1 through 5 {
+    @media (min-width: 500px + 200px * $j) {
+      font-size: 0.9rem + 0.3rem * $j;
+    }
+  }
+}
+button {
+  font-size: 0.8rem;
+  @for $j from 1 through 5 {
+    @media (min-width: 500px + 200px * $j) {
+      font-size: 0.7rem + 0.3rem * $j;
+    }
+  }
+}
+.container-fluid > .row:nth-child(3) {
+  h2 {
+    font-size: 0.55em;
+    @for $j from 1 through 5 {
+      @media (min-width: 500px + 200px * $j) {
+        font-size: 0.55em + 0.35em * $j;
+      }
+    }
+  }
+  button {
+    font-size: 0.35em;
+    @for $j from 1 through 5 {
+      @media (min-width: 500px + 200px * $j) {
+        font-size: 0.35em + 0.35em * $j;
+      }
+    }
+  }
+}
+/*@for $j from 0 through 5 {
   @media (max-width: 1500px - 200px * $j) {
     h1 {
       font-size: 2.2em - 0.2em * $j;
@@ -36,3 +106,4 @@
     }
   }
 }
+*/
