@@ -289,7 +289,8 @@ a {
     vertical-align: middle;
     border-radius: 30px;
     border: 3px solid #5F9CD2;
-    overflow: hidden; }
+    overflow: hidden;
+    height: 90%; }
     @media (max-width: 767px) {
       #about #imgContainer {
         height: 70%;
