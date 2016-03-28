@@ -19,8 +19,6 @@ body {
   background-color: #39286e; }
 
 .container-fluid > .row {
-  padding-left: 15px;
-  padding-right: 15px;
   box-sizing: border-box;
   background-color: white; }
 
@@ -97,34 +95,31 @@ header {
 /* --------------------------------------------------------------------
                               Second row
 ---------------------------------------------------------------------*/
-.container-fluid > .row:nth-child(2) {
+.container-fluid > .row:nth-child(2) > .table {
   position: relative; }
-  .container-fluid > .row:nth-child(2) h1 {
+  .container-fluid > .row:nth-child(2) > .table h1 {
     font-size: 2em;
     color: #676767; }
-  .container-fluid > .row:nth-child(2) p {
+  .container-fluid > .row:nth-child(2) > .table p {
     color: #676767;
     display: inline-block;
     padding: 1em 15px; }
-    .container-fluid > .row:nth-child(2) p:hover {
+    .container-fluid > .row:nth-child(2) > .table p:hover {
       color: #9f269b; }
-  .container-fluid > .row:nth-child(2) div:last-child {
-    text-align: right;
-    position: absolute;
-    top: 50%;
-    right: 0%;
-    transform: translateY(-50%); }
-  .container-fluid > .row:nth-child(2) #burger {
+  .container-fluid > .row:nth-child(2) > .table div:last-child {
+    text-align: right; }
+  .container-fluid > .row:nth-child(2) > .table #burger {
     display: none;
     position: absolute;
     top: 50%;
     right: 15px;
     transform: translateY(-50%); }
   @media (max-width: 768px) {
-    .container-fluid > .row:nth-child(2) #burger {
+    .container-fluid > .row:nth-child(2) > .table #burger {
       display: inline-block;
       width: 8%; }
-    .container-fluid > .row:nth-child(2) #menu {
+    .container-fluid > .row:nth-child(2) > .table #menu {
+      position: absolute;
       display: none;
       top: 10%;
       right: 15%;
@@ -134,17 +129,17 @@ header {
       z-index: 1000;
       border-radius: 10px;
       width: 20%; }
-      .container-fluid > .row:nth-child(2) #menu p {
+      .container-fluid > .row:nth-child(2) > .table #menu p {
         display: block;
         padding: 1em 5px; } }
   @media (max-width: 600px) {
-    .container-fluid > .row:nth-child(2) p {
+    .container-fluid > .row:nth-child(2) > .table p {
       font-size: 0.7em; }
-    .container-fluid > .row:nth-child(2) h1 {
+    .container-fluid > .row:nth-child(2) > .table h1 {
       font-size: 1.5em;
       margin: 0.5em 0px; } }
   @media (max-width: 300px) {
-    .container-fluid > .row:nth-child(2) h1 {
+    .container-fluid > .row:nth-child(2) > .table h1 {
       margin: 1em 0px; } }
 
 /* --------------------------------------------------------------------

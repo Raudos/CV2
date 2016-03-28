@@ -13,14 +13,41 @@ var $team = $(".person");
 var $burger = $("#burger");
 var $menu = $("#menu");
 var $checker = 0;
+var $containerRows = $(".container-fluid > .row");
+var $firstRow = $(".container-fluid > .row:first-child")
+var $width, $height;
 //Functions
+function $paddingMe() {
+  $width = $(window).width();
+  $height = $(window).height();
+  if ($width > 1500) {
+    $width = ($width - 1500) / 2;
+    $width += "px";
+    $containerRows.css("padding-left", $width);
+    $containerRows.css("padding-right", $width);
+  } else {
+    $containerRows.css("padding-left", "15px");
+    $containerRows.css("padding-right", "15px");
+  }
+  if ($height > $firstRow.height()) {
+    $height = ($height - $firstRow.height()) / 2;
+    $height += "px";
+    $firstRow.css("padding-top", $height);
+    $firstRow.css("padding-bottom", $height);
+  } else {
+    $firstRow.css("padding-top", "6em");
+    $firstRow.css("padding-bottom", "6em");
+  }
+}
 function $showMenu() {
   $burger.on("click", function() {
-    $menu.toggle();
     //if control variable is 0 change to 1, otherwise leave 0
+    // used this for the border, otherwise use toggle
     if ($checker == 0) {
+      $menu.css("display", "inherit");
       $checker = 1;
     } else {
+      $menu.css("display", "none");
       $checker = 0;
     }
   });
@@ -161,6 +188,10 @@ function $hexHover() {
 
 
 $(document).on("ready", function() {
+  $paddingMe();
+  $(window).resize(function() {
+    $paddingMe();
+  });
   $hexHover();
   $showMeAll();
   $showMePicked();

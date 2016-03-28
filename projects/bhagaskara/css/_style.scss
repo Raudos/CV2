@@ -18,11 +18,11 @@ span {
 body {
   background-color: $mainBackground;
 }
-.container-fluid > .row {
-  padding-left: 15px;
-  padding-right : 15px;
+.container-fluid {
+  &> .row {
   box-sizing: border-box;
   background-color: white;
+}
 }
 .table {
   width: 100%;
@@ -123,7 +123,7 @@ header {
                               Second row
 ---------------------------------------------------------------------*/
 
-.container-fluid > .row:nth-child(2) {
+.container-fluid > .row:nth-child(2) > .table{
   position: relative;
   h1 {
     font-size: 2em;
@@ -139,10 +139,6 @@ header {
   }
   div:last-child {
     text-align: right;
-    position: absolute;
-    top: 50%;
-    right: 0%;
-    transform: translateY(-50%);
   }
   #burger {
     display: none;
@@ -157,6 +153,7 @@ header {
       width: 8%;
     }
     #menu {
+      position: absolute;
       display: none;
       top: 10%;
       right: 15%;

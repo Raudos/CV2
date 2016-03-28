@@ -7,8 +7,11 @@
   font-family: lato;
   src: url("fonts/lato.ttf");
 }
-.container > .row {
+.container {
+  margin: 15px auto;
+  &>.row {
   border-radius: 10px;
+  }
 }
 * {
   font-family: lato;
@@ -73,7 +76,11 @@
 ----------------------------------------------------------------------------------*/
 
 body {
-  background-image: url("images/blocks.jpg");
+  //background-image: url("images/blocks.jpg");
+  background: linear-gradient(45deg, #b1d0ed 12%, transparent 0, transparent 88%, #b1d0ed 0),
+    linear-gradient(135deg, transparent 37%, #5F9CD2 0, #5F9CD2 63%, transparent 0),
+    linear-gradient(45deg, transparent 37%, #b1d0ed 0, #b1d0ed 63%, transparent 0) white;
+  background-size: 25px 25px;
 }
 
 .row {
@@ -100,7 +107,7 @@ a {
 }
 
 .row:not(.mainContainer) {
-  border: 1px solid white;
+  border: 3px solid white;
   margin-bottom: 0.5em;
   position: relative;
 }

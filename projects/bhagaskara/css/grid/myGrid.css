@@ -11,23 +11,10 @@
   .container {
     width: 1170px; } }
 .container-fluid {
-  max-width: 1500px;
   margin: auto; }
 
 .container {
   margin: auto; }
-
-.table {
-  display: table !important;
-  table-layout: fixed !important;
-  height: 100%;
-  width: 100%; }
-
-.cell {
-  vertical-align: middle;
-  float: none !important;
-  display: table-cell !important;
-  height: 100%; }
 
 @media (max-width: 767px) {
   .hidden-xs {
@@ -516,5 +503,16 @@
       min-height: 1px; }
     .row .col-lg-offset-12 {
       margin-left: 100%; } }
+
+.table {
+  display: table !important;
+  table-layout: fixed !important;
+  height: 100%;
+  width: 100%; }
+  .table .cell {
+    vertical-align: middle;
+    float: none;
+    display: table-cell;
+    height: 100%; }
 
 /*# sourceMappingURL=myGrid.css.map */
