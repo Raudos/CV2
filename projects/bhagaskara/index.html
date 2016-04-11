@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link type="text/css" rel="stylesheet" href="css/cssreset.css"/>
     <link type="text/css" rel="stylesheet" href="css/grid/myGrid.css"/>
-    <link type="text/css" rel="stylesheet" href="css/app.css"/>
+    <link type="text/css" rel="stylesheet" href="css/app.pref.min.css"/>
   </head>
   <body>
     <div class="container-fluid">
-      <header class="row">
+      <header class="row" data-name="home">
         <div id="title" class="col-md-10 col-md-offset-1">
           <h1>Bhagas<span>kara</span>.</h1>
           <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h2>
@@ -24,10 +24,22 @@
               <div class="col-xs-3 col-sm-3 col-md-6 col-xs-offset-3 col-sm-offset-3 col-md-offset-0 hexagon">
                 <img data-name="bubble" src="css/images/Header/header-nav/1/Shape.png" alt="hexagon" />
                 <img data-name="bubble" src="css/images/Header/header-nav/3/bubble.png" alt="chat-bubble" />
+                <div class="tooltip">
+                  <p>
+                    Blog
+                  </p>
+                  <img data-name="bubble" src="css/images/Header/header-nav/1/ShapePurple.png" alt="hexagon" />
+                </div>
               </div>
               <div class="col-xs-3 col-sm-3 col-md-6 hexagon">
                 <img data-name="photo" src="css/images/Header/header-nav/1/Shape.png" alt="hexagon" />
                 <img data-name="photo" src="css/images/Header/header-nav/4/photo.png" alt="photo" />
+                <div class="tooltip">
+                  <p>
+                    Portfolio
+                  </p>
+                  <img data-name="bubble" src="css/images/Header/header-nav/1/ShapePurple.png" alt="hexagon" />
+                </div>
               </div>
             </div>
           </div>
@@ -36,10 +48,22 @@
               <div class="col-xs-6 col-sm-6 col-md-6 hexagon">
                 <img data-name="settings" src="css/images/Header/header-nav/1/Shape.png" alt="hexagon" />
                 <img data-name="settings" src="css/images/Header/header-nav/1/settings.png" alt="settings" />
+                <div class="tooltip">
+                  <p>
+                    About
+                  </p>
+                  <img data-name="bubble" src="css/images/Header/header-nav/1/ShapePurple.png" alt="hexagon" />
+                </div>
               </div>
               <div class="col-xs-6 col-sm-6 col-md-6 hexagon">
                 <img data-name="user" src="css/images/Header/header-nav/1/Shape.png" alt="hexagon" />
                 <img data-name="user" src="css/images/Header/header-nav/2/user.png" alt="user" />
+                <div id="team" class="tooltip">
+                  <p>
+                    Team
+                  </p>
+                  <img data-name="bubble" src="css/images/Header/header-nav/1/ShapePurple.png" alt="hexagon" />
+                </div>
               </div>
             </div>
           </div>
@@ -48,15 +72,27 @@
               <div class="col-xs-6 col-sm-6 col-md-6 hexagon">
                 <img data-name="pen" src="css/images/Header/header-nav/1/Shape.png" alt="hexagon" />
                 <img data-name="pen" src="css/images/Header/header-nav/5/pen.png" alt="pen" />
+                <div id="services" class="tooltip">
+                  <p>
+                    Services
+                  </p>
+                  <img data-name="bubble" src="css/images/Header/header-nav/1/ShapePurple.png" alt="hexagon" />
+                </div>
               </div>
               <div class="col-xs-6 col-sm-6 col-md-6 hexagon">
                 <img data-name="plane" src="css/images/Header/header-nav/1/Shape.png" alt="hexagon" />
                 <img data-name="plane" src="css/images/Header/header-nav/6/paperplane.png" alt="paper-plane" />
+                <div class="tooltip">
+                  <p>
+                    Contact
+                  </p>
+                  <img data-name="bubble" src="css/images/Header/header-nav/1/ShapePurple.png" alt="hexagon" />
+                </div>
               </div>
             </div>
           </div>
           <div id="scroller" class="hexagon">
-            <img src="css/images/Header/scroller/Shape.png" alt="hexagon" />
+            <img src="css/images/Header/header-nav/1/Shape.png" alt="hexagon" />
             <img src="css/images/Header/scroller/arrow.png" alt="paper-plane" />
           </div>
         </div>
@@ -68,25 +104,25 @@
         </div>
         <img id="burger" src="css/images/hamburger.png" alt="hamburger" />
         <div id="menu" class="col-xs-8 col-sm-7 col-md-7 col-xs-offset-2 col-sm-offset-3 col-md-offset-3 cell">
-          <p>
+          <p data-name="home">
             HOME
           </p>
-          <p>
+          <p data-name="settings">
             ABOUT
           </p>
-          <p>
+          <p data-name="user">
             TEAM
           </p>
-          <p>
+          <p data-name="pen">
             SERVICES
           </p>
-          <p>
+          <p data-name="photo">
             PORTFOLIO
           </p>
-          <p>
+          <p data-name="bubble">
             BLOG
           </p>
-          <p>
+          <p data-name="plane">
             CONTACT
           </p>
         </div>
@@ -182,22 +218,9 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-xs-8 col-sm-4 col-md-4 hidden-xs col-xs-offset-2 person teamActive">
-            <img class="portrait" src="css/images/Team/01/Mugshot/ellipse.png" alt="portrait" />
-            <h2>ANNE HATHAWAY1</h2>
-            <p>
-              CEO / Marketing Guru
-            </p>
-            <div class="circle">
-              <p>f</p>
-            </div>
-            <div class="circle">
-              <p>g</p>
-            </div>
-          </div>
-          <div class="col-xs-8 col-sm-4 col-md-4 hidden-xs col-xs-offset-2 person teamActive">
-            <img class="portrait" src="css/images/Team/01/Mugshot/ellipse.png" alt="portrait" />
-            <h2>ANNE HATHAWAY2</h2>
+          <div class="col-xs-8 col-sm-4 col-md-4 col-xs-offset-2 person">
+            <img class="portrait" src="css/images/staff/portrait1.png" alt="portrait" />
+            <h2>John Ackman</h2>
             <p>
               CEO / Marketing Guru
             </p>
@@ -209,10 +232,10 @@
             </div>
           </div>
           <div class="col-xs-8 col-sm-4 col-md-4 col-xs-offset-2 person teamActive">
-            <img class="portrait" src="css/images/Team/01/Mugshot/ellipse.png" alt="portrait" />
-            <h2>ANNE HATHAWAY3</h2>
+            <img class="portrait" src="css/images/staff/portrait2.png" alt="portrait" />
+            <h2>Anne Hathaway</h2>
             <p>
-              CEO / Marketing Guru
+              Lead Designer
             </p>
             <div class="circle">
               <p>f</p>
@@ -221,11 +244,11 @@
               <p>g</p>
             </div>
           </div>
-          <div class="col-xs-8 col-sm-4 col-md-4 hidden-xs col-xs-offset-2 person">
-            <img class="portrait" src="css/images/Team/01/Mugshot/ellipse.png" alt="portrait" />
-            <h2>ANNE HATHAWAY4</h2>
+          <div class="col-xs-8 col-sm-4 col-md-4 col-xs-offset-2 person">
+            <img class="portrait" src="css/images/staff/portrait5.png" alt="portrait" />
+            <h2>Andrew Eckel</h2>
             <p>
-              CEO / Marketing Guru
+              Graphic Designer
             </p>
             <div class="circle">
               <p>f</p>
@@ -234,11 +257,24 @@
               <p>g</p>
             </div>
           </div>
-          <div class="col-xs-8 col-sm-4 col-md-4 hidden-xs col-xs-offset-2 person">
-            <img class="portrait" src="css/images/Team/01/Mugshot/ellipse.png" alt="portrait" />
-            <h2>ANNE HATHAWAY5</h2>
+          <div class="col-xs-8 col-sm-4 col-md-4 col-xs-offset-2 person">
+            <img class="portrait" src="css/images/staff/portrait4.png" alt="portrait" />
+            <h2>Nita Yelick</h2>
             <p>
-              CEO / Marketing Guru
+              UI Designer
+            </p>
+            <div class="circle">
+              <p>f</p>
+            </div>
+            <div class="circle">
+              <p>g</p>
+            </div>
+          </div>
+          <div class="col-xs-8 col-sm-4 col-md-4 col-xs-offset-2 person">
+            <img class="portrait" src="css/images/staff/portrait3.png" alt="portrait" />
+            <h2>Tucan</h2>
+            <p>
+              An ordinary tucan
             </p>
             <div class="circle">
               <p>f</p>
@@ -358,10 +394,10 @@
 
             </div>
             <p>
-              "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+              "People who think they know everything are a great annoyance to those of us who do."
             </p>
             <p>
-              LESAE CHRISTOPER, PINTEREST1
+              Isaac Asimov
             </p>
           </div>
           <div class="col-md-10 col-md-offset-1 quote">
@@ -369,10 +405,10 @@
 
             </div>
             <p>
-              "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+              "I can resist everything except temptation."
             </p>
             <p>
-              LESAE CHRISTOPER, PINTEREST2
+              Oscar Wilde
             </p>
           </div>
           <div class="col-md-10 col-md-offset-1 quote visible">
@@ -380,21 +416,10 @@
 
             </div>
             <p>
-              "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+              "A day without sunshine is like, you know, night."
             </p>
             <p>
-              LESAE CHRISTOPER, PINTEREST3
-            </p>
-          </div>
-          <div class="col-md-10 col-md-offset-1 quote">
-            <div class="iAmAPhoto">
-
-            </div>
-            <p>
-              "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-            </p>
-            <p>
-              LESAE CHRISTOPER, PINTEREST4
+              Steve Martin
             </p>
           </div>
           <div class="col-md-10 col-md-offset-1 quote">
@@ -402,10 +427,21 @@
 
             </div>
             <p>
-              "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+              "If you could kick the person in the pants responsible for most of your trouble, you wouldn't sit for a month."
             </p>
             <p>
-              LESAE CHRISTOPER, PINTEREST5
+              Theodore Roosevelt
+            </p>
+          </div>
+          <div class="col-md-10 col-md-offset-1 quote">
+            <div class="iAmAPhoto">
+
+            </div>
+            <p>
+              "I love deadlines. I like the whooshing sound they make as they fly by.""
+            </p>
+            <p>
+              Douglas Adams
             </p>
           </div>
         </div>
@@ -442,61 +478,9 @@
           <button type="button" name="portfolio">ICONS</button>
         </div>
         <div id="gallery" class="row">
-          <div class="col-xs-12 col-sm-6 col-md-4">
-            <div class="imageContainer">
-              <img src="css/images/Portfolio/Thumbnails/tumblr_n2k1499dIp1st5lhmo1_1280.png" alt="field" />
-              <h2>Lorem ipsum</h2>
-              <p>
-                apps, icons, ui
-              </p>
-            </div>
-          </div>
-          <div class="col-xs-12 col-sm-6 col-md-4">
-            <div class="imageContainer">
-              <img src="css/images/Portfolio/Thumbnails/tumblr_n2k15mq4xy1st5lhmo1_1280.png" alt="road-in-mountains" />
-              <h2>Lorem ipsum</h2>
-              <p>
-                apps, icons, ui
-              </p>
-            </div>
-          </div>
-          <div class="col-xs-12 col-sm-6 col-md-4">
-            <div class="imageContainer">
-              <img src="css/images/Portfolio/Thumbnails/tumblr_n2k114hDQX1st5lhmo1_1280.png" alt="new-york" />
-              <h2>Lorem ipsum</h2>
-              <p>
-                apps, icons, ui
-              </p>
-            </div>
-          </div>
-          <div class="col-xs-12 col-sm-6 col-md-4 hidden-xs">
-            <div class="imageContainer">
-              <img src="css/images/Portfolio/Thumbnails/tumblr_n2k10foRBd1st5lhmo1_1280.png" alt="river" />
-              <h2>Lorem ipsum</h2>
-              <p>
-                apps, icons, ui
-              </p>
-            </div>
-          </div>
-          <div class="col-xs-12 col-sm-6 col-md-4 hidden-xs">
-            <div class="imageContainer">
-              <img src="css/images/Portfolio/Thumbnails/tumblr_n2k0y8bxXE1st5lhmo1_1280.png" alt="boat-ride" />
-              <h2>Lorem ipsum</h2>
-              <p>
-                apps, icons, ui
-              </p>
-            </div>
-          </div>
-          <div class="col-xs-12 col-sm-6 col-md-4 hidden-xs">
-            <div class="imageContainer">
-              <img src="css/images/Portfolio/Thumbnails/tumblr_n1ipqbCLKd1st5lhmo1_1280.png" alt="person-sitting-on-bench" />
-              <h2>Lorem ipsum</h2>
-              <p>
-                apps, icons, ui
-              </p>
-            </div>
-          </div>
-          <button type="button" name="more">Watch more</button>
+          <nav class="row">
+            <button type="button" name="more">Watch more</button>
+          </nav>
         </div>
       </div>
       <div data-name="plane" class="row invisible">
@@ -548,8 +532,7 @@
       </footer>
    </div>
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-   <!--<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>-->
    <script src="http://cdn.jsdelivr.net/jquery.scrollto/2.1.2/jquery.scrollTo.min.js"></script>
-   <script type="text/javascript" src="js/script.js"></script>
+   <script type="text/javascript" src="js/script.min.js"></script>
   </body>
 </html>

@@ -114,7 +114,8 @@ header {
       position: absolute;
       top: 50%;
       left: 50%;
-      transform: translate(-50%, -50%); }
+      -webkit-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%); }
     header .row .hexagon .tooltip {
       position: absolute;
       top: -15%;
@@ -128,7 +129,8 @@ header {
         position: absolute;
         top: 50%;
         left: 50%;
-        transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
         z-index: 1000;
         font-family: impact; }
         @media (max-width: 900px) {
@@ -138,7 +140,8 @@ header {
         position: absolute;
         top: 50%;
         left: 50%;
-        transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
         width: 100%; }
   header .row #scroller {
     width: 10%;
@@ -176,7 +179,8 @@ header {
     position: absolute;
     top: 50%;
     right: 15px;
-    transform: translateY(-50%); }
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%); }
   @media (max-width: 768px) {
     .container-fluid > .row:nth-child(2) > .table #burger {
       display: inline-block;
@@ -186,7 +190,8 @@ header {
       display: none;
       top: 10%;
       right: 15%;
-      transform: translateY(0%);
+      -webkit-transform: translateY(0%);
+              transform: translateY(0%);
       border: 1px solid #9f269b;
       background-color: white;
       z-index: 1000;
@@ -237,7 +242,8 @@ header {
       position: absolute;
       top: 50%;
       left: 50%;
-      transform: translate(-50%, -50%); }
+      -webkit-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%); }
 
 /* --------------------------------------------------------------------
                               Fourth row
@@ -321,7 +327,8 @@ header {
       position: absolute;
       top: 50%;
       left: 50%;
-      transform: translate(-50%, -50%); }
+      -webkit-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%); }
 
 /* --------------------------------------------------------------------
                               Sixth row
@@ -389,7 +396,8 @@ header {
       position: absolute;
       top: 50%;
       left: 50%;
-      transform: translate(-50%, -50%); }
+      -webkit-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%); }
 
 /* --------------------------------------------------------------------
                               Seventh row
@@ -419,7 +427,8 @@ header {
         position: absolute;
         right: 0%;
         top: 50%;
-        transform: translateY(-50%); }
+        -webkit-transform: translateY(-50%);
+                transform: translateY(-50%); }
       @media (max-width: 400px) {
         .container-fluid > .row:nth-child(7) .skillContainer .textSkill p {
           font-size: 0.8em; }
@@ -622,7 +631,8 @@ header {
         position: absolute;
         top: 50%;
         left: 50%;
-        transform: translate(-50%, -50%); }
+        -webkit-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%); }
   .container-fluid > .row:nth-child(11) div:not(.row) {
     text-align: left; }
     .container-fluid > .row:nth-child(11) div:not(.row) p {
@@ -673,5 +683,3 @@ header {
       padding: 1em 0px; } }
   .container-fluid > .row:nth-child(12) h1 {
     color: #676767; }
-
-/*# sourceMappingURL=app.css.map */

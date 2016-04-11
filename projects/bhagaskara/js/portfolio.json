@@ -1,0 +1,35 @@
+[
+  {
+    "categories": ["WEB", "APPS", "ICONS"]
+  },
+  {
+    "category": ["APPS", "WEB"],
+    "title": "First photo",
+    "img": "\"css/images/Portfolio/Thumbnails/thumb6.png\" alt=\"field\""
+  },
+  {
+    "category": ["APPS"],
+    "title": "Second photo",
+    "img": "\"css/images/Portfolio/Thumbnails/thumb4.png\" alt=\"road-in-mountains\""
+  },
+  {
+    "category": ["WEB"],
+    "title": "Third photo",
+    "img": "\"css/images/Portfolio/Thumbnails/thumb5.png\" alt=\"new-york\""
+  },
+  {
+    "category": ["WEB", "ICONS"],
+    "title": "Fourth photo",
+    "img": "\"css/images/Portfolio/Thumbnails/thumb3.png\" alt=\"river\""
+  },
+  {
+    "category": ["ICONS"],
+    "title": "Fifth photo",
+    "img": "\"css/images/Portfolio/Thumbnails/thumb2.png\" alt=\"boat-ride\""
+  },
+  {
+    "category": ["ICONS", "APPS"],
+    "title": "Sixth photo",
+    "img": "\"css/images/Portfolio/Thumbnails/thumb1.png\" alt=\"person-sitting-on-bench\""
+  }
+]
