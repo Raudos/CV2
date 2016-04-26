@@ -76,11 +76,23 @@
 ----------------------------------------------------------------------------------*/
 
 body {
-  //background-image: url("images/blocks.jpg");
-  background: linear-gradient(45deg, #b1d0ed 12%, transparent 0, transparent 88%, #b1d0ed 0),
-    linear-gradient(135deg, transparent 37%, #5F9CD2 0, #5F9CD2 63%, transparent 0),
-    linear-gradient(45deg, transparent 37%, #b1d0ed 0, #b1d0ed 63%, transparent 0) white;
-  background-size: 25px 25px;
+  background:
+  	linear-gradient(
+  		limegreen,
+  		transparent
+  	),
+  	linear-gradient(
+  		90deg,
+  		skyblue,
+  		transparent
+  	),
+  	linear-gradient(
+  		-90deg,
+  		coral,
+  		transparent
+  	);
+  background-blend-mode: screen;
+  // background taken from http://bennettfeely.com/gradients/
 }
 
 .row {
@@ -231,7 +243,7 @@ a {
         padding: 0.5em;
         margin: 0px;
         text-align: center;
-        text-shadow: 1px 1px 2px black;
+        text-shadow: 1px 1px 2px black, -1px -1px 2px black;
         @media (max-width: 767px) {
           padding: 0.5em 2em;
         }
@@ -273,7 +285,7 @@ a {
     font-weight: bold;
     border-radius: 30px;
     text-align: center;
-    text-shadow: 1px 1px 2px black;
+    text-shadow: 1px 1px 2px black, -1px -1px 2px black;
     @media (max-width: 992px) {
       padding: 5% 2em;
     }
@@ -403,7 +415,7 @@ a {
         }
       }
     }
-    &:nth-child(2n):not(:nth-child(8)) {
+    &:nth-child(2n+1):not(:last-child) {
       position: relative;
       &:before {
         @media (min-width: 768px) {
@@ -418,7 +430,7 @@ a {
         }
       }
     }
-    &:last-child {
+    &:nth-child(2), &:last-child {
       position: relative;
       &:before {
         @media (min-width: 768px) {

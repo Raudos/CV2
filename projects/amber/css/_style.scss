@@ -1,0 +1,759 @@
+
+//--------------------------------------------------------------------------------
+//                              Global objects
+//--------------------------------------------------------------------------------
+
+.link {
+  display: inline-block;
+  background-color: $thirdRowButton;
+  height: 4rem;
+  width: 12rem;
+  max-width: 40%;
+  margin-top: 3em;
+  border: 3px solid $thirdRowButton;
+  cursor: pointer;
+
+  p {
+    color: white;
+    font-weight: bold;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  @media only screen and (min-device-width: 992px){
+    &:hover {
+      background-color: rgba(0,0,0,0);
+      p {
+        color: $thirdRowButton;
+      }
+    }
+  }
+}
+
+.header {
+  hr {
+    width: 5%;
+    margin-top: 2em;
+    margin-bottom: 4em;
+    @media (max-width: 900px) {
+      margin-top: 1em;
+      margin-bottom: 2em;
+    }
+    height: 5px;
+    background-color: rgb(238, 238, 238);
+    border: 0px;
+  }
+}
+
+.container-fluid > .row {
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+}
+//--------------------------------------------------------------------------------
+//                              First row
+//--------------------------------------------------------------------------------
+
+.container-fluid > .row:nth-child(1) {
+  background-color: black;
+  text-align: center;
+  padding-top: 0.7em;
+  padding-bottom: 0.7em;
+  @media (max-width: 400px) {
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
+  }
+  .cell:nth-child(1) {
+    position: relative;
+    input {
+      background-color: black;
+      border: 1px solid $firstRow;
+      color: $firstRow;
+      text-indent: 5px;
+      padding: 0.5em;
+      width: 90%;
+    }
+    .search {
+      position: absolute;
+      height: 40%;
+      right: 6%;
+      top: 50%;
+      transform: translateY(-50%);
+      cursor: pointer;
+    }
+  }
+  .offsetCell {
+    width: 50%;
+    @media (max-width: 768px) {
+      width: (100%/3);
+    }
+  }
+  .cell:nth-child(3) {
+    .cell {
+      height: 100%;
+      width: 50%;
+      p {
+        color: $firstRow;
+        display: inline-block;
+        padding-left: 6px;
+        cursor: pointer;
+      }
+      img {
+        height: 40%;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+//--------------------------------------------------------------------------------
+//                              Second row
+//--------------------------------------------------------------------------------
+
+.container-fluid > .row:nth-child(2) {
+  background-color: rgb(71, 71, 71);
+  text-align: center;
+  img {
+    width: 40%;
+    padding: 1em 0;
+    @media (max-width: 768px) {
+      width: 80%;
+    }
+  }
+  .row {
+    height: 100%;
+    .button {
+      float: left;
+      width: (100%/7);
+      height: 100%;
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+      .upper {
+        height: 20%;
+      }
+      .lower {
+        height: 80%;
+      }
+      p {
+        color: white;
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      &:nth-child(1) {
+        .upper {
+          background-color: $first;
+        }
+      }
+      &:nth-child(2) {
+        .upper {
+          background-color: $second;
+        }
+      }
+      &:nth-child(3) {
+        .upper {
+          background-color: $third;
+        }
+      }
+      &:nth-child(4) {
+        .upper {
+          background-color: $fourth;
+        }
+      }
+      &:nth-child(5) {
+        .upper {
+          background-color: $fifth;
+        }
+      }
+      &:nth-child(6) {
+        .upper {
+          background-color: $sixth;
+        }
+      }
+      &:nth-child(7) {
+        .upper {
+          background-color: $seventh;
+        }
+      }
+    }
+  }
+}
+
+//--------------------------------------------------------------------------------
+//                              Third row
+//--------------------------------------------------------------------------------
+.container-fluid > .row:nth-child(3) {
+  height: 50em;
+  background-image: url("images/wallpaper.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  text-align: center;
+  &>div {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    h1 {
+      color: white;
+    }
+  }
+  .link {
+    margin-left: 1.5%;
+    margin-right: 1.5%;
+    display: inline-block;
+  }
+}
+
+//--------------------------------------------------------------------------------
+//                              Fourth row
+//--------------------------------------------------------------------------------
+.container-fluid > .row:nth-child(4) {
+  text-align: center;
+  padding-top: 5em;
+  padding-bottom: 4em;
+  background-color: white;
+  color: grey;
+}
+
+//--------------------------------------------------------------------------------
+//                              Fifth row
+//--------------------------------------------------------------------------------
+.container-fluid > .row:nth-child(5) {
+  text-align: center;
+  padding-top: 5em;
+  padding-bottom: 5em;
+  background-color: $fifthRow;
+  color: white;
+  hr {
+    background-color: white;
+  }
+  &>.row {
+    .person {
+      margin-top: 2em;
+      width: 30%;
+      height: 290px;
+      float: left;
+      background-color: white;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      position: relative;
+      &:nth-child(1) {
+        background-image: url("images/project1.jpg");
+      }
+      &:nth-child(2) {
+        margin-right: 5%;
+        margin-left: 5%;
+        background-image: url("images/project2.jpg");
+      }
+      &:nth-child(3) {
+        background-image: url("images/project3.jpg");
+      }
+      .about {
+        height: 25%;
+        position: relative;
+        //dont forget the padding
+        top: 65%;
+        background-color: $fifthRowInner;
+        padding: 5%;
+        div {
+          float: left;
+          &:nth-child(1) {
+            width: 80%;
+            text-align: left;
+            height: 100%;
+            p {
+              position: relative;
+              top: 50%;
+              transform: translateY(-50%);
+              span {
+                color: $thirdRowButton;
+              }
+            }
+          }
+          &:nth-child(2) {
+            width: 20%;
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+            img {
+              margin-bottom: 5px;
+            }
+            p {
+              color: $thirdRowButton;
+            }
+          }
+        }
+      }
+      .hover {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0%;
+        background-color: rgba(102,102,102,0.6);
+        display: none;
+        .background {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          .circle {
+            height: 2em;
+            width: 2em;
+            @media (max-width: 700px) {
+              height: 1.3em;
+              width: 1.3em;
+            }
+            background-color: $thirdRowButton;
+            border-radius: 50%;
+            margin: 0.7em;
+            border: 2px solid $thirdRowButton;
+            &:hover {
+              background-color: rgba(0,0,0,0);
+              cursor: no-drop;
+            }
+            img {
+              position: relative;
+              top: 50%;
+              width: 60%;
+              transform: translateY(-50%);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+//--------------------------------------------------------------------------------
+//                              Sixth row
+//--------------------------------------------------------------------------------
+.container-fluid > .row:nth-child(6) {
+  text-align: center;
+  background-color: $thirdRowButton;
+  .cell {
+    &:nth-child(1) {
+      width: (100%*8/12);
+      h1 {
+        font-size: 2em;
+        color: white;
+      }
+    }
+    &:nth-child(2) {
+      width: (100%*4/12);
+      .link {
+        border: 3px solid white;
+        margin-bottom: 3em;
+        max-width: 100%;
+        &:hover {
+          background-color: white;
+          color: $thirdRowButton;
+        }
+      }
+    }
+  }
+  @media (max-width: 700px) {
+    .table {
+      display: block !important;
+      margin-top: 3em;
+      .cell {
+        display: block;
+        text-align: center;
+        width: 100%;
+      }
+    }
+  }
+}
+
+//--------------------------------------------------------------------------------
+//                              Seventh row
+//--------------------------------------------------------------------------------
+.container-fluid > .row:nth-child(7) {
+  text-align: center;
+  background-color: white;
+  padding-top: 5em;
+  padding-bottom: 5em;
+  .feat {
+    text-align: left;
+    padding: 3%;
+    img {
+      width: 7%;
+      float: left;
+    }
+    div {
+      float: left;
+      width: 80%;
+      margin-left: 13%;
+      line-height: 1.2em;
+      h2 {
+        font-size: 1.8em;
+        margin-bottom: 0.8em;
+        line-height: 1em;
+      }
+    }
+  }
+}
+
+//--------------------------------------------------------------------------------
+//                              Eigth row
+//--------------------------------------------------------------------------------
+.container-fluid > .row:nth-child(8) {
+  text-align: center;
+  background-color: $eigthRow;
+  padding-top: 5em;
+  padding-bottom: 5em;
+  .quote {
+    display: none;
+    h2 {
+      color: white;
+      font-size: 1.7em;
+      padding-top: 1.5em;
+      padding-bottom: 1em;
+    }
+    p {
+      color: $thirdRowButton;
+    }
+    &.clicked {
+      display: block;
+    }
+  }
+  .circle {
+    width: 0.8em;
+    height: 0.8em;
+    background-color: white;
+    display: inline-block;
+    border-radius: 50%;
+    margin-top: 3em;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+    &:hover {
+      background-color: $thirdRowButton;
+      cursor: pointer;
+    }
+    &.clicked {
+      background-color: $thirdRowButton;
+    }
+  }
+}
+
+//--------------------------------------------------------------------------------
+//                              Ninth row
+//--------------------------------------------------------------------------------
+.container-fluid > .row:nth-child(9) {
+  text-align: center;
+  background-color: white;
+  padding-top: 5em;
+  padding-bottom: 5em;
+  .post {
+    width: 30%;
+    float: left;
+    box-shadow: 2px 2px 15px 0px rgba(0,0,0,0.75);
+    .photo {
+      height: 13.75em;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      border: 2px solid $thirdRowButton;
+    }
+    &:nth-child(1) {
+      .photo {
+        background-image: url("images/post1.jpg");
+      }
+    }
+    &:nth-child(2) {
+      margin-left: 5%;
+      margin-right: 5%;
+      .photo {
+        background-image: url("images/post2.jpg");
+      }
+    }
+    &:nth-child(3) {
+      .photo {
+        background-image: url("images/post3.jpg");
+      }
+    }
+    &:hover {
+      box-shadow: 2px 2px 30px 0px rgba(0,0,0,0.75);
+    }
+    .title {
+      height: 5em;
+      text-align: left;
+      padding: 10px;
+      h2 {
+        margin-top: 0.5em;
+        color: $thirdRowButton;
+      }
+    }
+    .text {
+      height: 6em;
+      text-align: left;
+      text-overflow: ellipsis;
+      padding: 10px;
+    }
+    .misc {
+      border-bottom: 1px solid $eigthRow;
+      padding-bottom: 1em;
+      .cell {
+        &:first-child {
+          text-align: left;
+          p {
+            color: $thirdRowButton;
+            padding: 10px;
+          }
+        }
+        &:nth-child(2) {
+          text-align: right;
+          p {
+            display: inline-block;
+            padding: 10px 10px 10px 0;
+          }
+        }
+      }
+    }
+  }
+  @media (max-width: 768px) {
+    .post {
+      width: 80%;
+      margin: 2em 10% 2em 10% !important;
+      .title {
+        height: auto;
+      }
+      .text {
+        height: auto;
+      }
+    }
+  }
+}
+
+//--------------------------------------------------------------------------------
+//                              Tenth row
+//--------------------------------------------------------------------------------
+.container-fluid > .row:nth-child(10) {
+  text-align: center;
+  background-color: $thirdRowButton;
+  padding-top: 5em;
+  padding-bottom: 5em;
+  .table:nth-child(2) {
+    .cell {
+      vertical-align: top;
+    }
+  }
+  .header {
+    h1 {
+      color: white;
+    }
+    hr {
+      background-color: white;
+    }
+  }
+  .dots {
+    text-align: center;
+    width: (25%/2);
+    height: 100%;
+    .dotsContainer {
+      .dot {
+        height: 1em;
+        width: 1em;
+        background-color: white;
+        display: inline-block;
+        border-radius: 50%;
+        margin: 1em;
+        @media (max-width: 850px) {
+          margin: 0;
+          &:nth-child(1), &:nth-child(3) {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+  .graph {
+    width: 25%;
+    .outer {
+      position: relative;
+      img {
+        width: 100%;
+        }
+      .inner {
+        width: 50%;
+        height: 50%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: black;
+        border-radius: 50%;
+        img {
+          width: 60%;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+    }
+    h2 {
+      color: white;
+      margin-top: 1rem;
+    }
+    p {
+      color: white;
+    }
+  }
+}
+
+//--------------------------------------------------------------------------------
+//                              Eleventh row
+//--------------------------------------------------------------------------------
+.container-fluid > .row:nth-child(11) {
+  text-align: center;
+  background-color: white;
+  padding-top: 5em;
+  padding-bottom: 5em;
+  .team {
+    width: (85%/4);
+    float: left;
+    height: 42rem;
+    background-color: rgb(204,204,204);
+    position: relative;
+    box-shadow: 2px 2px 15px 0px rgba(0, 0, 0, 0.75);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    //display: none;
+    &:nth-child(1), &:nth-child(2), &:nth-child(3) {
+      margin-right: 5%;
+    }
+    &:nth-child(1) {
+      background-image: url("images/team1.png");
+    }
+    &:nth-child(2) {
+      background-image: url("images/team2.jpg");
+    }
+    &:nth-child(3) {
+      background-image: url("images/team3.jpg");
+    }
+    &:nth-child(4) {
+      background-image: url("images/team4.jpg");
+    }
+
+    .about {
+      background-color: white;
+      position: absolute;
+      height: 40%;
+      bottom: 0%;
+      p {
+        margin: 12% 5% 0 5%;
+      }
+      .name {
+        position: absolute;
+        top: -5%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 60%;
+        background-color: white;
+        padding: 0.5rem;
+        border: 2px solid grey;
+        z-index: 3;
+        p {
+          margin: 0;
+        }
+      }
+    }
+    .imShadow {
+      box-shadow: 2px 13px 15px 0px rgba(0,0,0,0.75);
+      height: 25%;
+      p {
+        margin-top: 10%;
+      }
+    }
+    .linkContainer {
+      background-color: white;
+      position: absolute;
+      bottom: 0%;
+      width: 100%;
+      z-index: 2;
+      .link {
+        margin: 0.2em 1em 1em 1em;
+      }
+      .active {
+        background-color: rgba(0,0,0,0);
+        p {
+          color: $thirdRowButton;
+        }
+      }
+    }
+  }
+  @media (max-width: 1000px) {
+    .team {
+      width: 40%;
+      margin-left: 5%;
+      margin-right: 5%;
+      display: none;
+      height: 32rem;
+    }
+    .active:not(.link) {
+      display: inline-block;
+    }
+  }
+}
+
+//--------------------------------------------------------------------------------
+//                              Twelfth row
+//--------------------------------------------------------------------------------
+.container-fluid > .row:nth-child(12) {
+  text-align: center;
+  background-color: $twelfthRow;
+  .cell {
+    width: 25%;
+    text-align: left;
+    padding: 0 2.5%;
+    h2 {
+      margin: 2em 0;
+      font-size: 1.5em;
+      color: white;
+    }
+  }
+  .row {
+    margin-bottom: 2em;
+    .block {
+      text-align: left;
+      width: 100%;
+      img {
+        float: left;
+        width: 5%;
+      }
+      div {
+        width: 85%;
+        margin-left: 5%;
+        float: left;
+        p {
+          color: white;
+          line-height: 1.2em;
+          .colored {
+            color: $thirdRowButton;
+          }
+          span {
+            color: grey;
+          }
+        }
+      }
+    }
+    .social {
+      .cell {
+        margin: 0;
+        float: none;
+        &:nth-child(1) {
+          width: 20%;
+          img {
+            width: 100%;
+          }
+        }
+        &:nth-child(2) {
+          width: 80%;
+        }
+      }
+    }
+  }
+}

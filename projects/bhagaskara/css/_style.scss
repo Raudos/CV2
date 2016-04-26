@@ -165,6 +165,9 @@ header {
           @media (max-width: 900px) {
             font-size: 0.9em;
           }
+          @media (max-width: 600px) {
+            font-size: 0.6em;
+          }
         }
         img {
           position: absolute;
@@ -282,13 +285,13 @@ header {
     line-height: 45px;
     padding: 15px;
   }
-  @media (max-width: 500px) {
+  @media (max-width: 700px) {
     h2 {
-      font-size: 1.8em;
+      font-size: 1.4em;
     }
     p {
       font-size: 0.9em;
-      line-height: 30px;
+      line-height: 25px;
     }
   }
   .hexagon {
@@ -583,9 +586,9 @@ header {
     font-size: 4em;
     margin-top: 0.5em;
   }
-  @media (max-width: 400px) {
+  @media (max-width: 700px) {
     h3 {
-      font-size: 3em;
+      font-size: 2em;
     }
   }
   p {
@@ -686,7 +689,7 @@ header {
     border: 1px solid $purple;
     border-radius: 5px;
     width: 80px;
-    margin: 0px 5px;
+    margin: 10px 5px;
     background-color: white;
     box-shadow: -1px 11px 21px -7px rgba(0,0,0,0.75);
     &:hover {

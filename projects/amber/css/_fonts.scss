@@ -1,0 +1,97 @@
+@font-face {
+  font-family: lato;
+  src: url("fonts/lato.ttf");
+}
+p, h1, h2 {
+  font-family: lato;
+
+}
+p {
+  font-size: 0.5rem;
+  @for $i from 1 through 6 {
+    @media (min-width: 300px + 200px * $i) {
+      font-size: 0.5rem + (1rem/6) * $i;
+    }
+  }
+}
+.container-fluid > .row {
+  .link {
+    p {
+      font-size: 0.8rem;
+    }
+  }
+}
+.container-fluid > .row {
+  .header {
+    font-size: 1.5em;
+    @for $i from 1 through 6 {
+      @media (min-width: 300px + 200px * $i) {
+        font-size: 1.5em + (1em/6) * $i;
+      }
+    }
+  }
+}
+.container-fluid > .row:nth-child(1) {
+ input, p {
+   @media (max-width: 399px) {
+     font-size: 0.5em;
+   }
+   @media (min-width: 400px) {
+     font-size: 0.7em;
+   }
+   @media (min-width: 700px) {
+     font-size: 1em;
+   }
+ }
+}
+.container-fluid > .row:nth-child(2) {
+ p {
+   font-size: 0.3em;
+   @for $i from 1 through 6 {
+     @media (min-width: 300px + 200px * $i) {
+       font-size: 0.3em + 0.2em * $i;
+     }
+   }
+ }
+}
+.container-fluid > .row:nth-child(3) {
+  h1 {
+    font-size: 1.5em;
+    @for $i from 1 through 6 {
+      @media (min-width: 300px + 200px * $i) {
+        font-size: 1.5em + 0.25em * $i;
+      }
+    }
+  }
+}
+.quote p {
+  font-size: 0.8rem;
+}
+.title {
+  h2 {
+    font-size: 1.5em;
+  }
+}
+.graph {
+  h2 {
+    font-size: 1.5em;
+    @for $i from 1 through 6 {
+      @media (min-width: 300px + 200px * $i) {
+        font-size: 1.5em + 0.25em * $i;
+      }
+    }
+  }
+}
+.team {
+  .name {
+    h2 {
+      font-size: 0.7em;
+    }
+    p {
+      font-size: 0.4em;
+    }
+  }
+  p {
+    font-size: 0.5em;
+  }
+}

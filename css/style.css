@@ -126,8 +126,8 @@
                                   Global elements
 ----------------------------------------------------------------------------------*/
 body {
-  background: linear-gradient(45deg, #b1d0ed 12%, transparent 0, transparent 88%, #b1d0ed 0), linear-gradient(135deg, transparent 37%, #5F9CD2 0, #5F9CD2 63%, transparent 0), linear-gradient(45deg, transparent 37%, #b1d0ed 0, #b1d0ed 63%, transparent 0) white;
-  background-size: 25px 25px; }
+  background: linear-gradient(limegreen, transparent), linear-gradient(90deg, skyblue, transparent), linear-gradient(-90deg, coral, transparent);
+  background-blend-mode: screen; }
 
 .row {
   margin: 0px; }
@@ -255,7 +255,7 @@ a {
       padding: 0.5em;
       margin: 0px;
       text-align: center;
-      text-shadow: 1px 1px 2px black; }
+      text-shadow: 1px 1px 2px black, -1px -1px 2px black; }
       @media (max-width: 767px) {
         #intro .cell:nth-child(5) p {
           padding: 0.5em 2em; } }
@@ -287,7 +287,7 @@ a {
     font-weight: bold;
     border-radius: 30px;
     text-align: center;
-    text-shadow: 1px 1px 2px black; }
+    text-shadow: 1px 1px 2px black, -1px -1px 2px black; }
     @media (max-width: 992px) {
       #about p {
         padding: 5% 2em; } }
@@ -390,10 +390,10 @@ a {
       font-family: lato;
       font-weight: bold;
       text-shadow: 1px 1px 2px #B1D0ED; }
-  #portfolio .project:nth-child(2n):not(:nth-child(8)) {
+  #portfolio .project:nth-child(2n+1):not(:last-child) {
     position: relative; }
     @media (min-width: 768px) {
-      #portfolio .project:nth-child(2n):not(:nth-child(8)):before {
+      #portfolio .project:nth-child(2n+1):not(:last-child):before {
         content: "";
         position: absolute;
         right: -0.6%;
@@ -402,10 +402,10 @@ a {
         width: 2px;
         border-right: 2px solid #4973C7;
         opacity: 0.3; } }
-  #portfolio .project:last-child {
+  #portfolio .project:nth-child(2), #portfolio .project:last-child {
     position: relative; }
     @media (min-width: 768px) {
-      #portfolio .project:last-child:before {
+      #portfolio .project:nth-child(2):before, #portfolio .project:last-child:before {
         content: "";
         position: absolute;
         left: -40%;
@@ -415,7 +415,7 @@ a {
         border-top: 2px solid #4973C7;
         opacity: 0.6; } }
     @media (min-width: 768px) {
-      #portfolio .project:last-child:after {
+      #portfolio .project:nth-child(2):after, #portfolio .project:last-child:after {
         content: "";
         position: absolute;
         right: -40%;
