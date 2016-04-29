@@ -1,6 +1,6 @@
-var $firstMain = $(".chairDiv:nth-child(2)");
-var $secondMain = $(".chairDiv:nth-child(3)");
-var $thirdMain = $(".chairDiv:nth-child(4)");
+var $firstMain = $(".chairDiv:nth-child(1)");
+var $secondMain = $(".chairDiv:nth-child(2)");
+var $thirdMain = $(".chairDiv:nth-child(3)");
 var $firstCircle = $(".naviCircle:first-child");
 var $secondCircle = $(".naviCircle:nth-child(2)");
 var $thirdCircle = $(".naviCircle:nth-child(3)");
@@ -16,13 +16,21 @@ var $firstPrice = $("#prices p:first-child");
 var $secondPrice = $("#prices p:nth-child(2)");
 var $thirdPrice = $("#prices p:nth-child(3)");
 var $summary = $("#summary p:nth-child(2)");
+var $containerRows = $(".container-fluid > .row");
+var $input = $("#pickContainer > div");
 
+
+
+//----------------------------------------------------------------------
+//												Functions
+//----------------------------------------------------------------------
 
 var main = function() {
+	//simple slider for chair images
 	$leftNavi.on("click", function() {
 		var currentPage = $("#slider .active");
 		var nextPage = currentPage.prev();
-		if (nextPage.is("nav")) {
+		if (nextPage.length == 0) {
 			nextPage = $thirdMain;
 		}
     currentPage.fadeOut(600, function() {
@@ -33,7 +41,7 @@ var main = function() {
 	$rightNavi.on("click", function() {
 		var currentPage = $("#slider .active");
 		var nextPage = currentPage.next();
-		if (nextPage.is("nav")) {
+		if (nextPage.length == 0) {
 			nextPage = $firstMain;
 		}
 		currentPage.fadeOut(600, function() {
@@ -41,29 +49,14 @@ var main = function() {
 			nextPage.fadeIn(600).addClass('active');
 		});
 	});
-	/*
-	$circle.on("click", function() {
-		// Check which circle and inner circle is lit, swap the circle
-		var currentCircle = $(".enabled");
-		$(this).addClass("enabled");
-		var test = $(this).children();
-		$(test).addClass("innerEnabled");
-		currentCircle.removeClass("enabled");
-		currentCircle.children().removeClass("innerEnabled");
-		// Check which image is enabled, swap the image
-		var currentImage = $(".active");
-		var circleClickedIndex = $(this).index() + 1;
-		var nextImage = $(".chairDiv:nth-child(" + circleClickedIndex + ")");
-		currentImage.fadeOut(600).removeClass('active');
-		nextImage.fadeIn(600).addClass('active');
-	}) */
-	$pickList.on("click", function() {
-		// Show list on click
-		$(this).next().toggle();
-		// Change opacity on click of the arrow
-		$(this).toggleClass("toggleList");
-	})
+	$input.on("click", function() {
+		//show list on click
+		$(this).children("ul").toggle();
+		//change opacity of the arrow on click
+		$(this).children("div").toggleClass("toggleList");
+	});
 	$li.on("click", function() {
+		//takes data-name of clicked element and adds it to the form
 		if (this.className == "type") {
 			$("#pickContainer div:first-child input").attr("placeholder", this.innerHTML);
 			$firstName.html($(this).html());
@@ -77,10 +70,9 @@ var main = function() {
 			$thirdName.html($(this).html());
 			$thirdPrice.html($(this).attr("data-name"));
 		}
-		$(this).offsetParent().toggle();
-		$pickList.removeClass("toggleList");
 		$summary.html(summary());
 	})
+	//adds transports price to the form
 	$("#transportLabel").on("click", function() {
 		$("#transport").toggle();
 		$(".priceTransport").toggle();
@@ -95,6 +87,7 @@ var main = function() {
 
 }
 function checkPosition() {
+	//depending on the width of the screen fires appropriate function
 	if (window.matchMedia('(max-width: 500px)').matches) {
 		$(".outerCircle").on("click", function(event) {
 			var $target = $(event.target);
@@ -124,15 +117,8 @@ function checkPosition() {
 
 	}
 }
-
-$(document).ready(function() {
-	$('input[type=checkbox]').prop('checked', true);
-	$summary.html(summary());
-	main();
-	checkPosition();
-})
-
 function summary() {
+	//total price to pay calculated from elements in the form
 	var $first = parseInt($firstPrice.html(), 10);
 	var $second = parseInt($secondPrice.html(), 10);
 	var $third = parseInt($thirdPrice.html(), 10);
@@ -147,9 +133,35 @@ function summary() {
 		$third = 0;
 	}
 	var summary = $first + $second + $third;
-	console.log($transport.prop('checked'));
 	if ($transport.prop('checked')) {
 		summary += 200;
 	}
 	return summary + " zł";
 }
+function $paddingMe() {
+  $width = $(window).width();
+  if ($width > 1500) {
+    $width = ($width - 1500) / 2;
+    $width += "px";
+    $containerRows.css("padding-left", $width);
+    $containerRows.css("padding-right", $width);
+  } else {
+    $containerRows.css("padding-left", "15px");
+    $containerRows.css("padding-right", "15px");
+  }
+}
+
+//----------------------------------------------------------------------
+//												Ready
+//----------------------------------------------------------------------
+
+$(document).ready(function() {
+	$('input[type=checkbox]').prop('checked', true);
+	$summary.html(summary());
+	main();
+	checkPosition();
+	$paddingMe();
+	$(window).resize(function() {
+    $paddingMe();
+  });
+})

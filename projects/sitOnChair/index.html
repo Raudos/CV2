@@ -6,7 +6,7 @@
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <link type="text/css" rel="stylesheet" href="css/cssreset.css"/>
      <link type="text/css" rel="stylesheet" href="css/myBootstrap/bootstrap.css"/>
-     <link type="text/css" rel="stylesheet" href="css/app.css"/>
+     <link type="text/css" rel="stylesheet" href="css/app.pref.min.css"/>
    </head>
    <body>
      <div class="container-fluid">
@@ -52,35 +52,37 @@
          </nav>
        </div>
        <div id="slider" class="row">
-         <div id="sliderContainer" class="col-xs-12 col-sm-5">
+         <div class="tab">
            <nav>
              <p id="leftNavi">
                <
              </p>
            </nav>
-           <div class="chairDiv">
-             <img class="img-responsive" src="css/images/fancy_chair.png"/>
+           <div id="sliderContainer" class="col-xs-12 col-sm-5 cellSlider">
+             <div class="chairDiv">
+               <img class="img-responsive" src="css/images/fancy_chair.png"/>
+             </div>
+             <div class="chairDiv active">
+               <img class="img-responsive" src="css/images/black_chair.png"/>
+             </div>
+             <div class="chairDiv">
+               <img class="img-responsive" src="css/images/white_chair.png"/>
+             </div>
            </div>
-           <div class="chairDiv active">
-             <img class="img-responsive" src="css/images/black_chair.png"/>
-           </div>
-           <div class="chairDiv">
-             <img class="img-responsive" src="css/images/white_chair.png"/>
+           <div class="col-xs-8 col-sm-7 col-xs-offset-2 col-sm-offset-0 cellSlider">
+             <div class="centerMe">
+               <h1>SIT ON OUR CHAIR</h1>
+               <p>
+                 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+               </p>
+               <button type="button" name="button">ZOBACZ WIĘCEJ</button>
+             </div>
            </div>
            <nav>
              <p id="rightNavi">
                >
              </p>
            </nav>
-         </div>
-         <div class="col-xs-8 col-sm-7 col-xs-offset-2 col-sm-offset-0">
-           <div class="centerMe">
-             <h1>SIT ON OUR CHAIR</h1>
-             <p>
-               Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-             </p>
-             <button type="button" name="button">ZOBACZ WIĘCEJ</button>
-           </div>
          </div>
        </div>
        <div class="row">
@@ -208,7 +210,7 @@
   					<h2>SKOMPONUJ SWOJE KRZESŁO</h2>
   					<div id="pickContainer">
   						<div>
-  							<input type="text" name="picktype" placeholder="Wybierz rodzaj">
+  							<input type="text" name="picktype" placeholder="Wybierz rodzaj" readonly="readonly">
   							<div class="pickList">
   							</div>
   							<ul>
@@ -217,9 +219,8 @@
   								<li data-name="3000" class="type">Selena</li>
   							</ul>
   						</div>
-
   						<div>
-  							<input type="text" name="pickcolor" placeholder="Wybierz kolor">
+  							<input type="text" name="pickcolor" placeholder="Wybierz kolor" readonly="readonly">
   							<div class="pickList">
   							</div>
   							<ul>
@@ -228,9 +229,8 @@
   								<li data-name="600" class="color">Zielony</li>
   							</ul>
   						</div>
-
   						<div>
-  							<input type="text" name="pickmaterial" placeholder="Wybierz materiał">
+  							<input type="text" name="pickmaterial" placeholder="Wybierz materiał" readonly="readonly">
   							<div class="pickList">
   							</div>
   							<ul>
@@ -332,6 +332,6 @@
        </div>
      </div>
      <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
-     <script type="text/javascript" src="js/main.js"></script>
+     <script type="text/javascript" src="js/main.min.js"></script>
    </body>
  </html>

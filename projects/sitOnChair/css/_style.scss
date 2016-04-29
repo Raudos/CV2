@@ -3,7 +3,30 @@
   src: url("fonts/raleway/raleway-regular-webfont.woff");
 }
 
-
+.container-fluid > .row {
+  //max-width: 1500px;
+}
+.tab {
+  display: table;
+  table-layout: fixed;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  padding: 0 30px;
+  .cellSlider {
+    vertical-align: middle;
+    float: none;
+    display: table-cell;
+    height: 100%;
+  }
+  @media (max-width: 768px) {
+    display: inline-block;
+    .cellSlider {
+      float: left;
+      display: block;
+    }
+  }
+}
 p, h1, h2, h3, h4, h5{
   font-family: raleway;
 }
@@ -93,17 +116,18 @@ h2 {
   background: -webkit-linear-gradient(top, #ffffff 0%, #d3d2da 100%);
   background: linear-gradient(to bottom, #ffffff 0%, #d3d2da 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#d3d2da',GradientType=0 );
-
   nav {
     display: inline-block;
     position: absolute;
     top: 50%;
-    left: 3%;
-    transform: translate(-50%, -50%);
+    transform: translateY(-50%);
     z-index: 1000;
-
-    &:nth-child(5) {
-      left: 97%;
+    cursor: pointer;
+    &:first-child {
+      left: 0%;
+    }
+    &:last-child {
+      right: 0%;
     }
   }
   button {
@@ -143,20 +167,6 @@ h2 {
   display: inline;
 }
 
-@media (min-width: 768px) {
-  #slider {
-    div {
-      position: static;
-    }
-
-    .centerMe {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      margin-right: 5em;
-    }
-  }
-}
 
 /* ---------------------- */
 /*        Third row          */
@@ -430,6 +440,7 @@ h2 {
     	text-indent: 10px;
     	font-size: 1.3em;
     	margin: 0px;
+      cursor: pointer;
       @media (max-width: 700px) {
         font-size: 1.1em;
         padding-top: 5px;

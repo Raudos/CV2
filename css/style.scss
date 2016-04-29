@@ -131,7 +131,7 @@ a {
 }
 
 .cell {
-  padding: 0px;
+  //padding: 0px;
   vertical-align: middle;
   display: table-cell;
   height: 100%;
@@ -185,11 +185,16 @@ a {
   background-color: rgb(177, 208, 237);
   padding: 15px 0px;
   #caricatureDiv {
-    background-image: url("images/cartoon.jpg");
+    background-image: url("images/prog2.png");
     background-size: cover;
     background-position: center;
     border: 2px solid #5F9CD2;
     border-radius: 30px;
+    a {
+      display: inline-block;
+      height: 100%;
+      width: 100%;
+    }
   }
   #hireDiv {
     background-image: url("images/hire2.jpg");
@@ -204,7 +209,7 @@ a {
         width: 0%;
       }
       @media (min-width: 768px) {
-        width: 3%
+        width: 1%
       }
     }
     &:nth-child(7), &:nth-child(3) {
@@ -213,10 +218,10 @@ a {
         margin-left: 1.5%;
       }
       @media (min-width: 768px) {
-        width: 40.5%;
+        width: 48.5%;
       }
       @media (min-width: 992px) {
-        width: 29.333%;
+        width: (96%/3);
       }
     }
     &:nth-child(5) {
@@ -227,10 +232,10 @@ a {
         margin-bottom: 15px;
       }
       @media (min-width: 768px) {
-        width: 40.5%;
+        width: 48.5%;
       }
       @media (min-width: 992px) {
-        width: 29.333%;
+        width: (96%/3);
       }
       background-color: #5F9CD2;
       border: 2px solid #5F9CD2;
@@ -268,42 +273,75 @@ a {
 
 #about {
   background-color: #B1D0ED;
-  .cell:first-child {
+  .cell:nth-child(2) {
     vertical-align: middle;
+    padding: 0px 10px !important;
+    p {
+      color: #FFF;
+      padding-top: 5%;
+      padding-bottom: 5%;
+      font-size: 1.2em;
+      font-weight: bold;
+      border-radius: 30px;
+      text-align: center;
+      text-shadow: 1px 1px 2px black, -1px -1px 2px black;
+      @media (max-width: 992px) {
+        padding: 5% 2em;
+        font-size: 1em;
+      }
+    }
+  }
+  .cell:nth-child(3) {
+    padding: 0;
+    box-shadow: -3px 0px 10px 0px rgba(122,123,124, 0.9);
+    overflow: hidden;
+    @media (max-width: 991px) {
+      height: 400px;
+      box-shadow: 0px -3px 10px 0px rgba(122,123,124, 0.9);
+    }
   }
   .cell {
-    padding: 0px 10px;
     @media (max-width: 991px) {
       display: inline-block !important;
     }
   }
-  p {
-    color: #FFF;
-    padding-top: 5%;
-    padding-bottom: 5%;
-    font-size: 1em;
-    font-weight: bold;
-    border-radius: 30px;
-    text-align: center;
-    text-shadow: 1px 1px 2px black, -1px -1px 2px black;
-    @media (max-width: 992px) {
-      padding: 5% 2em;
-    }
-  }
   #imgContainer {
     vertical-align: middle;
-    border-radius: 30px;
-    border: 3px solid #5F9CD2;
     overflow: hidden;
-
-    @media (max-width: 767px) {
-      height: 70%;
-      -webkit-transform: translateY(-10%);
-      transform: translateY(-10%);
-    }
-    img {
+    height: 100%;
+    .image {
+      height: 100%;
       width: 25%;
       float: left;
+      background-repeat: no-repeat;
+      background-size: cover;
+      //IE11 fix
+      padding-bottom: 500px;
+      &:nth-child(1) {
+        background-image: url("images/swim.png");
+        @media (max-width: 991px) {
+          border-bottom-left-radius: 10px;
+        }
+      }
+      &:nth-child(2) {
+        background-image: url("images/archery.png");
+      }
+      &:nth-child(3) {
+        background-image: url("images/fantasy.png");
+      }
+      &:nth-child(4) {
+        background-image: url("images/pw.png");
+        @media (min-width: 992px) {
+          border-top-right-radius: 10px;
+          border-bottom-right-radius: 10px;
+        }
+        @media (max-width: 991px) {
+          border-top-right-radius: 0;
+          border-bottom-right-radius: 10px;
+          //IE11 fix
+          padding-bottom: 447px;
+        }
+      }
     }
   }
 }
@@ -393,9 +431,9 @@ a {
         width: 100%;
         border: 3px solid #5f9cd2;
         border-radius: 10px;
-        box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
+        box-shadow: 5px 5px 5px 0px rgba(122, 123, 124, 0.85);
         &:hover {
-          box-shadow: -5px -5px 5px 0px rgba(0, 0, 0, 0.75);
+          box-shadow: -5px -5px 5px 0px rgba(122, 123, 124, 0.85);
         }
       }
       a {
@@ -676,7 +714,7 @@ section {
 
 .min, .max {
   font-size: 20px;
-  font-family: impact;
+  font-family: draw;
   color: rgba(254, 254, 254, 0.9);
 }
 

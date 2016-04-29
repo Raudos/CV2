@@ -91,15 +91,14 @@ h2 {
 #slider {
   position: relative;
   background: #ffffff;
-  background: -moz-linear-gradient(top, #ffffff 0%, #d3d2da 100%);
-  background: -webkit-linear-gradient(top, #ffffff 0%, #d3d2da 100%);
   background: linear-gradient(to bottom, #ffffff 0%, #d3d2da 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#d3d2da',GradientType=0 ); }
   #slider nav {
     display: inline-block;
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
     z-index: 1000;
     cursor: pointer; }
     #slider nav:first-child {
@@ -256,7 +255,8 @@ h2 {
       .row:nth-child(4) .offert .offertPrice div {
         position: relative;
         top: 50%;
-        transform: translateY(-50%); }
+        -webkit-transform: translateY(-50%);
+                transform: translateY(-50%); }
         .row:nth-child(4) .offert .offertPrice div p {
           color: grey; }
         .row:nth-child(4) .offert .offertPrice div p:first-child {
@@ -267,7 +267,8 @@ h2 {
       position: absolute;
       bottom: 3%;
       left: 50%;
-      transform: translateX(-50%);
+      -webkit-transform: translateX(-50%);
+              transform: translateX(-50%);
       background-color: #24ba9f;
       color: white;
       border-radius: 5px;
@@ -278,7 +279,8 @@ h2 {
     position: absolute;
     top: 0%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
     width: 3em;
     height: 3em;
     background-color: #f9f9f9;
@@ -289,7 +291,8 @@ h2 {
       position: relative;
       top: 50%;
       left: 50%;
-      transform: translate(-50%, -50%);
+      -webkit-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%);
       width: 1.5em;
       height: 1.5em;
       background-color: #e4e4e4;
@@ -332,7 +335,8 @@ h2 {
       position: absolute;
       top: 40%;
       right: 3%;
-      transform: translateY(-50%);
+      -webkit-transform: translateY(-50%);
+              transform: translateY(-50%);
       background-image: url("images/triangle2.png");
       background-size: contain;
       margin-top: 5px;
@@ -366,7 +370,8 @@ h2 {
     .row:nth-child(4) .row #transport {
       position: relative;
       top: 50%;
-      transform: translateY(-50%); }
+      -webkit-transform: translateY(-50%);
+              transform: translateY(-50%); }
     .row:nth-child(4) .row #transportInput {
       display: none; }
     .row:nth-child(4) .row #transportP {
@@ -584,7 +589,8 @@ h2 {
   #userLabel img {
     position: relative;
     top: 50%;
-    transform: translateY(-50%); }
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%); }
 
 textarea {
   resize: none;
@@ -637,5 +643,3 @@ textarea {
     float: right; }
   .row:nth-child(6) span {
     font-weight: bold; }
-
-/*# sourceMappingURL=app.css.map */

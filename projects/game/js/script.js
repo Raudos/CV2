@@ -12,6 +12,7 @@ var leftPressed = false;
 var topPressed = false;
 var bottomPressed = false;
 var spacePressed = false;
+var $announcement = $("#announcement");
 
 // Important! Cooldowns on shots are in the DRAW function!
 
@@ -420,7 +421,7 @@ tieMidSquadron = [];
 function drawMidTie() {
 	var n = tieMidSquadron.length;
 	for (var i = 0; n > i; i++) {
-		tieMidSquadron[i][1] += 1; //Before drawing so you they actually end up being deleted
+		tieMidSquadron[i][1] += 0.7; //Before drawing so they actually end up being deleted
 		if (tieMidSquadron[i][2] == 1) {
 			ctx.drawImage(tie, tieMidSquadron[i][0], tieMidSquadron[i][1], tieWidth, tieHeight);
 		}
@@ -485,8 +486,8 @@ tieRightSquadron = [];
 function drawRightTie() {
 	var n = tieRightSquadron.length;
 	for (var i = 0; n > i; i++) {
-		tieRightSquadron[i][0] -= 1;
-		tieRightSquadron[i][1] += 1; //Before drawing so you they actually end up being deleted
+		tieRightSquadron[i][0] -= 0.8;
+		tieRightSquadron[i][1] += 0.8; //Before drawing so they actually end up being deleted
 		if (tieRightSquadron[i][2] == 1) {
 			ctx.drawImage(tieRight, tieRightSquadron[i][0], tieRightSquadron[i][1], tieRightWidth, tieRightHeight);
 		}
@@ -657,7 +658,11 @@ function laserBossCol() {
 				lasersXwing.splice(i, 1);
 				bossHealth -= 1;
 				if (bossHealth <= 0) {
-					alert("You saved galaxy from The Evil Empire!")
+					$updateText("You saved galaxy from The Evil Empire!");
+          $announcement.find("h1").text("Rebel Alliance wins!");
+          $announcement.find("img").attr("src", "css/images/alliance.png");
+          $announcement.find("button").text("Play again?");
+          $announcement.show();
 				}
 			}
 		}
@@ -674,8 +679,8 @@ function bossMidLaserCol() {
 					bossMidLasers.splice(i, 1);
 					nbrOfLifes -= 1;
 				} else {
-					alert("You lose.");
-					document.location.reload();
+          $updateText("You got shot down by the Empire Cruiser.");
+          $announcement.show();
 				}
 			}
 		}
@@ -692,8 +697,8 @@ function bossLeftLaserCol() {
 					bossLeftLasers.splice(i, 1);
 					nbrOfLifes -= 1;
 				} else {
-					alert("You lose.");
-					document.location.reload();
+          $updateText("You got shot down by the Empire Cruiser.");
+          $announcement.show();
 				}
 			}
 		}
@@ -710,8 +715,8 @@ function bossRightLaserCol() {
 					bossRightLasers.splice(i, 1);
 					nbrOfLifes -= 1;
 				} else {
-					alert("You lose.");
-					document.location.reload();
+          $updateText("You got shot down by the Empire Cruiser.");
+          $announcement.show();
 				}
 			}
 		}
@@ -727,8 +732,8 @@ function tMidLaserCol() {
 					tieMidLasers.splice(i, 1);
 					nbrOfLifes -= 1;
 				} else {
-					alert("You lose.");
-					document.location.reload();
+          $updateText("You got shot down by the Tie Fighter.");
+          $announcement.show();
 				}
 			}
 		}
@@ -745,8 +750,8 @@ function tLeftLaserCol() {
 					tieLeftLasers.splice(i, 1);
 					nbrOfLifes -= 1;
 				} else {
-					alert("You lose.");
-					document.location.reload();
+          $updateText("You got shot down by the Tie Fighter.");
+          $announcement.show();
 				}
 			}
 		}
@@ -763,8 +768,8 @@ function tRightLaserCol() {
 					tieRightLasers.splice(i, 1);
 					nbrOfLifes -= 1;
 				} else {
-					alert("You lose.");
-					document.location.reload();
+          $updateText("You got shot down by the Tie Fighter.");
+          $announcement.show();
 				}
 			}
 		}
@@ -790,8 +795,8 @@ function moveXwing() {
 function xWingBossCol() {
 	if (xWingY <= bossY + bossHeight && xWingY + xWingHeight >= bossY) {
 		if (xWingX < bossX + bossWidth && xWingX + xWingWidth > bossX) {
-			alert("You crashed into the Empire Cruiser!");
-			document.location.reload();
+      $updateText("You crashed into Empire Cruiser.");
+      $announcement.show();
 		}
 	}
 }
@@ -801,8 +806,8 @@ function xWingMidCol() {
 	for (var i = 0; tie > i; i++) {
 		if (xWingY <= tieMidSquadron[i][1] + tieHeight && xWingY + xWingHeight >= tieMidSquadron[i][1] && tieMidSquadron[i][2] == 1) {
 			if (xWingX < tieMidSquadron[i][0] + tieWidth && xWingX + xWingWidth > tieMidSquadron[i][0]) {
-				alert("You crashed into the Tie Fighter!");
-				document.location.reload();
+        $updateText("You crashed into the Tie Fighter.");
+        $announcement.show();
 			}
 		}
 	}
@@ -813,8 +818,8 @@ function xWingLeftCol() {
 	for (var i = 0; tie > i; i++) {
 		if (xWingY <= tieLeftSquadron[i][1] + tieHeight && xWingY + xWingHeight >= tieLeftSquadron[i][1] && tieLeftSquadron[i][2] == 1) {
 			if (xWingX < tieLeftSquadron[i][0] + tieWidth && xWingX + xWingWidth > tieLeftSquadron[i][0]) {
-				alert("You crashed into the Tie Fighter!");
-				document.location.reload();
+        $updateText("You crashed into the Tie Fighter.");
+        $announcement.show();
 			}
 		}
 	}
@@ -825,8 +830,8 @@ function xWingRightCol() {
 	for (var i = 0; tie > i; i++) {
 		if (xWingY <= tieRightSquadron[i][1] + tieHeight && xWingY + xWingHeight >= tieRightSquadron[i][1] && tieRightSquadron[i][2] == 1) {
 			if (xWingX < tieRightSquadron[i][0] + tieWidth && xWingX + xWingWidth > tieRightSquadron[i][0]) {
-				alert("You crashed into the Tie Fighter!");
-				document.location.reload();
+        $updateText("You crashed into the Tie Fighter.");
+        $announcement.show();
 			}
 		}
 	}
@@ -905,12 +910,18 @@ function draw() {
 	laserLeftCol();
 	laserRightCol();
 	shotCD += 2;	// Cooldown reset on XWing shots
-	shotMidTCD += 0.5;	// Cooldown on tie shots
-	shotLeftTCD += 0.4; // Cooldown on left tie shots
-	shotRightTCD += 0.4; // Cooldown on right tie shots
+	shotMidTCD += 0.3;	// Cooldown on tie shots
+	shotLeftTCD += 0.2; // Cooldown on left tie shots
+	shotRightTCD += 0.2; // Cooldown on right tie shots
 	shotBossMidCD += 0.3; // Cooldown on middle boss shots
 	shotBossLeftCD += 0.5; // Cooldown on left boss shots
 	shotBossRightCD += 0.5;  // Cooldown on right boss shots
 }
-
-setInterval(draw, 15);
+function $updateText(text) {
+  $announcement.find("p").text(text);
+  clearInterval(drawMe);
+}
+$announcement.find("button").on("click", function() {
+  document.location.reload();
+})
+var drawMe = setInterval(draw, 15);
