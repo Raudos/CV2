@@ -473,7 +473,7 @@ header {
         box-shadow: -1px 11px 21px 7px $purple !important;
       }
     }
-    @media (max-width: 768px) {
+    @media (max-width: 767px) {
       .person {
         &:nth-child(1) {
           left: -100%;

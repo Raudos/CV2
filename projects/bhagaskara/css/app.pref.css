@@ -372,7 +372,7 @@ header {
       position: relative; }
       .container-fluid > .row:nth-child(6) > .row:nth-child(3) .teamActive img {
         box-shadow: -1px 11px 21px 7px #9f269b !important; }
-    @media (max-width: 768px) {
+    @media (max-width: 767px) {
       .container-fluid > .row:nth-child(6) > .row:nth-child(3) .person:nth-child(1) {
         left: -100%; }
       .container-fluid > .row:nth-child(6) > .row:nth-child(3) .person:nth-child(2) {

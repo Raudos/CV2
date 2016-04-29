@@ -425,7 +425,7 @@ $(document).on("ready", function() {
   $showMePicked();
   $nextQuote();
   $replaceTeamArrows();
-  if (window.matchMedia('(max-width: 768px)').matches) {
+  if (window.matchMedia('(max-width: 767px)').matches) {
     $showTeamSmall();
   } else {
     $showTeamBig();
